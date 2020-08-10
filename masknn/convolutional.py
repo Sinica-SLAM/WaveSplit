@@ -41,16 +41,24 @@ class Conv1DBlock(nn.Module):
         depth_conv1d = nn.Conv1d(hid_chan, hid_chan, kernel_size,
                                  padding=padding, dilation=dilation,
                                  groups=hid_chan)
-        self.shared_block = nn.Sequential(in_conv1d, nn.PReLU(),
-                                          conv_norm(hid_chan), depth_conv1d,
-                                          nn.PReLU(), conv_norm(hid_chan))
+        self.shared_depth_block = nn.Sequential(in_conv1d, nn.PReLU(),
+                                          conv_norm(hid_chan), depth_conv1d)
+        self.shared_nl_block = nn.Sequential(nn.PReLU(), conv_norm(hid_chan))
+        self.linear_a = nn.linear(hid_chan,hid_chan) ## Input Dim maybe incorrect
+        self.linear_b = nn.linear(hid_chan,hid_chan) ## Input Dim maybe incorrect
         self.res_conv = nn.Conv1d(hid_chan, in_chan, 1)
         if skip_out_chan:
             self.skip_conv = nn.Conv1d(hid_chan, skip_out_chan, 1)
 
-    def forward(self, x, c):
+    def forward(self, x, centroid = None):
         """ Input shape [batch, feats, seq]"""
-        shared_out = self.shared_block(x)
+        depth_out = self.shared_depth_block(x)
+        ## Unfinish: sent centroid one by one or together
+        if centroid is not None:
+            c = centroid[:,0,:] """ B * N * Dim """
+            depth_out = self.linear_a(c)*depth_out + self.linear_b(c)
+        #################################################
+        shared_out = self.shared_nl_block(depth_out)
         res_out = self.res_conv(shared_out)
         if not self.skip_out_chan:
             return res_out
@@ -132,7 +140,7 @@ class TDConvNet(nn.Module):
         else:
             self.output_act = mask_nl_class()
 
-    def forward(self, mixture_w):
+    def forward(self, mixture_w,centroid=None):
         """
 
         Args:
@@ -148,7 +156,7 @@ class TDConvNet(nn.Module):
         skip_connection = 0.
         for i in range(len(self.TCN)):
             # Common to w. skip and w.o skip architectures
-            tcn_out = self.TCN[i](output)
+            tcn_out = self.TCN[i](output,centroid) ##centroid
             if self.skip_chan:
                 residual, skip = tcn_out
                 skip_connection = skip_connection + skip

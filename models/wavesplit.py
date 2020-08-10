@@ -5,7 +5,7 @@ import numpy as np
 from .. import torch_utils
 from ..filterbanks import make_enc_dec
 from ..masknn import TDConvNet
-from .base_models import BaseTasNet
+#from .base_models import BaseTasNet
 
 class BaseWaveSplit(nn.Module)
     def __init__(self, encoder, decoder, speakerstack, separationstack, speakervectorloss):
@@ -24,7 +24,7 @@ class BaseWaveSplit(nn.Module)
         mask = self.SeparationStack(enc_wave,speaker_centroid)
         masked_wave = mask * enc_wave.unsqueeze(1)
         estimate_wave = torch_utils.pad_x_to_y(self.decoder(masked_wave), wave)
-        return speaker_vector,estimate_wave
+        return estimate_wave
 
 class WaveSplit(BaseWaveSplit):
     """ ConvTasNet separation model, as described in [1].

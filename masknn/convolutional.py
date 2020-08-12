@@ -44,8 +44,8 @@ class Conv1DBlock(nn.Module):
         self.shared_depth_block = nn.Sequential(in_conv1d, nn.PReLU(),
                                           conv_norm(hid_chan), depth_conv1d)
         self.shared_nl_block = nn.Sequential(nn.PReLU(), conv_norm(hid_chan))
-        self.linear_a = nn.linear(hid_chan,hid_chan) ## Input Dim maybe incorrect
-        self.linear_b = nn.linear(hid_chan,hid_chan) ## Input Dim maybe incorrect
+        self.linear_a = nn.Linear(hid_chan,hid_chan) ## Input Dim maybe incorrect
+        self.linear_b = nn.Linear(hid_chan,hid_chan) ## Input Dim maybe incorrect
         self.res_conv = nn.Conv1d(hid_chan, in_chan, 1)
         if skip_out_chan:
             self.skip_conv = nn.Conv1d(hid_chan, skip_out_chan, 1)
@@ -55,8 +55,8 @@ class Conv1DBlock(nn.Module):
         depth_out = self.shared_depth_block(x)
         ## Unfinish: sent centroid one by one or together
         if centroid is not None:
-            c = centroid[:,0,:] """ B * N * Dim """
-            depth_out = self.linear_a(c)*depth_out + self.linear_b(c)
+            c = centroid[:,:] #""" B * Dim """
+            depth_out = self.linear_a(c)[...,None]*depth_out + self.linear_b(c)[...,None]
         #################################################
         shared_out = self.shared_nl_block(depth_out)
         res_out = self.res_conv(shared_out)

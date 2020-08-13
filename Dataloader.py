@@ -1,6 +1,7 @@
 import torch
 from torch.utils import data
 import json
+import pickle
 import os
 import numpy as np
 import soundfile as sf
@@ -68,7 +69,7 @@ class WaveSplitDataset(data.Dataset):
     """
     dataset_name = 'WAVESPLIT'
     
-    def __init__(self, json_dir, task, sample_rate=8000, segment=4.0,
+    def __init__(self, json_dir, task, spk_dict, sample_rate=8000, segment=4.0,
                  nondefault_nsrc=None, normalize_audio=False):
         super(WaveSplitDataset, self).__init__()
         if task not in WAVESPLIT_TASKS.keys():
@@ -131,7 +132,8 @@ class WaveSplitDataset(data.Dataset):
         self.labels = mix_label_infos
         """
         self.labels = None
-
+        f = open(spk_dict,'rb')
+        self.spk_dict = pickle.load(f)
     def __add__(self, wham):
         if self.n_src != wham.n_src:
             raise ValueError('Only datasets having the same number of sources'
@@ -147,7 +149,7 @@ class WaveSplitDataset(data.Dataset):
     def __len__(self):
         return len(self.mix)
 
-    def __getitem__(self, idx, src_dict):
+    def __getitem__(self, idx):
         """ Gets a mixture/sources pair.
         Returns:
             mixture, vstack([source_arrays])
@@ -180,12 +182,12 @@ class WaveSplitDataset(data.Dataset):
         if self.labels is None:
             _labels = np.ones((2,self.seg_len))
         else:
-            lab = np.load(self.labels)
+            lab = np.load(self.labels[idx])
             _labels[0] = lab[0][rand_start:stop]
             _labels[1] = lab[1][rand_start:stop]
         # Transfer to Speaker ID    
-        _labels[0] = _labels[0]*get_speakerID(self.sources[0][0],src_dict)
-        _labels[1] = _labels[1]*get_speakerID(self.sources[1][0],src_dict)
+        _labels[0] = _labels[0]*get_speakerID(self.sources[0][idx][0])
+        _labels[1] = _labels[1]*get_speakerID(self.sources[1][idx][0])
         
         sources = torch.from_numpy(np.vstack(source_arrays))
         mixture = torch.from_numpy(x)
@@ -212,13 +214,13 @@ class WaveSplitDataset(data.Dataset):
         infos['licenses'] = data_license
         return infos
     """
-    def get_speakerID(src_path,src_dict):
+    def get_speakerID(src_path):
         """
         Input: Source
         Output: ID
         """
         key = src_path.split("/")[-1][0:3]
-        return src_dict[key]
+        return self.spk_dict[key]
 
 wham_noise_license = dict(
     title='The WSJ0 Hipster Ambient Mixtures dataset',

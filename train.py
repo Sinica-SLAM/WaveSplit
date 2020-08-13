@@ -25,14 +25,14 @@ def main(conf):
     print("train_task: ",conf['data']['task'])
     print("train_sample_rate: ",conf['data']['sample_rate'])
     print("train_nondefault_nsrc: ",conf['data']['nondefault_nsrc'])
-    # train_set = WaveSplitDataset(conf['data']['train_dir'], conf['data']['task'],
-    #                         sample_rate=conf['data']['sample_rate'],
-    #                         nondefault_nsrc=conf['data']['nondefault_nsrc'])
+
+    train_set = WaveSplitDataset(conf['data']['train_dir'], conf['data']['task'],"si_tr_s_dict.pkl",
+                            sample_rate=conf['data']['sample_rate'],
+                            nondefault_nsrc=conf['data']['nondefault_nsrc'])
+    val_set = WaveSplitDataset(conf['data']['valid_dir'], conf['data']['task'],"si_tr_s_dict.pkl",
+                          sample_rate=conf['data']['sample_rate'],
+                          nondefault_nsrc=conf['data']['nondefault_nsrc'])
     
-    # val_set = WaveSplitDataset(conf['data']['valid_dir'], conf['data']['task'],
-    #                       sample_rate=conf['data']['sample_rate'],
-    #                       nondefault_nsrc=conf['data']['nondefault_nsrc'])
-    """
     train_loader = DataLoader(train_set, shuffle=True,
                               batch_size=conf['training']['batch_size'],
                               num_workers=conf['training']['num_workers'],
@@ -41,10 +41,10 @@ def main(conf):
                             batch_size=conf['training']['batch_size'],
                             num_workers=conf['training']['num_workers'],
                             drop_last=True)
-    """
+    
     # Update number of source values (It depends on the task)
     #conf['masknet'].update({'n_src': train_set.n_src})
-    print(conf['filterbank'])
+    exit()
     model = WaveSplit(2)
     ipdb.set_trace()
 if __name__ == '__main__':
@@ -65,5 +65,5 @@ if __name__ == '__main__':
     # the attributes in an non-hierarchical structure. It can be useful to also
     # have it so we included it here but it is not used.
     arg_dic, plain_args = parse_args_as_dict(parser, return_plain_args=True)
-    pprint(arg_dic)
+    #pprint(arg_dic)
     main(arg_dic)

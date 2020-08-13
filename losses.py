@@ -58,7 +58,7 @@ class SpeakerVectorLoss(nn.Module):
         Dist = -1 * self.alpha * Dist + self.beta
 
         # Method 1
-        return E_S[:,:,:,0] , - Dist_.mean() + F.log_softmax(Dist,dim=1).mean()
+        return E_S[:,:,:,0] , - Dist_.mean() + torch.logsumexp(Dist,dim=1).mean()
 
         # Method 2
         #return self.cross_entropy( Dist, target)

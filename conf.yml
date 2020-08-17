@@ -33,8 +33,8 @@ optim:
   weight_decay: 0.
 # Data config
 data:
-  train_dir: data/wav8k/min/tr/
-  valid_dir: data/wav8k/min/cv/
+  train_dir: /mnt/md0/user_chinyi0523/json_wavesplit/wav8k/min/tr/
+  valid_dir: /mnt/md0/user_chinyi0523/json_wavesplit/wav8k/min/cv/
   task: sep_clean
   nondefault_nsrc:
   sample_rate: 8000

@@ -1,4 +1,5 @@
 import torch
+import ipdb
 from torch.utils import data
 import json
 import pickle
@@ -35,7 +36,22 @@ WAVESPLIT_TASKS = {'enhance_single': enh_single,
 # Aliases.
 WAVESPLIT_TASKS['enh_single'] = WAVESPLIT_TASKS['enhance_single']
 WAVESPLIT_TASKS['enh_both'] = WAVESPLIT_TASKS['enhance_both']
-
+def get_task(task):
+    if task is 'mix_clean':
+        return 0
+    elif task is 'mix_single':
+        return 1
+    elif task is 'mix_both':
+        return 2
+    elif task is 's1':
+        return 3
+    elif task is 's2':
+        return 4
+    elif task is 'noise':
+        return 5
+    else:
+        print("Wrong Task!")
+        exit()
 ###
 def normalize_tensor_wav(wav_tensor, eps=1e-8, std=None):
     mean = wav_tensor.mean(-1, keepdim=True)
@@ -90,9 +106,13 @@ class WaveSplitDataset(data.Dataset):
             self.n_src = nondefault_nsrc
         self.like_test = self.seg_len is None
         # Load json files
+        mix_json = os.path.join(json_dir,'data.json')
+        """
         mix_json = os.path.join(json_dir, self.task_dict['mixture'] + '.json')
         sources_json = [os.path.join(json_dir, source + '.json') for
                         source in self.task_dict['sources']]
+        """
+        
         """
         label part
         mix_label_json = os.path.join(json_dir, self.task_dict['mixture'] + '_label.json')
@@ -100,40 +120,43 @@ class WaveSplitDataset(data.Dataset):
             mix_label_infos = json.load(f)
         """
         with open(mix_json, 'r') as f:
-            mix_infos = json.load(f)
-        sources_infos = []
-        for src_json in sources_json:
-            with open(src_json, 'r') as f:
-                sources_infos.append(json.load(f))
+            mix_infos = json.loads(f.read())
+        
+        #ipdb.set_trace()
+        # sources_infos = []
+        # for src_json in sources_json:
+        #     with open(src_json, 'r') as f:
+        #         sources_infos.append(json.load(f))
         # Filter out short utterances only when segment is specified
         orig_len = len(mix_infos)
         drop_utt, drop_len = 0, 0
         if not self.like_test:
             for i in range(len(mix_infos) - 1, -1, -1):  # Go backward
-                if mix_infos[i][1] < self.seg_len:
+                if mix_infos[i][get_task(self.task_dict['mixture'])]['Sample'] < self.seg_len:
                     drop_utt += 1
-                    drop_len += mix_infos[i][1]
+                    drop_len += mix_infos[i][get_task(self.task_dict['mixture'])]['Sample']
                     del mix_infos[i]
                     """
                     del mix_label_infos[i]
                     """
-                    for src_inf in sources_infos:
-                        del src_inf[i]
+                    # for src_inf in sources_infos:
+                    #     del src_inf[i]
         print("Drop {} utts({:.2f} h) from {} (shorter than {} samples)".format(
             drop_utt, drop_len/sample_rate/36000, orig_len, self.seg_len))
         self.mix = mix_infos
 
 
         # Handle the case n_src > default_nsrc
-        while len(sources_infos) < self.n_src:
-            sources_infos.append([None for _ in range(len(self.mix))])
-        self.sources = sources_infos
+        # while len(sources_infos) < self.n_src:
+        #     sources_infos.append([None for _ in range(len(self.mix))])
+        # self.sources = sources_infos
         """
         self.labels = mix_label_infos
         """
         self.labels = None
         f = open(spk_dict,'rb')
         self.spk_dict = pickle.load(f)
+        ipdb.set_trace()
     def __add__(self, wham):
         if self.n_src != wham.n_src:
             raise ValueError('Only datasets having the same number of sources'
@@ -155,28 +178,36 @@ class WaveSplitDataset(data.Dataset):
             mixture, vstack([source_arrays])
         """
         # Random start
-        if self.mix[idx][1] == self.seg_len or self.like_test:
+        if self.mix[idx][get_task(self.task_dict['mixture'])]['Sample'] == self.seg_len or self.like_test:
             rand_start = 0
         else:
-            rand_start = np.random.randint(0, self.mix[idx][1] - self.seg_len)
+            rand_start = np.random.randint(0, self.mix[idx][get_task(self.task_dict['mixture'])]['Sample'] - self.seg_len)
         if self.like_test:
             stop = None
         else:
             stop = rand_start + self.seg_len
         # Load mixture
-        x, _ = sf.read(self.mix[idx][0], start=rand_start,
+        x, _ = sf.read(self.mix[idx][get_task(self.task_dict['mixture'])]['Src'], start=rand_start,
                        stop=stop, dtype='float32')
         seg_len = torch.as_tensor([len(x)])
         # Load sources
         source_arrays = []
-        for src in self.sources:
-            if src[idx] is None:
+        for SPK in ['s1','s2']:
+            if self.mix[idx][get_task(SPK)] is None:
                 # Target is filled with zeros if n_src > default_nsrc
                 s = np.zeros((seg_len, ))
             else:
-                s, _ = sf.read(src[idx][0], start=rand_start,
-                               stop=stop, dtype='float32')
+                s, _ = sf.read(self.mix[idx][get_task(SPK)]['Src'], start=rand_start,
+                    stop=stop, dtype='float32')
             source_arrays.append(s)
+        # for src in self.sources:
+        #     if src[idx] is None:
+        #         # Target is filled with zeros if n_src > default_nsrc
+        #         s = np.zeros((seg_len, ))
+        #     else:
+        #         s, _ = sf.read(src[idx][0], start=rand_start,
+        #                        stop=stop, dtype='float32')
+        #     source_arrays.append(s)
         # Load labels
         _labels = np.arrays(2,self.seg_len)
         if self.labels is None:

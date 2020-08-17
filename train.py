@@ -14,6 +14,7 @@ from pytorch_lightning.callbacks import ModelCheckpoint, EarlyStopping
 from Dataloader import WaveSplitDataset
 
 from WaveSplit.models.wavesplit import WaveSplit
+from WaveSplit.engine.optimizers import make_optimizer
 parser = argparse.ArgumentParser()
 parser.add_argument('--exp_dir', default='exp/tmp',
                     help='Full path to save best validation model')
@@ -43,9 +44,21 @@ def main(conf):
                             drop_last=True)
     # Update number of source values (It depends on the task)
     #conf['masknet'].update({'n_src': train_set.n_src})
-    exit()
-    model = WaveSplit(2)
-    ipdb.set_trace()
+    model = WaveSplit(n_src=2,**conf['filterbank'], **conf['speakerstack'], **conf['separationstack'])
+    optimizer = make_optimizer(model.parameters(), **conf['optim'])
+
+    # Define scheduler
+    scheduler = None
+    if conf['training']['half_lr']:
+        scheduler = ReduceLROnPlateau(optimizer=optimizer, factor=0.5,
+                                      patience=5)
+    # Just after instantiating, save the args. Easy loading in the future.
+    exp_dir = conf['main_args']['exp_dir']
+    os.makedirs(exp_dir, exist_ok=True)
+    conf_path = os.path.join(exp_dir, 'conf.yml')
+    with open(conf_path, 'w') as outfile:
+        yaml.safe_dump(conf, outfile)
+
 if __name__ == '__main__':
     import yaml
     from pprint import pprint as pprint

@@ -41,7 +41,6 @@ def main(conf):
                             batch_size=conf['training']['batch_size'],
                             num_workers=conf['training']['num_workers'],
                             drop_last=True)
-    ipdb.set_trace()
     # Update number of source values (It depends on the task)
     #conf['masknet'].update({'n_src': train_set.n_src})
     exit()

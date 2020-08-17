@@ -156,7 +156,6 @@ class WaveSplitDataset(data.Dataset):
         self.labels = None
         f = open(spk_dict,'rb')
         self.spk_dict = pickle.load(f)
-        ipdb.set_trace()
     def __add__(self, wham):
         if self.n_src != wham.n_src:
             raise ValueError('Only datasets having the same number of sources'

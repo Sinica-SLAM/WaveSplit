@@ -50,12 +50,13 @@ class WaveSplit(nn.Module):
         self.ReconstructionLoss = nn.MSELoss(reduction='sum') 
         self.Emb_table = nn.Parameter(torch.randn(129,hid_chan_spk)) ##Total Speaker,hid dim
 
-    def foward(self, inputs):
+    def forward(self, inputs):
         if self.training: #training
             mix_wave, clean_wave, spk_label = inputs
             enc_wave = self.Encoder(mix_wave)
             speaker_vector = self.SpeakerStack(enc_wave,None)
-            Speaker_centroids , PITLoss = self.SpeakerVectorLoss(speaker_vector,spk_label,self.Emb_table)
+            spk_label_resample = fix_target_size(spk_label, speaker_vector.size(-1), dim=-1)
+            Speaker_centroids , PITLoss = self.SpeakerVectorLoss(speaker_vector,spk_label_resample,self.Emb_table)
             RecLoss = 0
             masked_wave = list()
             for n in range(2):
@@ -63,10 +64,13 @@ class WaveSplit(nn.Module):
                 mask = self.SeparationStack(enc_wave, speaker_centroid)
                 masked_wave.append(mask * enc_wave.unsqueeze(1))
             masked_wave = torch.cat(masked_wave,dim=1)
-            estimate_wave = torch_utils.pad_x_to_y(self.decoder(masked_wave), clean_wave)
+            estimate_wave = torch_utils.pad_x_to_y(self.Decoder(masked_wave), clean_wave)
             RecLoss = self.ReconstructionLoss(estimate_wave,clean_wave)
             loss = PITLoss + RecLoss
-            return loss, PITLoss, RecLoss / 2
+            loss_dict = dict()
+            loss_dict["PITLoss"] = PITLoss
+            loss_dict["RecLoss"] = RecLoss / 2
+            return loss, loss_dict
 
         else: #val
             if isinstance(inputs, torch.Tensor):
@@ -91,24 +95,34 @@ class WaveSplit(nn.Module):
                     k_means( samples, speaker_vector.shape[1])[0] 
                     for samples in speaker_vector_trans
                 ])
-            Speaker_centroids = torch.from_numpy(Speaker_centroids, type=torch.float, device=speaker_vector.device)
+            Speaker_centroids = torch.from_numpy(Speaker_centroids).float().to(speaker_vector.device)
             RecLoss = 0
             masked_wave = list()
             for n in range(2):
                 speaker_centroid = Speaker_centroids[:,n,:] #B*N*D
                 mask = self.SeparationStack(enc_wave, speaker_centroid)
                 masked_wave.append(mask * enc_wave.unsqueeze(1))
-            masked_wave = torch.cat(masked_wave,dim=1)
+            masked_wave = torch.cat(masked_wave,dim=1)              
             if isinstance(inputs, torch.Tensor) or len(inputs) is 1:
                 return decoder(masked_wave)
             else:
-                estimate_wave = torch_utils.pad_x_to_y(self.decoder(masked_wave), clean_wave)
+                estimate_wave = torch_utils.pad_x_to_y(self.Decoder(masked_wave), clean_wave)
                 RecLoss = self.ReconstructionLoss(estimate_wave,clean_wave)
                 return estimate_wave, RecLoss / 2
             
 
-
-
+def fix_target_size(target, target_length, dim=-1):
+    assert dim == -1
+    target_resample = target[...,:1].repeat(1,1,target_length)
+    target_resample = target[...,::80]
+    if target_resample.size(-1) >= target_length:
+        target_resample = target_resample[...,:target_length]
+    else:
+        target_resample = torch.cat([
+            target_resample,
+            target_resample[...,:1].repeat(1,1,target_length-target_resample.size(-1))
+        ],dim=-1)
+    return target_resample
 
 
     """ ConvTasNet separation model, as described in [1].

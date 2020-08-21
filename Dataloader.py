@@ -85,7 +85,7 @@ class WaveSplitDataset(data.Dataset):
     """
     dataset_name = 'WAVESPLIT'
     
-    def __init__(self, json_dir, task, spk_dict, sample_rate=8000, segment=4.0,
+    def __init__(self, json_dir, task, spk_dict, sample_rate=8000, segment=2.0,
                  nondefault_nsrc=None, normalize_audio=False):
         super(WaveSplitDataset, self).__init__()
         if task not in WAVESPLIT_TASKS.keys():
@@ -208,20 +208,21 @@ class WaveSplitDataset(data.Dataset):
         #                        stop=stop, dtype='float32')
         #     source_arrays.append(s)
         # Load labels
-        _labels = np.arrays(2,self.seg_len)
+        _labels = np.zeros((2,self.seg_len))
         if self.labels is None:
             _labels = np.ones((2,self.seg_len))
         else:
             lab = np.load(self.labels[idx])
             _labels[0] = lab[0][rand_start:stop]
             _labels[1] = lab[1][rand_start:stop]
-        # Transfer to Speaker ID    
-        _labels[0] = _labels[0]*get_speakerID(self.sources[0][idx][0])
-        _labels[1] = _labels[1]*get_speakerID(self.sources[1][idx][0])
+        # Transfer to Speaker ID
         
-        sources = torch.from_numpy(np.vstack(source_arrays))
-        mixture = torch.from_numpy(x)
-        labels =  torch.from_numpy(_labels)
+        _labels[0] = _labels[0]*self.spk_dict[self.mix[idx][3]['spkID']]
+        _labels[1] = _labels[1]*self.spk_dict[self.mix[idx][4]['spkID']]
+        
+        sources = torch.from_numpy(np.vstack(source_arrays)).float()
+        mixture = torch.from_numpy(x).float()
+        labels =  torch.from_numpy(_labels).long()
         if self.normalize_audio:
             m_std = mixture.std(-1, keepdim=True)
             mixture = normalize_tensor_wav(mixture, eps=EPS, std=m_std)

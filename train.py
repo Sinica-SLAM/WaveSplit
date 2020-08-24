@@ -9,7 +9,7 @@ from importlib import import_module
 
 import torch
 from torch.utils.data import DataLoader
-from Dataloader import WaveSplitDataset
+from data_loader import WaveSplitDataset
 from WaveSplit.models.wavesplit import WaveSplit
 
 

@@ -7,9 +7,6 @@ import numpy as np
 from pathlib import Path
 from importlib import import_module
 
-import ipdb
-import numpy as npc
-
 import torch
 from torch.utils.data import DataLoader
 from Dataloader import WaveSplitDataset
@@ -81,6 +78,13 @@ class Trainer(object):
         _, rec_loss = self.model(inputs)
 
         return rec_loss
+    
+    def save_checkpoint(self, checkpoint_path):
+        torch.save( {
+                'model': self.model.state_dict(),
+                'optimizer': self.optimizer.state_dict(),
+            }, checkpoint_path)
+        print("Saved state dict. to {}".format(checkpoint_path))
 
         
 
@@ -145,26 +149,42 @@ def train(train_config):
 
     loss_log = dict()
     epoch = 0
-    print(len(train_loader))
-    print(train_config['batch_size'])
-    print(len(val_loader))
-    
-    for i, batch in enumerate(train_loader):
-        loss_detail = trainer.step(batch,None)
-        print("Finish: {x} %".format(x="%02f" %(float(100*(i+1))/float(len(train_loader)))),end='\r')
-            #print("Finish {x}".format(x=i))
-    
-            #iteration, loss_detail = trainer.step(batch, iteration=iteration)
-            
+    loss_epoch = list()
+    loss_valid_epoch = list()
+    for epoch in range(200):
+        loss_log = dict()
+        for i, batch in enumerate(train_loader):
+            loss_detail = trainer.step(batch,None)  
             # Keep Loss detail
-            # for key,val in loss_detail.items():
-            #     if key not in loss_log.keys():
-            #         loss_log[key] = list()
-            #     loss_log[key].append(val)
-    # for i, batch in enumerate(val_loader):
-    #     loss_detail = trainer.validator(batch)
-    #     print("Finish: {x} %".format(x="%02f" %(float(100*(i+1))/float(len(val_loader)))),end='\r')
-    print()
+            for key,val in loss_detail.items():
+                if key not in loss_log.keys():
+                    loss_log[key] = list()
+                loss_log[key].append(val)
+            if i % 100 is 0 and i>0:
+                PITL = (sum(loss_log["PITLoss"])/len(loss_log["PITLoss"])/16).detach().cpu().numpy()
+                RecL = (sum(loss_log["RecLoss"])/len(loss_log["RecLoss"])/16).detach().cpu().numpy()
+                print("Batch {x}/{y}: PITLoss: {PIT}, RECLoss: {Rec}".format(x=i,y=len(train_loader),PIT="%01f" %PITL,Rec="%01f" %RecL),end='\r')
+        Epoch_PITLoss = (sum(loss_log["PITLoss"])/len(loss_log["PITLoss"])/16).detach().cpu().numpy()
+        Epoch_RecLoss = (sum(loss_log["RecLoss"])/len(loss_log["RecLoss"])/16).detach().cpu().numpy()
+        print("Epoch {x}/{y}: PITLoss: {PIT}, RECLoss: {Rec}".format(x=epoch+1,y=200,PIT="%01f" %Epoch_PITLoss,Rec="%01f" %Epoch_RecLoss),end='\n')
+        loss_epoch.append([Epoch_PITLoss,Epoch_RecLoss])
+        val_loss = list()
+        for i, batch in enumerate(val_loader):
+            loss_detail = trainer.validator(batch)
+            val_loss.append(loss_detail.detach().cpu().numpy())
+            print("Calculating Validation Loss: {x} %".format(x="%02f" %(float(100*(i+1))/float(len(val_loader)))),end='\r')
+            #print((sum(val_loss)/len(val_loss)/16))
+        Valid_RecLoss = (sum(val_loss)/len(val_loss)/16)
+        print("Epoch {x}/{y}: Valid RECLoss: {Rec}".format(x=epoch+1,y=200,Rec="%01f" %Valid_RecLoss),end='\n')
+        if(min(loss_valid_epoch)>=Valid_RecLoss):
+            checkpoint_path =  output_directory / "best.pth"
+            trainer.save_checkpoint(checkpoint_path)
+        loss_valid_epoch.append(Valid_RecLoss)
+        if (epoch+1)%10 is 0:
+            checkpoint_path =  output_directory / "{}_{}.pth".format(time.strftime("%m-%d_%H-%M", time.localtime()),epoch+1)
+            trainer.save_checkpoint(checkpoint_path)
+    print("Finished")
+
 if __name__ == "__main__":
     import argparse
     import json

@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-import ipdb
+
 
 class SpeakerVectorLoss(nn.Module):
     def __init__(self, alpha=10.0, beta=5.0, distance='l2'):
@@ -32,7 +32,7 @@ class SpeakerVectorLoss(nn.Module):
         E_S = F.embedding(S,E).transpose(2,3)   # size of (Batch x N x Dim x Time)
         H_ = H[:,None,:]                        # size of (Batch x 1 x N x Dim x Time)
         E_S_ = E_S[:,:,None]                    # size of (Batch x N x 1 x Dim x Time)
-        #ipdb.set_trace()
+        
         Dist_ = ( H_ - E_S_).pow(2).sum(dim=3)  # size of (Batch x Nh x Ne x Time)
 
         Dist__ = []

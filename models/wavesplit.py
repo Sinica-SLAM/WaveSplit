@@ -1,14 +1,15 @@
-import torch
+from ..filterbanks import make_enc_dec
+from ..losses import SpeakerVectorLoss
+from ..utils import torch_utils
+from ..masknn import TDConvNet
+
+from sklearn.cluster import k_means
 from torch import nn
+
 import torch.nn.functional as F
 import numpy as np
-from sklearn.cluster import k_means
-from ..utils import torch_utils
-from ..filterbanks import make_enc_dec
-from ..masknn import TDConvNet
-from ..losses import SpeakerVectorLoss
-#from .base_models import BaseTasNet
-import ipdb
+import torch
+
 class WaveSplit(nn.Module):
     def __init__(self, n_src, out_chan=None, 
                  n_blocks_spk=14, n_repeats_spk=1, bn_chan_spk=128, hid_chan_spk=512, skip_chan_spk=128, 
@@ -53,6 +54,7 @@ class WaveSplit(nn.Module):
     def forward(self, inputs):
         if self.training: #training
             mix_wave, clean_wave, spk_label = inputs
+            mix_wave = mix_wave.unsqueeze(1)
             enc_wave = self.Encoder(mix_wave)
             speaker_vector = self.SpeakerStack(enc_wave,None)
             spk_label_resample = fix_target_size(spk_label, speaker_vector.size(-1), dim=-1)
@@ -86,16 +88,17 @@ class WaveSplit(nn.Module):
                 exit()
 
             Batch = mix_wave.shape[0]
+            mix_wave = mix_wave.unsqueeze(1)
             enc_wave = self.Encoder(mix_wave)
             speaker_vector = self.SpeakerStack(enc_wave,None)
-            
             speaker_vector_trans = speaker_vector.transpose(2,3).contiguous() # B*N*D*T to B*N*T*D
-            speaker_vector_trans = speaker_vector_trans.view(Batch,-1,speaker_vector.shape[3]).cpu().detach().numpy() #B*NT*D
+            speaker_vector_trans = speaker_vector_trans.view(Batch,-1,speaker_vector.shape[2]).cpu().detach().numpy() #B*NT*D
             Speaker_centroids = np.array([
                     k_means( samples, speaker_vector.shape[1])[0] 
                     for samples in speaker_vector_trans
                 ])
             Speaker_centroids = torch.from_numpy(Speaker_centroids).float().to(speaker_vector.device)
+            
             RecLoss = 0
             masked_wave = list()
             for n in range(2):

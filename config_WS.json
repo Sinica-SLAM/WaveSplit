@@ -1,0 +1,55 @@
+{
+    "train_config": {
+        "output_directory": "checkpoints_WaveSplit",
+        "trainer_type": "basic",
+        "epoch": 400,
+        "optimize_param": {
+            "optim_type": "RAdam",
+            "learning_rate": 1e-3,
+            "max_grad_norm": 10,
+            "lr_scheduler":{
+                "step_size": 100000,
+                "gamma": 0.5,
+                "last_epoch": -1
+            }
+        },
+        "batch_size": 16,
+        "epochs_per_checkpoint": 5, 
+        "epochs_per_log": 1,
+        "seed": 1234,
+        "checkpoint_path": "",
+        "num_workers": 4,
+        "half_lr": "yes",
+        "early_stop": "yes"
+    },
+    "filterbank": {
+        "n_filters": 256,
+        "kernel_size": 160,
+        "stride": 80,
+        "padding": 80 
+    },
+    "speakerstack": {
+        "n_blocks_spk": 10,
+        "n_repeats_spk": 1,
+        "mask_act_spk": "relu",
+        "bn_chan_spk": 128,
+        "skip_chan_spk": 128,
+        "hid_chan_spk": 256
+    },
+    "separationstack": {
+        "n_blocks_sep": 10,
+        "n_repeats_sep": 3,
+        "mask_act_sep": "relu",
+        "bn_chan_sep": 128,
+        "skip_chan_sep": 128,
+        "hid_chan_sep": 256
+    },
+    "data": {
+        "train_dir": "/mnt/md0/user_chinyi0523/json_wavesplit/wav8k/min/tr/",
+        "valid_dir": "/mnt/md0/user_chinyi0523/json_wavesplit/wav8k/min/cv/",
+        "task": "sep_clean",
+        "nondefault_nsrc":"",
+        "sample_rate": 8000,
+        "mode": "min"   
+    } 
+}

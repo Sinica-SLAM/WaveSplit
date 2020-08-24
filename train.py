@@ -176,10 +176,11 @@ def train(train_config):
             #print((sum(val_loss)/len(val_loss)/16))
         Valid_RecLoss = (sum(val_loss)/len(val_loss)/16)
         print("Epoch {x}/{y}: Valid RECLoss: {Rec}".format(x=epoch+1,y=200,Rec="%01f" %Valid_RecLoss),end='\n')
-        if(min(loss_valid_epoch)>=Valid_RecLoss):
+        loss_valid_epoch.append(Valid_RecLoss)
+        if(min(loss_valid_epoch)>Valid_RecLoss):
             checkpoint_path =  output_directory / "best.pth"
             trainer.save_checkpoint(checkpoint_path)
-        loss_valid_epoch.append(Valid_RecLoss)
+        
         if (epoch+1)%10 is 0:
             checkpoint_path =  output_directory / "{}_{}.pth".format(time.strftime("%m-%d_%H-%M", time.localtime()),epoch+1)
             trainer.save_checkpoint(checkpoint_path)

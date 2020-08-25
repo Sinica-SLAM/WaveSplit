@@ -9,7 +9,7 @@ from torch import nn
 import torch.nn.functional as F
 import numpy as np
 import torch
-
+import ipdb
 class WaveSplit(nn.Module):
     def __init__(self, n_src, out_chan=None, 
                  n_blocks_spk=14, n_repeats_spk=1, bn_chan_spk=128, hid_chan_spk=512, skip_chan_spk=128, 
@@ -48,7 +48,7 @@ class WaveSplit(nn.Module):
         self.SpeakerStack = speakerstack
         self.SeparationStack = separationstack
         self.SpeakerVectorLoss = speakervectorloss
-        self.ReconstructionLoss = nn.MSELoss(reduction='sum') 
+        self.ReconstructionLoss = nn.MSELoss(reduction='none') 
         self.Emb_table = nn.Parameter(torch.randn(129,hid_chan_spk)) ##Total Speaker,hid dim
 
     def forward(self, inputs):
@@ -67,7 +67,7 @@ class WaveSplit(nn.Module):
                 masked_wave.append(mask * enc_wave.unsqueeze(1))
             masked_wave = torch.cat(masked_wave,dim=1)
             estimate_wave = torch_utils.pad_x_to_y(self.Decoder(masked_wave), clean_wave)
-            RecLoss = self.ReconstructionLoss(estimate_wave,clean_wave)
+            RecLoss = self.ReconstructionLoss(estimate_wave,clean_wave).sum()
             loss = PITLoss + RecLoss
             loss_dict = dict()
             loss_dict["PITLoss"] = PITLoss
@@ -107,11 +107,15 @@ class WaveSplit(nn.Module):
                 masked_wave.append(mask * enc_wave.unsqueeze(1))
             masked_wave = torch.cat(masked_wave,dim=1)              
             if isinstance(inputs, torch.Tensor) or len(inputs) is 1:
-                return decoder(masked_wave)
+                return self.Decoder(masked_wave)
             else:
                 estimate_wave = torch_utils.pad_x_to_y(self.Decoder(masked_wave), clean_wave)
-                RecLoss = self.ReconstructionLoss(estimate_wave,clean_wave)
-                return estimate_wave, RecLoss / 2
+                RecLoss = self.ReconstructionLoss(estimate_wave,clean_wave).sum(dim=-1).sum(dim=-1,keepdim=True)
+                clean_wave_swap = clean_wave
+                clean_wave_swap[:,[0, 1],:] = clean_wave_swap[:,[1, 0],:]
+                RecLoss_swap = self.ReconstructionLoss(estimate_wave,clean_wave_swap).sum(dim=-1).sum(dim=-1,keepdim=True)
+                RecLoss = torch.cat([RecLoss,RecLoss_swap],dim=1)
+                return estimate_wave, torch.min(RecLoss,dim=1)[0].sum() / 2
             
 
 def fix_target_size(target, target_length, dim=-1):

@@ -85,7 +85,7 @@ class WaveSplitDataset(data.Dataset):
     """
     dataset_name = 'WAVESPLIT'
     
-    def __init__(self, json_dir, task, spk_dict, sample_rate=8000, segment=2.0,
+    def __init__(self, json_dir, task, spk_dict, sample_rate=8000, segment=4.0,
                  nondefault_nsrc=None, normalize_audio=False):
         super(WaveSplitDataset, self).__init__()
         if task not in WAVESPLIT_TASKS.keys():
@@ -186,7 +186,7 @@ class WaveSplitDataset(data.Dataset):
         else:
             stop = rand_start + self.seg_len
         # Load mixture
-        x, _ = sf.read(self.mix[idx][get_task(self.task_dict['mixture'])]['Src'], start=rand_start,
+        x, _ = sf.read('../'+ self.mix[idx][get_task(self.task_dict['mixture'])]['Src'], start=rand_start,
                        stop=stop, dtype='float32')
         seg_len = torch.as_tensor([len(x)])
         # Load sources
@@ -196,7 +196,7 @@ class WaveSplitDataset(data.Dataset):
                 # Target is filled with zeros if n_src > default_nsrc
                 s = np.zeros((seg_len, ))
             else:
-                s, _ = sf.read(self.mix[idx][get_task(SPK)]['Src'], start=rand_start,
+                s, _ = sf.read('../'+ self.mix[idx][get_task(SPK)]['Src'], start=rand_start,
                     stop=stop, dtype='float32')
             source_arrays.append(s)
         # for src in self.sources:

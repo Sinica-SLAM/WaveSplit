@@ -36,7 +36,8 @@ def create_wham(wsj_root, wham_noise_path, output_root, json_root, wsjmix_16k_ro
         scaling_npz = np.load(scaling_npz_path, allow_pickle=True)
 
         noise_path = os.path.join(wham_noise_path, splt)
-        for sr_dir in ['16k', '8k']:
+        #for sr_dir in ['16k', '8k']:
+        for sr_dir in ['8k']:
             wav_dir = 'wav' + sr_dir
             if sr_dir == '8k':
                 sr = 8000

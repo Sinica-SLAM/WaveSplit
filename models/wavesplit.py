@@ -1,8 +1,8 @@
 from ..filterbanks import make_enc_dec
-from ..losses import SpeakerVectorLoss
+from ..losses import SpeakerVectorLoss,SingleSrcNegSDR,RegularizationLoss,pairwise_neg_sisdr
 from ..utils import torch_utils
 from ..masknn import TDConvNet
-
+from ..pit_wrapper import PITLossWrapper
 from sklearn.cluster import k_means
 from torch import nn
 
@@ -42,36 +42,71 @@ class WaveSplit(nn.Module):
             norm_type=norm_type, mask_act=mask_act_sep
         )
         speakervectorloss = SpeakerVectorLoss()
-        
+        regularizationloss = RegularizationLoss()
         self.Encoder = encoder
         self.Decoder = decoder
         self.SpeakerStack = speakerstack
         self.SeparationStack = separationstack
         self.SpeakerVectorLoss = speakervectorloss
-        self.ReconstructionLoss = nn.MSELoss(reduction='none') 
+        self.ReconstructionLoss = nn.MSELoss(reduction='none')
+        self.SISNRLoss = SingleSrcNegSDR("sisdr",zero_mean=False) 
+        self.RegularizationLoss = regularizationloss
         self.Emb_table = nn.Parameter(torch.randn(129,hid_chan_spk)) ##Total Speaker,hid dim
+        self.Emb_dim = hid_chan_spk
 
-    def forward(self, inputs):
+    def normalize(self,speaker_vector):
+        # speaker_vector = torch.cat(
+        #     [
+        #         F.normalize(speaker_vector,dim=1)
+        #         for vector in speaker_vector.split(self.Emb_dim, dim=1)
+        #     ],
+        #     dim=1
+        # )
+        speaker_vector = F.normalize(speaker_vector,dim=2)
+        return speaker_vector
+
+    def forward(self, inputs, epoch=None, max_epoch=None):
         if self.training: #training
             mix_wave, clean_wave, spk_label = inputs
             mix_wave = mix_wave.unsqueeze(1)
             enc_wave = self.Encoder(mix_wave)
-            speaker_vector = self.SpeakerStack(enc_wave,None)
+            speaker_vector = self.SpeakerStack(enc_wave,None)[0]
+            ###
+            speaker_vector = self.normalize(speaker_vector)
+            with torch.no_grad():
+                self.Emb_table.data = F.normalize(self.Emb_table.data,dim=1)
+
+            Emb_table = F.normalize(self.Emb_table,dim=1)
+            ###
             spk_label_resample = fix_target_size(spk_label, speaker_vector.size(-1), dim=-1)
-            Speaker_centroids , PITLoss = self.SpeakerVectorLoss(speaker_vector,spk_label_resample,self.Emb_table)
+            Speaker_centroids , PITLoss = self.SpeakerVectorLoss(speaker_vector,spk_label_resample,Emb_table)
             RecLoss = 0
             masked_wave = list()
             for n in range(2):
                 speaker_centroid = Speaker_centroids[:,n,:] #B*N*D
-                mask = self.SeparationStack(enc_wave, speaker_centroid)
+                mask = self.SeparationStack(enc_wave, speaker_centroid)[1]
                 masked_wave.append(mask * enc_wave.unsqueeze(1))
             masked_wave = torch.cat(masked_wave,dim=1)
             estimate_wave = torch_utils.pad_x_to_y(self.Decoder(masked_wave), clean_wave)
-            RecLoss = self.ReconstructionLoss(estimate_wave,clean_wave).sum()
-            loss = PITLoss + RecLoss
+            SISNR = self.SISNRLoss(estimate_wave,clean_wave).mean()
+            #RecLoss = self.ReconstructionLoss(estimate_wave,clean_wave).sum()
+            with torch.no_grad():
+                mix_wave = torch.cat([mix_wave,mix_wave],dim=1)
+                SISNR_O = self.SISNRLoss(mix_wave,clean_wave).mean()
+            RegLoss = self.RegularizationLoss(Emb_table)
+
+            if 2*epoch >= max_epoch:
+                param_PIT = 10
+            else:
+                param_PIT = 1+(9*2*epoch/max_epoch)
+            loss = param_PIT*PITLoss + SISNR + 0.3*RegLoss
             loss_dict = dict()
-            loss_dict["PITLoss"] = PITLoss
-            loss_dict["RecLoss"] = RecLoss / 2
+            loss_dict["PITLoss"] = PITLoss.detach().cpu().numpy()
+            loss_dict["RecLoss"] = SISNR.detach().cpu().numpy()
+            loss_dict["RegLoss"] = RegLoss.detach().cpu().numpy()
+            loss_dict["OriLoss"] = SISNR_O.detach().cpu().numpy()
+            
+            
             return loss, loss_dict
 
         else: #val
@@ -90,7 +125,8 @@ class WaveSplit(nn.Module):
             Batch = mix_wave.shape[0]
             mix_wave = mix_wave.unsqueeze(1)
             enc_wave = self.Encoder(mix_wave)
-            speaker_vector = self.SpeakerStack(enc_wave,None)
+            speaker_vector = self.SpeakerStack(enc_wave,None)[0]
+            speaker_vector = self.normalize(speaker_vector)
             speaker_vector_trans = speaker_vector.transpose(2,3).contiguous() # B*N*D*T to B*N*T*D
             speaker_vector_trans = speaker_vector_trans.view(Batch,-1,speaker_vector.shape[2]).cpu().detach().numpy() #B*NT*D
             Speaker_centroids = np.array([
@@ -98,24 +134,41 @@ class WaveSplit(nn.Module):
                     for samples in speaker_vector_trans
                 ])
             Speaker_centroids = torch.from_numpy(Speaker_centroids).float().to(speaker_vector.device)
-            
+            Speaker_centroids = F.normalize(Speaker_centroids,dim=2)
             RecLoss = 0
             masked_wave = list()
             for n in range(2):
                 speaker_centroid = Speaker_centroids[:,n,:] #B*N*D
-                mask = self.SeparationStack(enc_wave, speaker_centroid)
+                mask = self.SeparationStack(enc_wave, speaker_centroid)[1]
                 masked_wave.append(mask * enc_wave.unsqueeze(1))
             masked_wave = torch.cat(masked_wave,dim=1)              
             if isinstance(inputs, torch.Tensor) or len(inputs) is 1:
                 return self.Decoder(masked_wave)
             else:
+                mix_wave = torch_utils.pad_x_to_y(mix_wave, clean_wave)
+                #SISNRB = self.SISNRLoss(mix_wave.repeat(1,2,1),clean_wave).sum(dim=-1)
                 estimate_wave = torch_utils.pad_x_to_y(self.Decoder(masked_wave), clean_wave)
-                RecLoss = self.ReconstructionLoss(estimate_wave,clean_wave).sum(dim=-1).sum(dim=-1,keepdim=True)
-                clean_wave_swap = clean_wave
-                clean_wave_swap[:,[0, 1],:] = clean_wave_swap[:,[1, 0],:]
-                RecLoss_swap = self.ReconstructionLoss(estimate_wave,clean_wave_swap).sum(dim=-1).sum(dim=-1,keepdim=True)
-                RecLoss = torch.cat([RecLoss,RecLoss_swap],dim=1)
-                return estimate_wave, torch.min(RecLoss,dim=1)[0].sum() / 2
+                mix_wave = torch.cat([mix_wave,mix_wave],dim=1)
+                
+                # RecLoss = self.ReconstructionLoss(estimate_wave,clean_wave).sum(dim=-1).sum(dim=-1,keepdim=True)
+                SISNR = self.SISNRLoss(estimate_wave,clean_wave).mean(dim=-1,keepdim=True)
+                
+                # RecLoss_swap = self.ReconstructionLoss(estimate_wave,clean_wave_swap).sum(dim=-1).sum(dim=-1,keepdim=True)
+                clean_wave_swap = torch.cat([clean_wave[:,1:],clean_wave[:,:1]],dim=1)
+                SISNRS = self.SISNRLoss(estimate_wave,clean_wave_swap).mean(dim=-1,keepdim=True)
+
+                SISNR_O = self.SISNRLoss(mix_wave,clean_wave).mean(dim=-1,keepdim=True).mean()
+                
+                # RecLoss = torch.cat([RecLoss,RecLoss_swap],dim=1)
+                loss_val_single = torch.min(torch.cat([SISNR,SISNRS],dim=-1),dim=-1)[0].mean()
+
+                loss_func = PITLossWrapper(pairwise_neg_sisdr, pit_from='pw_mtx')
+                loss_val = loss_func(estimate_wave, clean_wave)
+                #print(loss_val)
+                #print(-min(SISNR-SISNRB,SISNRS-SISNRB))
+                #exit()
+                return estimate_wave, loss_val_single, SISNR_O
+                #return estimate_wave, torch.min(RecLoss,dim=1)[0].sum() / 2, -min(SISNR-SISNRB,SISNRS-SISNRB)
             
 
 def fix_target_size(target, target_length, dim=-1):

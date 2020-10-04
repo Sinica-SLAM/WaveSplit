@@ -6,7 +6,7 @@ import logging
 import numpy as np
 from pathlib import Path
 from importlib import import_module
-
+import statistics
 import torch
 from torch.utils.data import DataLoader
 from data_loader import WaveSplitDataset
@@ -54,14 +54,15 @@ class Trainer(object):
         else:
             self.scheduler = None
     
-    def step(self, input, iteration=None):
+    def step(self, input, epoch=None, max_epoch=None):
         self.model.train()
         self.model.zero_grad()
 
         inputs = [x.cuda() for x in input]
-        loss, loss_detail = self.model(inputs)
-
+        loss, loss_detail = self.model(inputs,epoch,max_epoch)
+        
         loss.backward()
+        
         if self.opt_param['max_grad_norm'] > 0:
             torch.nn.utils.clip_grad_norm_(
                 self.model.parameters(),
@@ -75,9 +76,9 @@ class Trainer(object):
     def validator(self, input):
         self.model.eval()
         inputs = [x.cuda() for x in input]
-        _, rec_loss = self.model(inputs)
-
-        return rec_loss
+        with torch.no_grad():
+            _, rec_loss, ori_loss = self.model(inputs)
+        return rec_loss, ori_loss
     
     def save_checkpoint(self, checkpoint_path):
         torch.save( {
@@ -151,33 +152,41 @@ def train(train_config):
     epoch = 0
     loss_epoch = list()
     loss_valid_epoch = list()
-    for epoch in range(200):
+    for epoch in range(max_epoch):
         loss_log = dict()
         for i, batch in enumerate(train_loader):
-            loss_detail = trainer.step(batch,None)  
+            loss_detail = trainer.step(batch,epoch+1,max_epoch)  
             # Keep Loss detail
             for key,val in loss_detail.items():
                 if key not in loss_log.keys():
                     loss_log[key] = list()
                 loss_log[key].append(val)
-            if i % 100 is 0 and i>0:
-                PITL = (sum(loss_log["PITLoss"])/len(loss_log["PITLoss"])/16).detach().cpu().numpy()
-                RecL = (sum(loss_log["RecLoss"])/len(loss_log["RecLoss"])/16).detach().cpu().numpy()
-                print("Batch {x}/{y}: PITLoss: {PIT}, RECLoss: {Rec}".format(x=i,y=len(train_loader),PIT="%01f" %PITL,Rec="%01f" %RecL),end='\r')
-        Epoch_PITLoss = (sum(loss_log["PITLoss"])/len(loss_log["PITLoss"])/16).detach().cpu().numpy()
-        Epoch_RecLoss = (sum(loss_log["RecLoss"])/len(loss_log["RecLoss"])/16).detach().cpu().numpy()
-        print("Epoch {x}/{y}: PITLoss: {PIT}, RECLoss: {Rec}".format(x=epoch+1,y=200,PIT="%01f" %Epoch_PITLoss,Rec="%01f" %Epoch_RecLoss),end='\n')
-        loss_epoch.append([Epoch_PITLoss,Epoch_RecLoss])
+            if i % 500 is 0 and i>0:
+                PITL = (sum(loss_log["PITLoss"])/len(loss_log["PITLoss"]))
+                RecL = (sum(loss_log["RecLoss"])/len(loss_log["RecLoss"]))
+                RegL = (sum(loss_log["RegLoss"])/len(loss_log["RegLoss"]))
+                print("Batch {x}/{y}: PITLoss: {PIT}, RECLoss: {Rec}, RegLoss: {Reg}".format(x=i,y=len(train_loader),PIT="%01f" %PITL,Rec="%01f" %RecL,Reg="%01f" %RegL),end='\r')
+                
+        Epoch_PITLoss = (sum(loss_log["PITLoss"])/len(loss_log["PITLoss"]))
+        Epoch_RecLoss = (sum(loss_log["RecLoss"])/len(loss_log["RecLoss"]))
+        Epoch_RegLoss = (sum(loss_log["RegLoss"])/len(loss_log["RegLoss"]))
+        Epoch_RecLoss_STD = np.std(np.array(loss_log["RecLoss"]))
+
+        print("Epoch {x}/{y}: PITLoss: {PIT}, RECLoss: {Rec} with std: {STD}, RegLoss: {Reg}".format(x=epoch+1,y=400,PIT="%01f" %Epoch_PITLoss,Rec="%01f" %Epoch_RecLoss,STD="%01f" %Epoch_RecLoss_STD,Reg="%01f" %Epoch_RegLoss),end='\n')
+        
+        loss_epoch.append([Epoch_PITLoss,Epoch_RecLoss,Epoch_RegLoss,Epoch_RecLoss_STD])
         val_loss = list()
         for i, batch in enumerate(val_loader):
-            loss_detail = trainer.validator(batch)
+            loss_detail, ori_loss = trainer.validator(batch)
             val_loss.append(loss_detail.detach().cpu().numpy())
-            print("Calculating Validation Loss: {x} %".format(x="%02f" %(float(100*(i+1))/float(len(val_loader)))),end='\r')
+            #print("Calculating Validation Loss: {x} %".format(x="%02f" %(float(100*(i+1))/float(len(val_loader)))),end='\r')
             #print((sum(val_loss)/len(val_loss)/16))
-        Valid_RecLoss = (sum(val_loss)/len(val_loss)/16)
-        print("Epoch {x}/{y}: Valid RECLoss: {Rec}".format(x=epoch+1,y=200,Rec="%01f" %Valid_RecLoss),end='\n')
+        Valid_RecLoss = (sum(val_loss)/len(val_loss))
+        Valid_RecLoss_STD = np.std(np.array(val_loss))
+
+        print("Epoch {x}/{y}: Valid RECLoss: {Rec} with std: {STD}".format(x=epoch+1,y=400,Rec="%01f" %Valid_RecLoss,STD="%01f" %Valid_RecLoss_STD),end='\n')
         loss_valid_epoch.append(Valid_RecLoss)
-        if(min(loss_valid_epoch)>Valid_RecLoss):
+        if(min(loss_valid_epoch)>=Valid_RecLoss):
             checkpoint_path =  output_directory / "best.pth"
             trainer.save_checkpoint(checkpoint_path)
         
@@ -200,7 +209,7 @@ if __name__ == "__main__":
     parser.add_argument('-T', '--training_dir', type=str, default=None,
                         help='Traininig dictionary path')
 
-    parser.add_argument('-g', '--gpu', type=str, default='0',
+    parser.add_argument('-g', '--gpu', type=str, default='7',
                         help='Using gpu #')
     args = parser.parse_args()
 

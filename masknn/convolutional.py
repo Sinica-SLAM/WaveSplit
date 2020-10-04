@@ -168,7 +168,7 @@ class TDConvNet(nn.Module):
         score = self.mask_net(mask_inp)
         score = score.view(batch, self.n_src, self.out_chan, n_frames)
         est_mask = self.output_act(score)
-        return est_mask
+        return score,est_mask
 
     def get_config(self):
         config = {

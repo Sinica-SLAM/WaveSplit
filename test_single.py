@@ -12,8 +12,7 @@ import torch
 from torch.utils.data import DataLoader
 from data_loader import WaveSplitDataset
 from WaveSplit.models.wavesplit import WaveSplit
-from losses import SingleSrcNegSDR,PITminLoss,PairwiseNegSDR
-from pit_wrapper import PITLossWrapper
+
 import ipdb
 
 
@@ -36,18 +35,6 @@ class Tester(object):
         input = input.cuda()
         wave = self.model(input)
         return wave
-    
-    def test_cal(self, mix, clean):
-        self.model.eval()
-
-        mix = mix.cuda()
-        clean = clean.cuda()
-        with torch.no_grad():
-            wave,SISNR,SISNR_O = self.model([mix,clean])
-            #print(wave.shape)
-            wave = wave.squeeze(0).cpu().detach().numpy()
-            
-        return - SISNR.cpu().numpy() , -SISNR_O.cpu().numpy() ,wave
 
 def test(test_config): 
     # Initial
@@ -59,68 +46,37 @@ def test(test_config):
     # Setup
 
     tester = Tester(test_config, spks_config, seps_config, filt_config)
-    
-    print("Testing directory:",data_config['test_dir'])
+    print(data_config['test_dir'])
     with open(data_config['test_dir']+"data.json") as g:
         test_data = g.read()
     test_info = json.loads(test_data)
-    SNR_List = []
-    SNRO_List = []
-    print(test_info[1][0]['Src'])
+    """../wham_concat/wav8k/max/tr/concat/40po031b_0.88899_01xo030g_-0.88899.wav"""
+    """../01co030d_1.3862_011a010y_-1.3862.wav"""
+    print(test_info[2][0]['Src'])
     
-    for i in range(len(test_info)):
-        mix_data, _ = sf.read('../'+test_info[i][0]['Src'], start=0, stop=None, dtype='float32')
-        clean1, _ = sf.read('../'+test_info[i][3]['Src'], start=0, stop=None, dtype='float32')
-        clean2, _ = sf.read('../'+test_info[i][4]['Src'], start=0, stop=None, dtype='float32')
-        mix = torch.from_numpy(mix_data).float().unsqueeze(0)
-        clean1 = torch.from_numpy(clean1).float().unsqueeze(0)
-        clean2 = torch.from_numpy(clean2).float().unsqueeze(0)
-        clean = torch.cat((clean1,clean2),0)
-        clean = clean.unsqueeze(0)
-        
-        SISNR,SISNR_O,wave = tester.test_cal(torch.from_numpy(mix_data).float().unsqueeze(0),clean)
-        clean_cpu = clean.squeeze(0).cpu().detach().numpy()
-        SNR_List.append(SISNR)
-        SNRO_List.append(SISNR_O)
-        
-        #print(SISNR)
-        """
-        output_directory = Path(output_directory)
+    mix_data, _ = sf.read('../'+ test_info[2][0]['Src'], start=0, stop=None, dtype='float32')
+    #mix_data, _ = sf.read("../wham_concat/wav8k/max/tr/concat/40po031b_0.88899_01xo030g_-0.88899.wav", start=0, stop=None, dtype='float32')
+    #mix_data, _ = sf.read("../01co030d_1.3862_011a010y_-1.3862.wav", start=0, stop=None, dtype='float32')
+    mix = torch.from_numpy(mix_data).float().unsqueeze(0)
+    
+    wave = tester.test(torch.from_numpy(mix_data).float().unsqueeze(0))
+    wave = wave.squeeze(0).cpu().detach().numpy()
+    print(wave.shape)
+    
+    output_directory = Path(output_directory)
 
-
-        output_directory.mkdir(parents=True, exist_ok=True)
-        outputpath = str(output_directory / "{ex}_Mix.wav".format(ex=i+1))
+    
+    output_directory.mkdir(parents=True, exist_ok=True)
+    for i in range(2):
+        outputpath = str(output_directory / "Sep_{x}_tr_best.wav".format(x=i+1))
         print(outputpath)
-        max_sample = np.max(np.abs(mix_data))
-        norm_wave = mix_data.copy() / max_sample
-        sf.write(outputpath,norm_wave,8000)
-
-        for j in range(2):
-            outputpath = str(output_directory / "{ex}_Sep_{x}_tt_best.wav".format(ex=i+1,x=j+1))
-            print(outputpath)
-            max_sample = np.max(np.abs(wave[j]))
-            norm_wave = wave[j].copy() / max_sample if max_sample >= 1 else wave[j].copy()
-            sf.write(outputpath,norm_wave,8000)
-            outputpath = str(output_directory / "{ex}_Sep_{x}_tt_Truth.wav".format(ex=i+1,x=j+1))
-            print(outputpath)
-            max_sample = np.max(np.abs(clean_cpu[j]))
-            norm_wave = clean_cpu[j].copy() / max_sample
-            sf.write(outputpath,norm_wave,8000)
-            
-        #exit()    
-        """
-        if (i+1)%100 is 0:
-            #exit()
-            print("{cur}/{tot}: {avg}, {avg_o}".format(cur=i+1,tot=len(test_info),avg=(sum(SNR_List)/len(SNR_List)),avg_o=(sum(SNRO_List)/len(SNRO_List))),end='\r')
-    
-    print("Testing Set Avg. SISNR:",sum(SNR_List)/len(SNR_List),"mix Avg. SISNR:",sum(SNRO_List)/len(SNRO_List))
-    
-    
+        sf.write(outputpath,wave[i],8000)    
 
 if __name__ == "__main__":
     import argparse
     import json
-
+    import sys
+    
     parser = argparse.ArgumentParser()
     parser.add_argument('-c', '--config', type=str, default='config_WS.json',
                         help='JSON file for configuration')
@@ -131,7 +87,7 @@ if __name__ == "__main__":
     parser.add_argument('-T', '--training_dir', type=str, default=None,
                         help='Traininig dictionary path')
 
-    parser.add_argument('-g', '--gpu', type=str, default='0',
+    parser.add_argument('-g', '--gpu', type=str, default='6',
                         help='Using gpu #')
     
     args = parser.parse_args()
@@ -153,9 +109,9 @@ if __name__ == "__main__":
     filt_config = config["filterbank"]
 
     if args.output_directory is not None:
-        train_config['output_directory'] = args.output_directory
+        test_config['output_directory'] = args.output_directory
     if args.checkpoint_path is not None:
-        train_config['checkpoint_path'] = args.checkpoint_path
+        test_config['checkpoint_path'] = args.checkpoint_path
     if args.training_dir is not None:
         data_config['training_dir'] = args.training_dir
 

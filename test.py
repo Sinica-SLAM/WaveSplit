@@ -83,8 +83,8 @@ def test(test_config):
         SNR_List.append(SISNR)
         SNRO_List.append(SISNR_O)
         
-        #print(SISNR)
-        """
+        print(SISNR)
+        
         output_directory = Path(output_directory)
 
 
@@ -93,28 +93,37 @@ def test(test_config):
         print(outputpath)
         max_sample = np.max(np.abs(mix_data))
         norm_wave = mix_data.copy() / max_sample
-        sf.write(outputpath,norm_wave,8000)
+        #sf.write(outputpath,norm_wave,8000)
 
         for j in range(2):
             outputpath = str(output_directory / "{ex}_Sep_{x}_tt_best.wav".format(ex=i+1,x=j+1))
-            print(outputpath)
+            #print(outputpath)
             max_sample = np.max(np.abs(wave[j]))
             norm_wave = wave[j].copy() / max_sample if max_sample >= 1 else wave[j].copy()
-            sf.write(outputpath,norm_wave,8000)
+            #sf.write(outputpath,norm_wave,8000)
             outputpath = str(output_directory / "{ex}_Sep_{x}_tt_Truth.wav".format(ex=i+1,x=j+1))
-            print(outputpath)
+            #print(outputpath)
             max_sample = np.max(np.abs(clean_cpu[j]))
             norm_wave = clean_cpu[j].copy() / max_sample
-            sf.write(outputpath,norm_wave,8000)
+            #sf.write(outputpath,norm_wave,8000)
             
         #exit()    
-        """
-        if (i+1)%100 is 0:
-            #exit()
+        
+        if (i+1)%20 is 0:
+            # SNR_Arr = np.array(SNR_List)
+            # q = np.median(SNR_Arr)
+            # w = np.percentile(SNR_Arr, [25, 50, 75])
+            # print(q,w)
+            exit()
             print("{cur}/{tot}: {avg}, {avg_o}".format(cur=i+1,tot=len(test_info),avg=(sum(SNR_List)/len(SNR_List)),avg_o=(sum(SNRO_List)/len(SNRO_List))),end='\r')
     
     print("Testing Set Avg. SISNR:",sum(SNR_List)/len(SNR_List),"mix Avg. SISNR:",sum(SNRO_List)/len(SNRO_List))
-    
+    SNR_Arr = np.array(SNR_List)
+    np.save("ValidationResult.npy",SNR_Arr)
+    q = np.median(SNR_Arr)
+    w = np.percentile(SNR_Arr, [13, 25, 50, 75, 88])
+    print(q,w)
+    print(np.std(SNR_Arr))
     
 
 if __name__ == "__main__":

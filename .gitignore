@@ -1,3 +1,12 @@
 checkpoints_WaveSplit/
 __pycache__/
 WaveSplit_Exp/
+config_try.json
+curves/
+plotCurve.py
+plotHist.py
+reg_linear_fix.log
+testSingle.py
+wham_scripts/
+try_concat/
+checkpoints_*/

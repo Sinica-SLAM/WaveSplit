@@ -1,6 +1,6 @@
 {
     "train_config": {
-        "output_directory": "checkpoints_Wavesplit_new_reg",
+        "output_directory": "checkpoints_Wavesplit_reg_abs",
         "trainer_type": "basic", 
         "epoch": 400,
         "optimize_param": {
@@ -23,11 +23,11 @@
         "early_stop": "yes"
     },
     "test_config": {
-        "checkpoint_directory": "checkpoints_Wavesplit_new",
+        "checkpoint_directory": "checkpoints_Wavesplit_new_reg3",
         "batch_size": 8,
         "checkpoint_path": "best.pth",
         "num_workers": 4,
-        "output_directory": "WaveSplit_Normalize_SNR_new"
+        "output_directory": "WaveSplit_Regularize_SNR"
     },
     "filterbank": {
         "n_filters": 256, 
@@ -54,7 +54,7 @@
     "data": {
         "train_dir": "wham_scripts/json_wavesplit/wav8k/min/tr/",
         "valid_dir": "wham_scripts/json_wavesplit/wav8k/min/cv/",
-        "test_dir": "wham_scripts/json_wavesplit/wav8k/min/cv/",
+        "test_dir": "wham_scripts/json_wavesplit/wav8k/min/tt/",
         "task": "sep_clean",
         "nondefault_nsrc":"",
         "sample_rate": 8000,

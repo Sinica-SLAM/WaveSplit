@@ -16,9 +16,9 @@ class RegularizationLoss(nn.Module):
         """
         Dist = (E[:,None] - E[None,:]).abs().sum(-1)
         Identity = torch.eye(E.shape[0])
-        Dist = torch.log( Dist.masked_fill( (Identity!=0).cuda() , 1000000 ) )
+        Dist = Dist.masked_fill( (Identity!=0).cuda() , 1000000 ) 
 
-        return -(Dist.min(dim=-1)[0]).sum()
+        return -torch.log( (Dist.min(dim=-1)[0])).mean()
 
 class SpeakerVectorLoss(nn.Module):
     def __init__(self, alpha=10.0, beta=5.0, distance='l2'):
@@ -58,7 +58,7 @@ class SpeakerVectorLoss(nn.Module):
         for path in paths:
             tmp = torch.cat(
                     [
-                        Dist_[:,p[0],p[1],:].unsqueeze(1) 
+                        Dist_[:,p[0],p[1],:].unsqueeze(1)    
                         for p in path
                     ],
                     dim=1

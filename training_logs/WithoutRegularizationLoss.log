@@ -1,0 +1,1365 @@
+Drop 2925 utts(0.26 h) from 20000 (shorter than 32000 samples)
+Drop 701 utts(0.06 h) from 5000 (shorter than 32000 samples)
+Batch 500/2134: PITLoss: 9.823963, RECLoss: -2.736186, RegLoss: 669.162005
+Batch 1000/2134: PITLoss: 7.181313, RECLoss: -3.944029, RegLoss: 692.555359
+Batch 1500/2134: PITLoss: 6.147603, RECLoss: -4.754722, RegLoss: 690.817653
+Batch 2000/2134: PITLoss: 5.588050, RECLoss: -5.379289, RegLoss: 687.658905
+Epoch 1/400: PITLoss: 5.473072, RECLoss: -5.520550 with std: 2.406552, RegLoss: 687.084972
+Epoch 1/400: Valid RECLoss: -7.022142 with std: 1.549153
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 3.596946, RECLoss: -7.966607, RegLoss: 681.399265
+Batch 1000/2134: PITLoss: 3.530325, RECLoss: -8.073317, RegLoss: 678.229316
+Batch 1500/2134: PITLoss: 3.475215, RECLoss: -8.248776, RegLoss: 675.492212
+Batch 2000/2134: PITLoss: 3.448054, RECLoss: -8.383265, RegLoss: 674.111848
+Epoch 2/400: PITLoss: 3.438153, RECLoss: -8.439282 with std: 1.481185, RegLoss: 674.091267
+Epoch 2/400: Valid RECLoss: -8.237826 with std: 1.263694
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 3.263079, RECLoss: -9.114810, RegLoss: inf
+Batch 1000/2134: PITLoss: 3.249636, RECLoss: -9.241317, RegLoss: inf
+Batch 1500/2134: PITLoss: 3.239255, RECLoss: -9.330152, RegLoss: inf
+Batch 2000/2134: PITLoss: 3.221943, RECLoss: -9.454920, RegLoss: inf
+Epoch 3/400: PITLoss: 3.215945, RECLoss: -9.481892 with std: 1.385863, RegLoss: inf
+Epoch 3/400: Valid RECLoss: -9.263673 with std: 1.508704
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 3.122062, RECLoss: -9.957145, RegLoss: 680.766549
+Batch 1000/2134: PITLoss: 3.107863, RECLoss: -10.031368, RegLoss: 672.937486
+Batch 1500/2134: PITLoss: 3.088907, RECLoss: -10.159569, RegLoss: 670.948331
+Batch 2000/2134: PITLoss: 3.066373, RECLoss: -10.273340, RegLoss: 672.268240
+Epoch 4/400: PITLoss: 3.062941, RECLoss: -10.284997 with std: 1.307265, RegLoss: 672.846436
+Epoch 4/400: Valid RECLoss: -10.051027 with std: 1.514080
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 2.974363, RECLoss: -10.732862, RegLoss: inf
+Batch 1000/2134: PITLoss: 2.966444, RECLoss: -10.751512, RegLoss: inf
+Batch 1500/2134: PITLoss: 2.959097, RECLoss: -10.817699, RegLoss: inf
+Batch 2000/2134: PITLoss: 2.944817, RECLoss: -10.881278, RegLoss: inf
+Epoch 5/400: PITLoss: 2.942000, RECLoss: -10.899971 with std: 1.240123, RegLoss: inf
+Epoch 5/400: Valid RECLoss: -10.253427 with std: 1.688664
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 2.899999, RECLoss: -11.196956, RegLoss: 735.634907
+Batch 1000/2134: PITLoss: 2.884821, RECLoss: -11.253509, RegLoss: 741.108012
+Batch 1500/2134: PITLoss: 2.876372, RECLoss: -11.301628, RegLoss: 745.940949
+Batch 2000/2134: PITLoss: 2.865478, RECLoss: -11.336823, RegLoss: 749.991317
+Epoch 6/400: PITLoss: 2.862596, RECLoss: -11.342310 with std: 1.177650, RegLoss: 751.385699
+Epoch 6/400: Valid RECLoss: -10.699632 with std: 1.529670
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 2.812563, RECLoss: -11.677639, RegLoss: 783.808826
+Batch 1000/2134: PITLoss: 2.808082, RECLoss: -11.674683, RegLoss: 787.316723
+Batch 1500/2134: PITLoss: 2.803517, RECLoss: -11.646998, RegLoss: 793.750960
+Batch 2000/2134: PITLoss: 2.796017, RECLoss: -11.693320, RegLoss: 800.703138
+Epoch 7/400: PITLoss: 2.790867, RECLoss: -11.717920 with std: 1.174136, RegLoss: 801.879391
+Epoch 7/400: Valid RECLoss: -11.079420 with std: 1.586507
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 2.734704, RECLoss: -11.973325, RegLoss: 830.042146
+Batch 1000/2134: PITLoss: 2.719783, RECLoss: -11.991488, RegLoss: 838.669041
+Batch 1500/2134: PITLoss: 2.706793, RECLoss: -12.008546, RegLoss: 846.366815
+Batch 2000/2134: PITLoss: 2.688745, RECLoss: -12.033660, RegLoss: 851.864890
+Epoch 8/400: PITLoss: 2.685014, RECLoss: -12.032754 with std: 1.155299, RegLoss: 854.051054
+Epoch 8/400: Valid RECLoss: -11.339569 with std: 1.527552
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 2.617453, RECLoss: -12.265545, RegLoss: 877.600928
+Batch 1000/2134: PITLoss: 2.606233, RECLoss: -12.273234, RegLoss: inf
+Batch 1500/2134: PITLoss: 2.597406, RECLoss: -12.281024, RegLoss: inf
+Batch 2000/2134: PITLoss: 2.588972, RECLoss: -12.301437, RegLoss: inf
+Epoch 9/400: PITLoss: 2.588910, RECLoss: -12.301449 with std: 1.103952, RegLoss: inf
+Epoch 9/400: Valid RECLoss: -11.687427 with std: 1.466871
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 2.549936, RECLoss: -12.416368, RegLoss: 936.997230
+Batch 1000/2134: PITLoss: 2.532752, RECLoss: -12.504869, RegLoss: inf
+Batch 1500/2134: PITLoss: 2.527572, RECLoss: -12.515686, RegLoss: inf
+Batch 2000/2134: PITLoss: 2.518008, RECLoss: -12.530955, RegLoss: inf
+Epoch 10/400: PITLoss: 2.512633, RECLoss: -12.547456 with std: 1.069465, RegLoss: inf
+Epoch 10/400: Valid RECLoss: -11.841053 with std: 1.543543
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Saved state dict. to checkpoints_Wavesplit_new/09-30_02-44_10.pth
+Batch 500/2134: PITLoss: 2.467704, RECLoss: -12.805692, RegLoss: inf
+Batch 1000/2134: PITLoss: 2.456613, RECLoss: -12.756796, RegLoss: inf
+Batch 1500/2134: PITLoss: 2.458643, RECLoss: -12.757780, RegLoss: inf
+Batch 2000/2134: PITLoss: 2.446831, RECLoss: -12.752414, RegLoss: inf
+Epoch 11/400: PITLoss: 2.444850, RECLoss: -12.755792 with std: 1.062985, RegLoss: inf
+Epoch 11/400: Valid RECLoss: -11.820472 with std: 1.573085
+Batch 500/2134: PITLoss: 2.372364, RECLoss: -12.960221, RegLoss: inf
+Batch 1000/2134: PITLoss: 2.381563, RECLoss: -12.924605, RegLoss: inf
+Batch 1500/2134: PITLoss: 2.381443, RECLoss: -12.931834, RegLoss: inf
+Batch 2000/2134: PITLoss: 2.385112, RECLoss: -12.937945, RegLoss: inf
+Epoch 12/400: PITLoss: 2.383738, RECLoss: -12.937797 with std: 1.034478, RegLoss: inf
+Epoch 12/400: Valid RECLoss: -12.147843 with std: 1.578304
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 2.318118, RECLoss: -13.102397, RegLoss: inf
+Batch 1000/2134: PITLoss: 2.337427, RECLoss: -13.105344, RegLoss: inf
+Batch 1500/2134: PITLoss: 2.333342, RECLoss: -13.117477, RegLoss: inf
+Batch 2000/2134: PITLoss: 2.320060, RECLoss: -13.131162, RegLoss: inf
+Epoch 13/400: PITLoss: 2.321209, RECLoss: -13.139076 with std: 1.011955, RegLoss: inf
+Epoch 13/400: Valid RECLoss: -12.438486 with std: 1.420248
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 2.270899, RECLoss: -13.224247, RegLoss: inf
+Batch 1000/2134: PITLoss: 2.280429, RECLoss: -13.237824, RegLoss: inf
+Batch 1500/2134: PITLoss: 2.262273, RECLoss: -13.271498, RegLoss: inf
+Batch 2000/2134: PITLoss: 2.262004, RECLoss: -13.272351, RegLoss: inf
+Epoch 14/400: PITLoss: 2.261626, RECLoss: -13.282154 with std: 1.024508, RegLoss: inf
+Epoch 14/400: Valid RECLoss: -12.441241 with std: 1.458398
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 2.223594, RECLoss: -13.433839, RegLoss: inf
+Batch 1000/2134: PITLoss: 2.200741, RECLoss: -13.424835, RegLoss: inf
+Batch 1500/2134: PITLoss: 2.206542, RECLoss: -13.409894, RegLoss: inf
+Batch 2000/2134: PITLoss: 2.196229, RECLoss: -13.419317, RegLoss: inf
+Epoch 15/400: PITLoss: 2.196458, RECLoss: -13.425813 with std: 0.990624, RegLoss: inf
+Epoch 15/400: Valid RECLoss: -12.757503 with std: 1.447632
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 2.142176, RECLoss: -13.582709, RegLoss: inf
+Batch 1000/2134: PITLoss: 2.147920, RECLoss: -13.544205, RegLoss: inf
+Batch 1500/2134: PITLoss: 2.140341, RECLoss: -13.565799, RegLoss: inf
+Batch 2000/2134: PITLoss: 2.136882, RECLoss: -13.585702, RegLoss: inf
+Epoch 16/400: PITLoss: 2.135685, RECLoss: -13.582681 with std: 0.990703, RegLoss: inf
+Epoch 16/400: Valid RECLoss: -12.533065 with std: 1.538488
+Batch 500/2134: PITLoss: 2.077056, RECLoss: -13.658575, RegLoss: inf
+Batch 1000/2134: PITLoss: 2.085433, RECLoss: -13.670733, RegLoss: inf
+Batch 1500/2134: PITLoss: 2.076762, RECLoss: -13.690798, RegLoss: inf
+Batch 2000/2134: PITLoss: 2.073478, RECLoss: -13.681572, RegLoss: inf
+Epoch 17/400: PITLoss: 2.070747, RECLoss: -13.689833 with std: 0.963644, RegLoss: inf
+Epoch 17/400: Valid RECLoss: -12.859758 with std: 1.455872
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 2.018817, RECLoss: -13.882496, RegLoss: inf
+Batch 1000/2134: PITLoss: 2.013589, RECLoss: -13.844264, RegLoss: inf
+Batch 1500/2134: PITLoss: 2.019692, RECLoss: -13.827946, RegLoss: inf
+Batch 2000/2134: PITLoss: 2.017465, RECLoss: -13.805171, RegLoss: inf
+Epoch 18/400: PITLoss: 2.017079, RECLoss: -13.804235 with std: 0.931759, RegLoss: inf
+Epoch 18/400: Valid RECLoss: -12.740994 with std: 1.612496
+Batch 500/2134: PITLoss: 1.934059, RECLoss: -14.000900, RegLoss: inf
+Batch 1000/2134: PITLoss: 1.950409, RECLoss: -13.992329, RegLoss: inf
+Batch 1500/2134: PITLoss: 1.949172, RECLoss: -13.956415, RegLoss: inf
+Batch 2000/2134: PITLoss: 1.951898, RECLoss: -13.940304, RegLoss: inf
+Epoch 19/400: PITLoss: 1.956979, RECLoss: -13.938096 with std: 0.897699, RegLoss: inf
+Epoch 19/400: Valid RECLoss: -13.194191 with std: 1.335903
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 1.949241, RECLoss: -13.934602, RegLoss: inf
+Batch 1000/2134: PITLoss: 1.926904, RECLoss: -13.988091, RegLoss: inf
+Batch 1500/2134: PITLoss: 1.919712, RECLoss: -14.026271, RegLoss: inf
+Batch 2000/2134: PITLoss: 1.912802, RECLoss: -14.040890, RegLoss: inf
+Epoch 20/400: PITLoss: 1.912826, RECLoss: -14.040221 with std: 0.902997, RegLoss: inf
+Epoch 20/400: Valid RECLoss: -13.207883 with std: 1.451106
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Saved state dict. to checkpoints_Wavesplit_new/09-30_11-28_20.pth
+Batch 500/2134: PITLoss: 1.864227, RECLoss: -14.186227, RegLoss: inf
+Batch 1000/2134: PITLoss: 1.843968, RECLoss: -14.128096, RegLoss: inf
+Batch 1500/2134: PITLoss: 1.854980, RECLoss: -14.138767, RegLoss: inf
+Batch 2000/2134: PITLoss: 1.857531, RECLoss: -14.111514, RegLoss: inf
+Epoch 21/400: PITLoss: 1.858175, RECLoss: -14.122565 with std: 0.883387, RegLoss: inf
+Epoch 21/400: Valid RECLoss: -13.417161 with std: 1.413192
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 1.819594, RECLoss: -14.199995, RegLoss: inf
+Batch 1000/2134: PITLoss: 1.819183, RECLoss: -14.194365, RegLoss: inf
+Batch 1500/2134: PITLoss: 1.815778, RECLoss: -14.215168, RegLoss: inf
+Batch 2000/2134: PITLoss: 1.816857, RECLoss: -14.216537, RegLoss: inf
+Epoch 22/400: PITLoss: 1.812296, RECLoss: -14.230390 with std: 0.858985, RegLoss: inf
+Epoch 22/400: Valid RECLoss: -13.463523 with std: 1.384622
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 1.730866, RECLoss: -14.310722, RegLoss: inf
+Batch 1000/2134: PITLoss: 1.752244, RECLoss: -14.296028, RegLoss: inf
+Batch 1500/2134: PITLoss: 1.753807, RECLoss: -14.303598, RegLoss: inf
+Batch 2000/2134: PITLoss: 1.761122, RECLoss: -14.308824, RegLoss: inf
+Epoch 23/400: PITLoss: 1.758953, RECLoss: -14.309777 with std: 0.843929, RegLoss: inf
+Epoch 23/400: Valid RECLoss: -13.275003 with std: 1.499142
+Batch 500/2134: PITLoss: 1.697762, RECLoss: -14.408883, RegLoss: inf
+Batch 1000/2134: PITLoss: 1.701939, RECLoss: -14.410102, RegLoss: inf
+Batch 1500/2134: PITLoss: 1.710360, RECLoss: -14.376031, RegLoss: inf
+Batch 2000/2134: PITLoss: 1.704636, RECLoss: -14.390286, RegLoss: inf
+Epoch 24/400: PITLoss: 1.707299, RECLoss: -14.392239 with std: 0.810272, RegLoss: inf
+Epoch 24/400: Valid RECLoss: -13.596928 with std: 1.326599
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 1.667051, RECLoss: -14.445782, RegLoss: inf
+Batch 1000/2134: PITLoss: 1.670715, RECLoss: -14.498537, RegLoss: inf
+Batch 1500/2134: PITLoss: 1.668699, RECLoss: -14.484282, RegLoss: inf
+Batch 2000/2134: PITLoss: 1.677559, RECLoss: -14.473974, RegLoss: inf
+Epoch 25/400: PITLoss: 1.678765, RECLoss: -14.470985 with std: 0.789465, RegLoss: inf
+Epoch 25/400: Valid RECLoss: -13.621565 with std: 1.370086
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 1.632722, RECLoss: -14.582337, RegLoss: inf
+Batch 1000/2134: PITLoss: 1.637331, RECLoss: -14.553903, RegLoss: inf
+Batch 1500/2134: PITLoss: 1.622658, RECLoss: -14.557332, RegLoss: inf
+Batch 2000/2134: PITLoss: 1.631951, RECLoss: -14.532134, RegLoss: inf
+Epoch 26/400: PITLoss: 1.631839, RECLoss: -14.538216 with std: 0.783281, RegLoss: inf
+Epoch 26/400: Valid RECLoss: -13.705253 with std: 1.428270
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 1.610923, RECLoss: -14.660897, RegLoss: inf
+Batch 1000/2134: PITLoss: 1.599816, RECLoss: -14.651907, RegLoss: inf
+Batch 1500/2134: PITLoss: 1.592686, RECLoss: -14.669229, RegLoss: inf
+Batch 2000/2134: PITLoss: 1.594267, RECLoss: -14.637429, RegLoss: inf
+Epoch 27/400: PITLoss: 1.595926, RECLoss: -14.625843 with std: 0.779221, RegLoss: inf
+Epoch 27/400: Valid RECLoss: -13.723593 with std: 1.352727
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 1.559175, RECLoss: -14.676330, RegLoss: inf
+Batch 1000/2134: PITLoss: 1.543413, RECLoss: -14.678070, RegLoss: inf
+Batch 1500/2134: PITLoss: 1.556180, RECLoss: -14.661638, RegLoss: inf
+Batch 2000/2134: PITLoss: 1.551067, RECLoss: -14.686650, RegLoss: inf
+Epoch 28/400: PITLoss: 1.555624, RECLoss: -14.693288 with std: 0.784797, RegLoss: inf
+Epoch 28/400: Valid RECLoss: -13.889604 with std: 1.314425
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 1.465437, RECLoss: -14.791376, RegLoss: inf
+Batch 1000/2134: PITLoss: 1.485993, RECLoss: -14.782131, RegLoss: inf
+Batch 1500/2134: PITLoss: 1.497974, RECLoss: -14.767589, RegLoss: inf
+Batch 2000/2134: PITLoss: 1.505384, RECLoss: -14.765716, RegLoss: inf
+Epoch 29/400: PITLoss: 1.506126, RECLoss: -14.763597 with std: 0.773814, RegLoss: inf
+Epoch 29/400: Valid RECLoss: -13.781326 with std: 1.381315
+Batch 500/2134: PITLoss: 1.489564, RECLoss: -14.848953, RegLoss: inf
+Batch 1000/2134: PITLoss: 1.478032, RECLoss: -14.844685, RegLoss: inf
+Batch 1500/2134: PITLoss: 1.489059, RECLoss: -14.847579, RegLoss: inf
+Batch 2000/2134: PITLoss: 1.480597, RECLoss: -14.838851, RegLoss: inf
+Epoch 30/400: PITLoss: 1.482536, RECLoss: -14.833144 with std: 0.742880, RegLoss: inf
+Epoch 30/400: Valid RECLoss: -13.950004 with std: 1.363933
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Saved state dict. to checkpoints_Wavesplit_new/09-30_20-37_30.pth
+Batch 500/2134: PITLoss: 1.408120, RECLoss: -14.856011, RegLoss: inf
+Batch 1000/2134: PITLoss: 1.422540, RECLoss: -14.879560, RegLoss: inf
+Batch 1500/2134: PITLoss: 1.427632, RECLoss: -14.859971, RegLoss: inf
+Batch 2000/2134: PITLoss: 1.444672, RECLoss: -14.844681, RegLoss: inf
+Epoch 31/400: PITLoss: 1.441730, RECLoss: -14.855524 with std: 0.753866, RegLoss: inf
+Epoch 31/400: Valid RECLoss: -14.157185 with std: 1.280706
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 1.391382, RECLoss: -14.969280, RegLoss: inf
+Batch 1000/2134: PITLoss: 1.395055, RECLoss: -14.921600, RegLoss: inf
+Batch 1500/2134: PITLoss: 1.393746, RECLoss: -14.963902, RegLoss: inf
+Batch 2000/2134: PITLoss: 1.401172, RECLoss: -14.950936, RegLoss: inf
+Epoch 32/400: PITLoss: 1.399036, RECLoss: -14.953811 with std: 0.749509, RegLoss: inf
+Epoch 32/400: Valid RECLoss: -14.108746 with std: 1.398083
+Batch 500/2134: PITLoss: 1.355208, RECLoss: -15.042819, RegLoss: inf
+Batch 1000/2134: PITLoss: 1.361786, RECLoss: -15.019262, RegLoss: inf
+Batch 1500/2134: PITLoss: 1.372522, RECLoss: -15.029813, RegLoss: inf
+Batch 2000/2134: PITLoss: 1.370963, RECLoss: -15.018014, RegLoss: inf
+Epoch 33/400: PITLoss: 1.368230, RECLoss: -15.021040 with std: 0.709312, RegLoss: inf
+Epoch 33/400: Valid RECLoss: -14.110308 with std: 1.316723
+Batch 500/2134: PITLoss: 1.348986, RECLoss: -15.152185, RegLoss: inf
+Batch 1000/2134: PITLoss: 1.328737, RECLoss: -15.062658, RegLoss: inf
+Batch 1500/2134: PITLoss: 1.338750, RECLoss: -15.038049, RegLoss: inf
+Batch 2000/2134: PITLoss: 1.334868, RECLoss: -15.025550, RegLoss: inf
+Epoch 34/400: PITLoss: 1.336560, RECLoss: -15.026815 with std: 0.744755, RegLoss: inf
+Epoch 34/400: Valid RECLoss: -14.212500 with std: 1.313278
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 1.287692, RECLoss: -15.085379, RegLoss: inf
+Batch 1000/2134: PITLoss: 1.291189, RECLoss: -15.110877, RegLoss: inf
+Batch 1500/2134: PITLoss: 1.295456, RECLoss: -15.132297, RegLoss: inf
+Batch 2000/2134: PITLoss: 1.300462, RECLoss: -15.106135, RegLoss: inf
+Epoch 35/400: PITLoss: 1.299989, RECLoss: -15.108536 with std: 0.690733, RegLoss: inf
+Epoch 35/400: Valid RECLoss: -14.243843 with std: 1.322717
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 1.245519, RECLoss: -15.206440, RegLoss: inf
+Batch 1000/2134: PITLoss: 1.258343, RECLoss: -15.153660, RegLoss: inf
+Batch 1500/2134: PITLoss: 1.258377, RECLoss: -15.126571, RegLoss: inf
+Batch 2000/2134: PITLoss: 1.268045, RECLoss: -15.122466, RegLoss: inf
+Epoch 36/400: PITLoss: 1.268131, RECLoss: -15.127554 with std: 0.705007, RegLoss: inf
+Epoch 36/400: Valid RECLoss: -14.282117 with std: 1.357944
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 1.200500, RECLoss: -15.222647, RegLoss: inf
+Batch 1000/2134: PITLoss: 1.217770, RECLoss: -15.220042, RegLoss: inf
+Batch 1500/2134: PITLoss: 1.234277, RECLoss: -15.208396, RegLoss: inf
+Batch 2000/2134: PITLoss: 1.242541, RECLoss: -15.181342, RegLoss: inf
+Epoch 37/400: PITLoss: 1.246803, RECLoss: -15.177342 with std: 0.703992, RegLoss: inf
+Epoch 37/400: Valid RECLoss: -14.232430 with std: 1.312827
+Batch 500/2134: PITLoss: 1.192105, RECLoss: -15.289324, RegLoss: inf
+Batch 1000/2134: PITLoss: 1.202973, RECLoss: -15.276939, RegLoss: inf
+Batch 1500/2134: PITLoss: 1.217380, RECLoss: -15.257376, RegLoss: inf
+Batch 2000/2134: PITLoss: 1.213319, RECLoss: -15.262130, RegLoss: inf
+Epoch 38/400: PITLoss: 1.211467, RECLoss: -15.260301 with std: 0.678932, RegLoss: inf
+Epoch 38/400: Valid RECLoss: -14.383316 with std: 1.272903
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 1.170846, RECLoss: -15.302376, RegLoss: inf
+Batch 1000/2134: PITLoss: 1.178056, RECLoss: -15.273693, RegLoss: inf
+Batch 1500/2134: PITLoss: 1.180705, RECLoss: -15.268190, RegLoss: inf
+Batch 2000/2134: PITLoss: 1.180922, RECLoss: -15.277166, RegLoss: inf
+Epoch 39/400: PITLoss: 1.182150, RECLoss: -15.280774 with std: 0.665568, RegLoss: inf
+Epoch 39/400: Valid RECLoss: -14.233349 with std: 1.339059
+Batch 500/2134: PITLoss: 1.156327, RECLoss: -15.401736, RegLoss: inf
+Batch 1000/2134: PITLoss: 1.155161, RECLoss: -15.370095, RegLoss: inf
+Batch 1500/2134: PITLoss: 1.155972, RECLoss: -15.333192, RegLoss: inf
+Batch 2000/2134: PITLoss: 1.161326, RECLoss: -15.340818, RegLoss: inf
+Epoch 40/400: PITLoss: 1.161350, RECLoss: -15.335827 with std: 0.689346, RegLoss: inf
+Epoch 40/400: Valid RECLoss: -14.411660 with std: 1.322024
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Saved state dict. to checkpoints_Wavesplit_new/10-01_05-36_40.pth
+Batch 500/2134: PITLoss: 1.102410, RECLoss: -15.378273, RegLoss: inf
+Batch 1000/2134: PITLoss: 1.116114, RECLoss: -15.350800, RegLoss: inf
+Batch 1500/2134: PITLoss: 1.121041, RECLoss: -15.374910, RegLoss: inf
+Batch 2000/2134: PITLoss: 1.132344, RECLoss: -15.363871, RegLoss: inf
+Epoch 41/400: PITLoss: 1.133474, RECLoss: -15.362985 with std: 0.692755, RegLoss: inf
+Epoch 41/400: Valid RECLoss: -14.446750 with std: 1.272014
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 1.053732, RECLoss: -15.384228, RegLoss: inf
+Batch 1000/2134: PITLoss: 1.101330, RECLoss: -15.437684, RegLoss: inf
+Batch 1500/2134: PITLoss: 1.104721, RECLoss: -15.433762, RegLoss: inf
+Batch 2000/2134: PITLoss: 1.106692, RECLoss: -15.415666, RegLoss: inf
+Epoch 42/400: PITLoss: 1.109786, RECLoss: -15.411576 with std: 0.659817, RegLoss: inf
+Epoch 42/400: Valid RECLoss: -14.452726 with std: 1.405368
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 1.066975, RECLoss: -15.454581, RegLoss: inf
+Batch 1000/2134: PITLoss: 1.074492, RECLoss: -15.430015, RegLoss: inf
+Batch 1500/2134: PITLoss: 1.074063, RECLoss: -15.418475, RegLoss: inf
+Batch 2000/2134: PITLoss: 1.079362, RECLoss: -15.417884, RegLoss: inf
+Epoch 43/400: PITLoss: 1.079619, RECLoss: -15.422233 with std: 0.677796, RegLoss: inf
+Epoch 43/400: Valid RECLoss: -14.400904 with std: 1.373199
+Batch 500/2134: PITLoss: 1.023825, RECLoss: -15.572117, RegLoss: inf
+Batch 1000/2134: PITLoss: 1.026590, RECLoss: -15.506139, RegLoss: inf
+Batch 1500/2134: PITLoss: 1.042698, RECLoss: -15.507184, RegLoss: inf
+Batch 2000/2134: PITLoss: 1.052520, RECLoss: -15.489653, RegLoss: inf
+Epoch 44/400: PITLoss: 1.051632, RECLoss: -15.493941 with std: 0.633442, RegLoss: inf
+Epoch 44/400: Valid RECLoss: -14.565326 with std: 1.368229
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 1.012336, RECLoss: -15.570839, RegLoss: inf
+Batch 1000/2134: PITLoss: 1.020976, RECLoss: -15.551216, RegLoss: inf
+Batch 1500/2134: PITLoss: 1.019258, RECLoss: -15.522891, RegLoss: inf
+Batch 2000/2134: PITLoss: 1.023644, RECLoss: -15.525009, RegLoss: inf
+Epoch 45/400: PITLoss: 1.027871, RECLoss: -15.526808 with std: 0.642121, RegLoss: inf
+Epoch 45/400: Valid RECLoss: -14.556221 with std: 1.335894
+Batch 500/2134: PITLoss: 1.007677, RECLoss: -15.521482, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.987117, RECLoss: -15.558149, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.989622, RECLoss: -15.548148, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.996835, RECLoss: -15.535578, RegLoss: inf
+Epoch 46/400: PITLoss: 0.996064, RECLoss: -15.538214 with std: 0.637230, RegLoss: inf
+Epoch 46/400: Valid RECLoss: -14.449173 with std: 1.348583
+Batch 500/2134: PITLoss: 0.965339, RECLoss: -15.696653, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.966375, RECLoss: -15.650995, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.968532, RECLoss: -15.632865, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.959988, RECLoss: -15.652509, RegLoss: inf
+Epoch 47/400: PITLoss: 0.948902, RECLoss: -15.660139 with std: 0.601151, RegLoss: inf
+Epoch 47/400: Valid RECLoss: -14.819403 with std: 1.344097
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 0.723015, RECLoss: -15.908298, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.713480, RECLoss: -15.929071, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.710597, RECLoss: -15.936013, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.712005, RECLoss: -15.951446, RegLoss: inf
+Epoch 48/400: PITLoss: 0.711366, RECLoss: -15.957306 with std: 0.528719, RegLoss: inf
+Epoch 48/400: Valid RECLoss: -14.984614 with std: 1.257036
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 0.666562, RECLoss: -16.042410, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.673021, RECLoss: -16.054607, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.680364, RECLoss: -16.043900, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.684108, RECLoss: -16.026120, RegLoss: inf
+Epoch 49/400: PITLoss: 0.684658, RECLoss: -16.021677 with std: 0.523440, RegLoss: inf
+Epoch 49/400: Valid RECLoss: -15.045660 with std: 1.272165
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 0.638536, RECLoss: -16.086724, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.660954, RECLoss: -16.066349, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.655824, RECLoss: -16.061300, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.655242, RECLoss: -16.062473, RegLoss: inf
+Epoch 50/400: PITLoss: 0.657432, RECLoss: -16.064261 with std: 0.510909, RegLoss: inf
+Epoch 50/400: Valid RECLoss: -15.084703 with std: 1.246622
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Saved state dict. to checkpoints_Wavesplit_new/10-01_14-18_50.pth
+Batch 500/2134: PITLoss: 0.610725, RECLoss: -16.117565, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.623581, RECLoss: -16.107114, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.627155, RECLoss: -16.101015, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.634467, RECLoss: -16.105297, RegLoss: inf
+Epoch 51/400: PITLoss: 0.635701, RECLoss: -16.104200 with std: 0.505907, RegLoss: inf
+Epoch 51/400: Valid RECLoss: -15.043207 with std: 1.301747
+Batch 500/2134: PITLoss: 0.603276, RECLoss: -16.138725, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.613440, RECLoss: -16.124997, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.613493, RECLoss: -16.127013, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.617825, RECLoss: -16.121173, RegLoss: inf
+Epoch 52/400: PITLoss: 0.617331, RECLoss: -16.123091 with std: 0.506248, RegLoss: inf
+Epoch 52/400: Valid RECLoss: -14.963969 with std: 1.395621
+Batch 500/2134: PITLoss: 0.582410, RECLoss: -16.228960, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.590207, RECLoss: -16.195871, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.596988, RECLoss: -16.177892, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.603442, RECLoss: -16.163639, RegLoss: inf
+Epoch 53/400: PITLoss: 0.604516, RECLoss: -16.160074 with std: 0.512370, RegLoss: inf
+Epoch 53/400: Valid RECLoss: -15.124805 with std: 1.265995
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 0.586299, RECLoss: -16.231793, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.588863, RECLoss: -16.208876, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.587021, RECLoss: -16.194844, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.591084, RECLoss: -16.186228, RegLoss: inf
+Epoch 54/400: PITLoss: 0.593079, RECLoss: -16.181683 with std: 0.500614, RegLoss: inf
+Epoch 54/400: Valid RECLoss: -15.056171 with std: 1.316665
+Batch 500/2134: PITLoss: 0.561967, RECLoss: -16.210088, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.564131, RECLoss: -16.218770, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.575746, RECLoss: -16.211636, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.574215, RECLoss: -16.206250, RegLoss: inf
+Epoch 55/400: PITLoss: 0.573436, RECLoss: -16.206060 with std: 0.500354, RegLoss: inf
+Epoch 55/400: Valid RECLoss: -15.103702 with std: 1.273042
+Batch 500/2134: PITLoss: 0.541492, RECLoss: -16.279384, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.561204, RECLoss: -16.242842, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.565336, RECLoss: -16.238555, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.560754, RECLoss: -16.239254, RegLoss: inf
+Epoch 56/400: PITLoss: 0.561625, RECLoss: -16.231907 with std: 0.482944, RegLoss: inf
+Epoch 56/400: Valid RECLoss: -15.087290 with std: 1.284935
+Batch 500/2134: PITLoss: 0.536626, RECLoss: -16.247544, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.541754, RECLoss: -16.249626, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.544608, RECLoss: -16.254515, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.548166, RECLoss: -16.234037, RegLoss: inf
+Epoch 57/400: PITLoss: 0.548052, RECLoss: -16.234816 with std: 0.509797, RegLoss: inf
+Epoch 57/400: Valid RECLoss: -15.217829 with std: 1.235570
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 0.506910, RECLoss: -16.278743, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.517177, RECLoss: -16.261878, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.524144, RECLoss: -16.270889, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.527838, RECLoss: -16.269812, RegLoss: inf
+Epoch 58/400: PITLoss: 0.531172, RECLoss: -16.267630 with std: 0.495512, RegLoss: inf
+Epoch 58/400: Valid RECLoss: -15.100651 with std: 1.341792
+Batch 500/2134: PITLoss: 0.529263, RECLoss: -16.310854, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.534091, RECLoss: -16.286238, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.534912, RECLoss: -16.278808, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.536479, RECLoss: -16.280890, RegLoss: inf
+Epoch 59/400: PITLoss: 0.534400, RECLoss: -16.286983 with std: 0.513438, RegLoss: inf
+Epoch 59/400: Valid RECLoss: -15.237468 with std: 1.246575
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 0.497859, RECLoss: -16.330650, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.509466, RECLoss: -16.337790, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.515718, RECLoss: -16.310200, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.521521, RECLoss: -16.295523, RegLoss: inf
+Epoch 60/400: PITLoss: 0.521520, RECLoss: -16.290988 with std: 0.490640, RegLoss: inf
+Epoch 60/400: Valid RECLoss: -15.110876 with std: 1.400791
+Saved state dict. to checkpoints_Wavesplit_new/10-01_22-49_60.pth
+Batch 500/2134: PITLoss: 0.493860, RECLoss: -16.327231, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.494588, RECLoss: -16.330976, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.496145, RECLoss: -16.335605, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.502656, RECLoss: -16.334940, RegLoss: inf
+Epoch 61/400: PITLoss: 0.504899, RECLoss: -16.329234 with std: 0.492087, RegLoss: inf
+Epoch 61/400: Valid RECLoss: -15.217194 with std: 1.309167
+Batch 500/2134: PITLoss: 0.488016, RECLoss: -16.322131, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.496148, RECLoss: -16.330368, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.494962, RECLoss: -16.324283, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.493544, RECLoss: -16.327774, RegLoss: inf
+Epoch 62/400: PITLoss: 0.492792, RECLoss: -16.328353 with std: 0.500393, RegLoss: inf
+Epoch 62/400: Valid RECLoss: -15.297302 with std: 1.265446
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 0.465142, RECLoss: -16.421455, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.474596, RECLoss: -16.392378, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.482824, RECLoss: -16.383395, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.482466, RECLoss: -16.369288, RegLoss: inf
+Epoch 63/400: PITLoss: 0.484071, RECLoss: -16.365698 with std: 0.480181, RegLoss: inf
+Epoch 63/400: Valid RECLoss: -15.213535 with std: 1.293512
+Batch 500/2134: PITLoss: 0.455296, RECLoss: -16.389322, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.468798, RECLoss: -16.348365, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.476734, RECLoss: -16.354117, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.477154, RECLoss: -16.359721, RegLoss: inf
+Epoch 64/400: PITLoss: 0.476752, RECLoss: -16.355255 with std: 0.499022, RegLoss: inf
+Epoch 64/400: Valid RECLoss: -15.191155 with std: 1.308519
+Batch 500/2134: PITLoss: 0.454595, RECLoss: -16.355142, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.456941, RECLoss: -16.386510, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.460065, RECLoss: -16.397116, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.457032, RECLoss: -16.387188, RegLoss: inf
+Epoch 65/400: PITLoss: 0.457813, RECLoss: -16.392040 with std: 0.499904, RegLoss: inf
+Epoch 65/400: Valid RECLoss: -15.197942 with std: 1.293122
+Batch 500/2134: PITLoss: 0.426156, RECLoss: -16.425960, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.433771, RECLoss: -16.404032, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.437831, RECLoss: -16.414277, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.448054, RECLoss: -16.395147, RegLoss: inf
+Epoch 66/400: PITLoss: 0.451498, RECLoss: -16.390948 with std: 0.499133, RegLoss: inf
+Epoch 66/400: Valid RECLoss: -15.193806 with std: 1.333396
+Batch 500/2134: PITLoss: 0.441046, RECLoss: -16.424785, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.441679, RECLoss: -16.405378, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.445291, RECLoss: -16.401029, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.447484, RECLoss: -16.402831, RegLoss: inf
+Epoch 67/400: PITLoss: 0.447371, RECLoss: -16.401411 with std: 0.492539, RegLoss: inf
+Epoch 67/400: Valid RECLoss: -15.186519 with std: 1.345694
+Batch 500/2134: PITLoss: 0.427150, RECLoss: -16.466190, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.420140, RECLoss: -16.454818, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.429066, RECLoss: -16.446327, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.434398, RECLoss: -16.429694, RegLoss: inf
+Epoch 68/400: PITLoss: 0.435257, RECLoss: -16.431484 with std: 0.500782, RegLoss: inf
+Epoch 68/400: Valid RECLoss: -15.255501 with std: 1.373008
+Batch 500/2134: PITLoss: 0.418430, RECLoss: -16.528659, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.428050, RECLoss: -16.502336, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.434495, RECLoss: -16.479746, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.437720, RECLoss: -16.448500, RegLoss: inf
+Epoch 69/400: PITLoss: 0.439730, RECLoss: -16.447732 with std: 0.490007, RegLoss: inf
+Epoch 69/400: Valid RECLoss: -15.220029 with std: 1.411620
+Batch 500/2134: PITLoss: 0.428342, RECLoss: -16.477634, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.416113, RECLoss: -16.475079, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.422012, RECLoss: -16.472051, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.425827, RECLoss: -16.470608, RegLoss: inf
+Epoch 70/400: PITLoss: 0.428472, RECLoss: -16.460639 with std: 0.494841, RegLoss: inf
+Epoch 70/400: Valid RECLoss: -15.292111 with std: 1.345830
+Saved state dict. to checkpoints_Wavesplit_new/10-02_07-22_70.pth
+Batch 500/2134: PITLoss: 0.392134, RECLoss: -16.507927, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.401448, RECLoss: -16.500110, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.408604, RECLoss: -16.503828, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.408066, RECLoss: -16.499454, RegLoss: inf
+Epoch 71/400: PITLoss: 0.411961, RECLoss: -16.493930 with std: 0.488695, RegLoss: inf
+Epoch 71/400: Valid RECLoss: -15.231788 with std: 1.396930
+Batch 500/2134: PITLoss: 0.400831, RECLoss: -16.464505, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.411843, RECLoss: -16.469717, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.411451, RECLoss: -16.485191, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.411971, RECLoss: -16.486365, RegLoss: inf
+Epoch 72/400: PITLoss: 0.411208, RECLoss: -16.483812 with std: 0.496076, RegLoss: inf
+Epoch 72/400: Valid RECLoss: -15.273031 with std: 1.440662
+Batch 500/2134: PITLoss: 0.408930, RECLoss: -16.515963, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.397709, RECLoss: -16.518148, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.402512, RECLoss: -16.504973, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.401722, RECLoss: -16.502592, RegLoss: inf
+Epoch 73/400: PITLoss: 0.403899, RECLoss: -16.504635 with std: 0.500442, RegLoss: inf
+Epoch 73/400: Valid RECLoss: -15.331507 with std: 1.369373
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 0.396484, RECLoss: -16.593293, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.392003, RECLoss: -16.558911, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.396150, RECLoss: -16.536585, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.398756, RECLoss: -16.521504, RegLoss: inf
+Epoch 74/400: PITLoss: 0.399565, RECLoss: -16.514847 with std: 0.499790, RegLoss: inf
+Epoch 74/400: Valid RECLoss: -15.281173 with std: 1.333717
+Batch 500/2134: PITLoss: 0.385333, RECLoss: -16.552171, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.381262, RECLoss: -16.545025, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.384625, RECLoss: -16.533916, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.386440, RECLoss: -16.535841, RegLoss: inf
+Epoch 75/400: PITLoss: 0.386911, RECLoss: -16.534276 with std: 0.490291, RegLoss: inf
+Epoch 75/400: Valid RECLoss: -15.231015 with std: 1.360901
+Batch 500/2134: PITLoss: 0.382525, RECLoss: -16.567770, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.389953, RECLoss: -16.519105, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.390587, RECLoss: -16.542994, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.392517, RECLoss: -16.533900, RegLoss: inf
+Epoch 76/400: PITLoss: 0.391638, RECLoss: -16.533917 with std: 0.483056, RegLoss: inf
+Epoch 76/400: Valid RECLoss: -15.378083 with std: 1.218059
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 0.368632, RECLoss: -16.594131, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.374411, RECLoss: -16.586350, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.375380, RECLoss: -16.578500, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.378664, RECLoss: -16.560800, RegLoss: inf
+Epoch 77/400: PITLoss: 0.379582, RECLoss: -16.561855 with std: 0.491179, RegLoss: inf
+Epoch 77/400: Valid RECLoss: -15.427857 with std: 1.300294
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 0.363907, RECLoss: -16.603229, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.361139, RECLoss: -16.568300, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.363859, RECLoss: -16.558155, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.369066, RECLoss: -16.557455, RegLoss: inf
+Epoch 78/400: PITLoss: 0.370496, RECLoss: -16.557748 with std: 0.484128, RegLoss: inf
+Epoch 78/400: Valid RECLoss: -15.339231 with std: 1.421409
+Batch 500/2134: PITLoss: 0.347585, RECLoss: -16.585740, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.351316, RECLoss: -16.587173, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.361538, RECLoss: -16.582816, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.363209, RECLoss: -16.575087, RegLoss: inf
+Epoch 79/400: PITLoss: 0.363310, RECLoss: -16.575284 with std: 0.490494, RegLoss: inf
+Epoch 79/400: Valid RECLoss: -15.466507 with std: 1.263657
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 0.345722, RECLoss: -16.669220, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.365971, RECLoss: -16.606001, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.361103, RECLoss: -16.598301, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.358988, RECLoss: -16.585982, RegLoss: inf
+Epoch 80/400: PITLoss: 0.360668, RECLoss: -16.581373 with std: 0.494519, RegLoss: inf
+Epoch 80/400: Valid RECLoss: -15.287173 with std: 1.379531
+Saved state dict. to checkpoints_Wavesplit_new/10-02_15-59_80.pth
+Batch 500/2134: PITLoss: 0.357574, RECLoss: -16.616417, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.339649, RECLoss: -16.612165, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.341522, RECLoss: -16.586000, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.342721, RECLoss: -16.599775, RegLoss: inf
+Epoch 81/400: PITLoss: 0.345253, RECLoss: -16.596180 with std: 0.491146, RegLoss: inf
+Epoch 81/400: Valid RECLoss: -15.306984 with std: 1.271627
+Batch 500/2134: PITLoss: 0.333812, RECLoss: -16.650970, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.345427, RECLoss: -16.603305, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.345385, RECLoss: -16.611675, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.349138, RECLoss: -16.605945, RegLoss: inf
+Epoch 82/400: PITLoss: 0.349822, RECLoss: -16.600913 with std: 0.474508, RegLoss: inf
+Epoch 82/400: Valid RECLoss: -15.294004 with std: 1.286681
+Batch 500/2134: PITLoss: 0.329666, RECLoss: -16.639205, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.329253, RECLoss: -16.622646, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.338390, RECLoss: -16.617464, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.340027, RECLoss: -16.614313, RegLoss: inf
+Epoch 83/400: PITLoss: 0.340674, RECLoss: -16.612097 with std: 0.491727, RegLoss: inf
+Epoch 83/400: Valid RECLoss: -15.442940 with std: 1.332238
+Batch 500/2134: PITLoss: 0.333563, RECLoss: -16.668825, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.333885, RECLoss: -16.659275, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.333770, RECLoss: -16.649539, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.337460, RECLoss: -16.641247, RegLoss: inf
+Epoch 84/400: PITLoss: 0.339024, RECLoss: -16.641696 with std: 0.505141, RegLoss: inf
+Epoch 84/400: Valid RECLoss: -15.481172 with std: 1.253920
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 0.333345, RECLoss: -16.642423, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.339219, RECLoss: -16.670572, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.334673, RECLoss: -16.657396, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.336092, RECLoss: -16.648499, RegLoss: inf
+Epoch 85/400: PITLoss: 0.336919, RECLoss: -16.647814 with std: 0.465031, RegLoss: inf
+Epoch 85/400: Valid RECLoss: -15.427973 with std: 1.341223
+Batch 500/2134: PITLoss: 0.324399, RECLoss: -16.739154, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.326286, RECLoss: -16.688498, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.326874, RECLoss: -16.696149, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.327902, RECLoss: -16.674916, RegLoss: inf
+Epoch 86/400: PITLoss: 0.329207, RECLoss: -16.672442 with std: 0.486659, RegLoss: inf
+Epoch 86/400: Valid RECLoss: -15.486352 with std: 1.283028
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 0.308731, RECLoss: -16.717867, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.304151, RECLoss: -16.686598, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.311869, RECLoss: -16.672578, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.321443, RECLoss: -16.654887, RegLoss: inf
+Epoch 87/400: PITLoss: 0.320914, RECLoss: -16.658785 with std: 0.487759, RegLoss: inf
+Epoch 87/400: Valid RECLoss: -15.509430 with std: 1.284740
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 0.318876, RECLoss: -16.727549, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.324750, RECLoss: -16.704549, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.329070, RECLoss: -16.714568, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.328031, RECLoss: -16.715174, RegLoss: inf
+Epoch 88/400: PITLoss: 0.327465, RECLoss: -16.707636 with std: 0.472787, RegLoss: inf
+Epoch 88/400: Valid RECLoss: -15.330798 with std: 1.355359
+Batch 500/2134: PITLoss: 0.281532, RECLoss: -16.697293, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.296195, RECLoss: -16.693284, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.303989, RECLoss: -16.682726, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.307873, RECLoss: -16.681955, RegLoss: inf
+Epoch 89/400: PITLoss: 0.309903, RECLoss: -16.679644 with std: 0.462659, RegLoss: inf
+Epoch 89/400: Valid RECLoss: -15.476742 with std: 1.374806
+Batch 500/2134: PITLoss: 0.281510, RECLoss: -16.757394, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.295460, RECLoss: -16.715293, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.303800, RECLoss: -16.718250, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.306557, RECLoss: -16.712567, RegLoss: inf
+Epoch 90/400: PITLoss: 0.308785, RECLoss: -16.711017 with std: 0.480646, RegLoss: inf
+Epoch 90/400: Valid RECLoss: -15.381619 with std: 1.332268
+Saved state dict. to checkpoints_Wavesplit_new/10-03_00-48_90.pth
+Batch 500/2134: PITLoss: 0.280117, RECLoss: -16.720575, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.289036, RECLoss: -16.735459, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.299610, RECLoss: -16.725852, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.303287, RECLoss: -16.720408, RegLoss: inf
+Epoch 91/400: PITLoss: 0.304219, RECLoss: -16.720268 with std: 0.466180, RegLoss: inf
+Epoch 91/400: Valid RECLoss: -15.538485 with std: 1.273736
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 0.288609, RECLoss: -16.703849, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.302539, RECLoss: -16.711864, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.302936, RECLoss: -16.715884, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.301852, RECLoss: -16.717823, RegLoss: inf
+Epoch 92/400: PITLoss: 0.302950, RECLoss: -16.720119 with std: 0.493203, RegLoss: inf
+Epoch 92/400: Valid RECLoss: -15.561751 with std: 1.299489
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 0.279867, RECLoss: -16.698645, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.289241, RECLoss: -16.726531, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.291221, RECLoss: -16.726068, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.292503, RECLoss: -16.717282, RegLoss: inf
+Epoch 93/400: PITLoss: 0.294275, RECLoss: -16.716363 with std: 0.495088, RegLoss: inf
+Epoch 93/400: Valid RECLoss: -15.540916 with std: 1.266230
+Batch 500/2134: PITLoss: 0.279727, RECLoss: -16.808118, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.286848, RECLoss: -16.808614, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.293889, RECLoss: -16.791581, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.277084, RECLoss: -16.801947, RegLoss: inf
+Epoch 94/400: PITLoss: 0.272977, RECLoss: -16.805845 with std: 0.455010, RegLoss: inf
+Epoch 94/400: Valid RECLoss: -15.663782 with std: 1.273059
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 0.174673, RECLoss: -16.884427, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.181103, RECLoss: -16.897841, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.179910, RECLoss: -16.910879, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.182357, RECLoss: -16.920371, RegLoss: inf
+Epoch 95/400: PITLoss: 0.184388, RECLoss: -16.918413 with std: 0.462930, RegLoss: inf
+Epoch 95/400: Valid RECLoss: -15.589236 with std: 1.354955
+Batch 500/2134: PITLoss: 0.160072, RECLoss: -16.941211, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.165894, RECLoss: -16.936237, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.171486, RECLoss: -16.931992, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.172096, RECLoss: -16.930244, RegLoss: inf
+Epoch 96/400: PITLoss: 0.174369, RECLoss: -16.931393 with std: 0.462895, RegLoss: inf
+Epoch 96/400: Valid RECLoss: -15.728943 with std: 1.281773
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 0.172306, RECLoss: -16.959438, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.170561, RECLoss: -16.966028, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.172362, RECLoss: -16.954402, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.171080, RECLoss: -16.958966, RegLoss: inf
+Epoch 97/400: PITLoss: 0.171195, RECLoss: -16.954853 with std: 0.455879, RegLoss: inf
+Epoch 97/400: Valid RECLoss: -15.727595 with std: 1.280114
+Batch 500/2134: PITLoss: 0.169538, RECLoss: -16.976956, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.170716, RECLoss: -16.986261, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.171503, RECLoss: -16.981074, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.171518, RECLoss: -16.963720, RegLoss: inf
+Epoch 98/400: PITLoss: 0.170602, RECLoss: -16.967548 with std: 0.448561, RegLoss: inf
+Epoch 98/400: Valid RECLoss: -15.666943 with std: 1.308660
+Batch 500/2134: PITLoss: 0.159614, RECLoss: -16.977245, RegLoss: 925.801074
+Batch 1000/2134: PITLoss: 0.160479, RECLoss: -16.993718, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.158734, RECLoss: -16.982723, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.159865, RECLoss: -16.978839, RegLoss: inf
+Epoch 99/400: PITLoss: 0.159400, RECLoss: -16.980566 with std: 0.457828, RegLoss: inf
+Epoch 99/400: Valid RECLoss: -15.789351 with std: 1.209194
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 0.145563, RECLoss: -17.029710, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.153286, RECLoss: -17.001511, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.158027, RECLoss: -16.987669, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.158444, RECLoss: -16.998155, RegLoss: inf
+Epoch 100/400: PITLoss: 0.157557, RECLoss: -16.999879 with std: 0.462027, RegLoss: inf
+Epoch 100/400: Valid RECLoss: -15.788418 with std: 1.204023
+Saved state dict. to checkpoints_Wavesplit_new/10-03_09-32_100.pth
+Batch 500/2134: PITLoss: 0.154787, RECLoss: -17.022413, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.148486, RECLoss: -17.010815, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.151610, RECLoss: -16.994654, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.155418, RECLoss: -16.995587, RegLoss: inf
+Epoch 101/400: PITLoss: 0.154690, RECLoss: -16.999005 with std: 0.445618, RegLoss: inf
+Epoch 101/400: Valid RECLoss: -15.727195 with std: 1.330989
+Batch 500/2134: PITLoss: 0.135618, RECLoss: -17.024286, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.147394, RECLoss: -17.026416, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.152691, RECLoss: -17.019753, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.155213, RECLoss: -17.012230, RegLoss: inf
+Epoch 102/400: PITLoss: 0.156263, RECLoss: -17.014042 with std: 0.455121, RegLoss: inf
+Epoch 102/400: Valid RECLoss: -15.736178 with std: 1.268854
+Batch 500/2134: PITLoss: 0.145986, RECLoss: -17.014112, RegLoss: 936.371933
+Batch 1000/2134: PITLoss: 0.142348, RECLoss: -17.015672, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.144021, RECLoss: -17.025555, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.146263, RECLoss: -17.017218, RegLoss: inf
+Epoch 103/400: PITLoss: 0.148226, RECLoss: -17.015813 with std: 0.447475, RegLoss: inf
+Epoch 103/400: Valid RECLoss: -15.767425 with std: 1.260750
+Batch 500/2134: PITLoss: 0.139682, RECLoss: -17.053034, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.141184, RECLoss: -17.049453, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.145660, RECLoss: -17.040540, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.146551, RECLoss: -17.040573, RegLoss: inf
+Epoch 104/400: PITLoss: 0.147967, RECLoss: -17.036987 with std: 0.449797, RegLoss: inf
+Epoch 104/400: Valid RECLoss: -15.781614 with std: 1.258791
+Batch 500/2134: PITLoss: 0.137539, RECLoss: -17.081315, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.143803, RECLoss: -17.056053, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.146222, RECLoss: -17.044788, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.148023, RECLoss: -17.035640, RegLoss: inf
+Epoch 105/400: PITLoss: 0.148336, RECLoss: -17.037450 with std: 0.444153, RegLoss: inf
+Epoch 105/400: Valid RECLoss: -15.752834 with std: 1.320185
+Batch 500/2134: PITLoss: 0.134657, RECLoss: -17.085368, RegLoss: 928.950005
+Batch 1000/2134: PITLoss: 0.139831, RECLoss: -17.058209, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.142699, RECLoss: -17.055328, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.145442, RECLoss: -17.047239, RegLoss: inf
+Epoch 106/400: PITLoss: 0.145726, RECLoss: -17.041849 with std: 0.458598, RegLoss: inf
+Epoch 106/400: Valid RECLoss: -15.739069 with std: 1.306866
+Batch 500/2134: PITLoss: 0.143349, RECLoss: -17.084920, RegLoss: 926.326012
+Batch 1000/2134: PITLoss: 0.147662, RECLoss: -17.061232, RegLoss: 924.261376
+Batch 1500/2134: PITLoss: 0.147602, RECLoss: -17.059414, RegLoss: 923.416584
+Batch 2000/2134: PITLoss: 0.144842, RECLoss: -17.051507, RegLoss: inf
+Epoch 107/400: PITLoss: 0.144013, RECLoss: -17.051050 with std: 0.448143, RegLoss: inf
+Epoch 107/400: Valid RECLoss: -15.775519 with std: 1.279361
+Batch 500/2134: PITLoss: 0.143556, RECLoss: -17.073097, RegLoss: 933.111529
+Batch 1000/2134: PITLoss: 0.139343, RECLoss: -17.078260, RegLoss: 936.137199
+Batch 1500/2134: PITLoss: 0.139232, RECLoss: -17.068535, RegLoss: 935.385961
+Batch 2000/2134: PITLoss: 0.138436, RECLoss: -17.055288, RegLoss: 937.379642
+Epoch 108/400: PITLoss: 0.138229, RECLoss: -17.053129 with std: 0.463316, RegLoss: 937.554608
+Epoch 108/400: Valid RECLoss: -15.770325 with std: 1.291161
+Batch 500/2134: PITLoss: 0.134485, RECLoss: -17.084947, RegLoss: 942.646941
+Batch 1000/2134: PITLoss: 0.135649, RECLoss: -17.081731, RegLoss: 938.912431
+Batch 1500/2134: PITLoss: 0.133467, RECLoss: -17.072426, RegLoss: 938.150549
+Batch 2000/2134: PITLoss: 0.139951, RECLoss: -17.065389, RegLoss: inf
+Epoch 109/400: PITLoss: 0.139507, RECLoss: -17.062799 with std: 0.449825, RegLoss: inf
+Epoch 109/400: Valid RECLoss: -15.750635 with std: 1.334159
+Batch 500/2134: PITLoss: 0.141075, RECLoss: -17.078897, RegLoss: 926.637201
+Batch 1000/2134: PITLoss: 0.134017, RECLoss: -17.091847, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.134279, RECLoss: -17.092931, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.138545, RECLoss: -17.080998, RegLoss: inf
+Epoch 110/400: PITLoss: 0.137510, RECLoss: -17.077597 with std: 0.442442, RegLoss: inf
+Epoch 110/400: Valid RECLoss: -15.711936 with std: 1.335773
+Saved state dict. to checkpoints_Wavesplit_new/10-03_18-07_110.pth
+Batch 500/2134: PITLoss: 0.131146, RECLoss: -17.066070, RegLoss: 929.801590
+Batch 1000/2134: PITLoss: 0.133818, RECLoss: -17.059201, RegLoss: 931.086729
+Batch 1500/2134: PITLoss: 0.131994, RECLoss: -17.070773, RegLoss: 934.488113
+Batch 2000/2134: PITLoss: 0.136283, RECLoss: -17.072713, RegLoss: 934.352128
+Epoch 111/400: PITLoss: 0.135053, RECLoss: -17.074775 with std: 0.446029, RegLoss: inf
+Epoch 111/400: Valid RECLoss: -15.770580 with std: 1.289359
+Batch 500/2134: PITLoss: 0.127501, RECLoss: -17.113164, RegLoss: 937.041872
+Batch 1000/2134: PITLoss: 0.136222, RECLoss: -17.100902, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.132812, RECLoss: -17.093206, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.131370, RECLoss: -17.079094, RegLoss: inf
+Epoch 112/400: PITLoss: 0.131575, RECLoss: -17.081443 with std: 0.449656, RegLoss: inf
+Epoch 112/400: Valid RECLoss: -15.787611 with std: 1.335147
+Batch 500/2134: PITLoss: 0.144928, RECLoss: -17.116990, RegLoss: 929.788022
+Batch 1000/2134: PITLoss: 0.140278, RECLoss: -17.093537, RegLoss: 929.048550
+Batch 1500/2134: PITLoss: 0.137215, RECLoss: -17.089890, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.136140, RECLoss: -17.093970, RegLoss: inf
+Epoch 113/400: PITLoss: 0.135425, RECLoss: -17.092128 with std: 0.465740, RegLoss: inf
+Epoch 113/400: Valid RECLoss: -15.856503 with std: 1.201912
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 0.128793, RECLoss: -17.090058, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.132696, RECLoss: -17.084906, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.130650, RECLoss: -17.088543, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.133005, RECLoss: -17.097203, RegLoss: inf
+Epoch 114/400: PITLoss: 0.132701, RECLoss: -17.096706 with std: 0.457547, RegLoss: inf
+Epoch 114/400: Valid RECLoss: -15.820055 with std: 1.318627
+Batch 500/2134: PITLoss: 0.125400, RECLoss: -17.095366, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.133544, RECLoss: -17.095446, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.130353, RECLoss: -17.098249, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.133500, RECLoss: -17.094035, RegLoss: inf
+Epoch 115/400: PITLoss: 0.133332, RECLoss: -17.094281 with std: 0.457354, RegLoss: inf
+Epoch 115/400: Valid RECLoss: -15.790208 with std: 1.320750
+Batch 500/2134: PITLoss: 0.121842, RECLoss: -17.113588, RegLoss: 913.729358
+Batch 1000/2134: PITLoss: 0.124779, RECLoss: -17.130757, RegLoss: 916.197469
+Batch 1500/2134: PITLoss: 0.126269, RECLoss: -17.113385, RegLoss: 918.524466
+Batch 2000/2134: PITLoss: 0.123648, RECLoss: -17.110317, RegLoss: inf
+Epoch 116/400: PITLoss: 0.124130, RECLoss: -17.110528 with std: 0.461182, RegLoss: inf
+Epoch 116/400: Valid RECLoss: -15.823767 with std: 1.274021
+Batch 500/2134: PITLoss: 0.114535, RECLoss: -17.125048, RegLoss: 924.186243
+Batch 1000/2134: PITLoss: 0.119616, RECLoss: -17.122020, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.126318, RECLoss: -17.121224, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.131262, RECLoss: -17.110761, RegLoss: inf
+Epoch 117/400: PITLoss: 0.130320, RECLoss: -17.116152 with std: 0.444116, RegLoss: inf
+Epoch 117/400: Valid RECLoss: -15.804739 with std: 1.308774
+Batch 500/2134: PITLoss: 0.120949, RECLoss: -17.131279, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.119482, RECLoss: -17.114097, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.123082, RECLoss: -17.113306, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.124773, RECLoss: -17.115415, RegLoss: inf
+Epoch 118/400: PITLoss: 0.125399, RECLoss: -17.114325 with std: 0.475383, RegLoss: inf
+Epoch 118/400: Valid RECLoss: -15.721812 with std: 1.352096
+Batch 500/2134: PITLoss: 0.103594, RECLoss: -17.159999, RegLoss: 919.853366
+Batch 1000/2134: PITLoss: 0.112647, RECLoss: -17.127561, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.117825, RECLoss: -17.124017, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.117002, RECLoss: -17.129193, RegLoss: inf
+Epoch 119/400: PITLoss: 0.116485, RECLoss: -17.129255 with std: 0.452441, RegLoss: inf
+Epoch 119/400: Valid RECLoss: -15.796190 with std: 1.310670
+Batch 500/2134: PITLoss: 0.121207, RECLoss: -17.143472, RegLoss: 918.452026
+Batch 1000/2134: PITLoss: 0.118116, RECLoss: -17.138718, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.120881, RECLoss: -17.134113, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.120742, RECLoss: -17.132321, RegLoss: inf
+Epoch 120/400: PITLoss: 0.120684, RECLoss: -17.130997 with std: 0.448585, RegLoss: inf
+Epoch 120/400: Valid RECLoss: -15.839688 with std: 1.252220
+Saved state dict. to checkpoints_Wavesplit_new/10-04_02-35_120.pth
+Batch 500/2134: PITLoss: 0.116583, RECLoss: -17.144782, RegLoss: 915.228452
+Batch 1000/2134: PITLoss: 0.112983, RECLoss: -17.161535, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.117521, RECLoss: -17.158273, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.117725, RECLoss: -17.150199, RegLoss: inf
+Epoch 121/400: PITLoss: 0.117845, RECLoss: -17.153471 with std: 0.447496, RegLoss: inf
+Epoch 121/400: Valid RECLoss: -15.795449 with std: 1.328455
+Batch 500/2134: PITLoss: 0.114996, RECLoss: -17.161870, RegLoss: 919.200277
+Batch 1000/2134: PITLoss: 0.119402, RECLoss: -17.151923, RegLoss: 918.614259
+Batch 1500/2134: PITLoss: 0.119844, RECLoss: -17.143961, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.118740, RECLoss: -17.147928, RegLoss: inf
+Epoch 122/400: PITLoss: 0.118847, RECLoss: -17.145420 with std: 0.448353, RegLoss: inf
+Epoch 122/400: Valid RECLoss: -15.880561 with std: 1.227908
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 0.103396, RECLoss: -17.146036, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.112898, RECLoss: -17.175371, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.115382, RECLoss: -17.163662, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.117270, RECLoss: -17.164060, RegLoss: inf
+Epoch 123/400: PITLoss: 0.117884, RECLoss: -17.159332 with std: 0.464217, RegLoss: inf
+Epoch 123/400: Valid RECLoss: -15.782824 with std: 1.357220
+Batch 500/2134: PITLoss: 0.120438, RECLoss: -17.197881, RegLoss: 920.799004
+Batch 1000/2134: PITLoss: 0.123062, RECLoss: -17.176052, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.122931, RECLoss: -17.175081, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.123671, RECLoss: -17.161304, RegLoss: inf
+Epoch 124/400: PITLoss: 0.122980, RECLoss: -17.161681 with std: 0.462740, RegLoss: inf
+Epoch 124/400: Valid RECLoss: -15.879499 with std: 1.255500
+Batch 500/2134: PITLoss: 0.109906, RECLoss: -17.179046, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.110150, RECLoss: -17.175976, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.111986, RECLoss: -17.171428, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.113105, RECLoss: -17.169693, RegLoss: inf
+Epoch 125/400: PITLoss: 0.113319, RECLoss: -17.166656 with std: 0.449622, RegLoss: inf
+Epoch 125/400: Valid RECLoss: -15.831295 with std: 1.333085
+Batch 500/2134: PITLoss: 0.099533, RECLoss: -17.165979, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.106793, RECLoss: -17.179013, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.107485, RECLoss: -17.181981, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.111462, RECLoss: -17.166249, RegLoss: inf
+Epoch 126/400: PITLoss: 0.110689, RECLoss: -17.168784 with std: 0.456056, RegLoss: inf
+Epoch 126/400: Valid RECLoss: -15.822274 with std: 1.318676
+Batch 500/2134: PITLoss: 0.110187, RECLoss: -17.181192, RegLoss: 914.176387
+Batch 1000/2134: PITLoss: 0.108934, RECLoss: -17.182713, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.109448, RECLoss: -17.187415, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.112971, RECLoss: -17.182017, RegLoss: inf
+Epoch 127/400: PITLoss: 0.112108, RECLoss: -17.175395 with std: 0.457735, RegLoss: inf
+Epoch 127/400: Valid RECLoss: -15.878672 with std: 1.301454
+Batch 500/2134: PITLoss: 0.105533, RECLoss: -17.201821, RegLoss: 905.998545
+Batch 1000/2134: PITLoss: 0.111943, RECLoss: -17.188255, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.112211, RECLoss: -17.176202, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.112527, RECLoss: -17.185737, RegLoss: inf
+Epoch 128/400: PITLoss: 0.112526, RECLoss: -17.184498 with std: 0.452880, RegLoss: inf
+Epoch 128/400: Valid RECLoss: -15.859928 with std: 1.270174
+Batch 500/2134: PITLoss: 0.100551, RECLoss: -17.214672, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.102990, RECLoss: -17.193624, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.103555, RECLoss: -17.197773, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.107627, RECLoss: -17.201937, RegLoss: inf
+Epoch 129/400: PITLoss: 0.107948, RECLoss: -17.197293 with std: 0.456613, RegLoss: inf
+Epoch 129/400: Valid RECLoss: -15.853083 with std: 1.256107
+Batch 500/2134: PITLoss: 0.109949, RECLoss: -17.151010, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.110834, RECLoss: -17.164735, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.112474, RECLoss: -17.180765, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.111558, RECLoss: -17.180608, RegLoss: inf
+Epoch 130/400: PITLoss: 0.111505, RECLoss: -17.182238 with std: 0.449624, RegLoss: inf
+Epoch 130/400: Valid RECLoss: -15.842305 with std: 1.320288
+Saved state dict. to checkpoints_Wavesplit_new/10-04_11-03_130.pth
+Batch 500/2134: PITLoss: 0.107682, RECLoss: -17.225482, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.108167, RECLoss: -17.219626, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.108184, RECLoss: -17.208297, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.108836, RECLoss: -17.201991, RegLoss: inf
+Epoch 131/400: PITLoss: 0.110259, RECLoss: -17.199137 with std: 0.448986, RegLoss: inf
+Epoch 131/400: Valid RECLoss: -15.822395 with std: 1.343431
+Batch 500/2134: PITLoss: 0.103479, RECLoss: -17.202938, RegLoss: 899.196651
+Batch 1000/2134: PITLoss: 0.103212, RECLoss: -17.207299, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.104662, RECLoss: -17.211912, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.105953, RECLoss: -17.205262, RegLoss: inf
+Epoch 132/400: PITLoss: 0.106500, RECLoss: -17.205367 with std: 0.450778, RegLoss: inf
+Epoch 132/400: Valid RECLoss: -15.857797 with std: 1.330953
+Batch 500/2134: PITLoss: 0.102793, RECLoss: -17.242332, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.107449, RECLoss: -17.229813, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.111970, RECLoss: -17.221549, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.110868, RECLoss: -17.210841, RegLoss: inf
+Epoch 133/400: PITLoss: 0.112679, RECLoss: -17.211207 with std: 0.463589, RegLoss: inf
+Epoch 133/400: Valid RECLoss: -15.848636 with std: 1.351288
+Batch 500/2134: PITLoss: 0.105004, RECLoss: -17.268709, RegLoss: 901.911151
+Batch 1000/2134: PITLoss: 0.104589, RECLoss: -17.242073, RegLoss: 899.574321
+Batch 1500/2134: PITLoss: 0.106410, RECLoss: -17.239969, RegLoss: 899.062257
+Batch 2000/2134: PITLoss: 0.104852, RECLoss: -17.218934, RegLoss: inf
+Epoch 134/400: PITLoss: 0.106058, RECLoss: -17.217441 with std: 0.457483, RegLoss: inf
+Epoch 134/400: Valid RECLoss: -15.863997 with std: 1.327209
+Batch 500/2134: PITLoss: 0.108120, RECLoss: -17.244274, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.106048, RECLoss: -17.220850, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.103157, RECLoss: -17.222121, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.102690, RECLoss: -17.229311, RegLoss: inf
+Epoch 135/400: PITLoss: 0.102598, RECLoss: -17.228198 with std: 0.452931, RegLoss: inf
+Epoch 135/400: Valid RECLoss: -15.864317 with std: 1.340676
+Batch 500/2134: PITLoss: 0.096298, RECLoss: -17.244695, RegLoss: 902.940636
+Batch 1000/2134: PITLoss: 0.095678, RECLoss: -17.240260, RegLoss: 900.690040
+Batch 1500/2134: PITLoss: 0.096825, RECLoss: -17.225938, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.098247, RECLoss: -17.226669, RegLoss: inf
+Epoch 136/400: PITLoss: 0.099167, RECLoss: -17.226044 with std: 0.457151, RegLoss: inf
+Epoch 136/400: Valid RECLoss: -15.864529 with std: 1.319704
+Batch 500/2134: PITLoss: 0.092834, RECLoss: -17.272259, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.096599, RECLoss: -17.265177, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.098914, RECLoss: -17.245474, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.101852, RECLoss: -17.240012, RegLoss: inf
+Epoch 137/400: PITLoss: 0.101921, RECLoss: -17.239108 with std: 0.446820, RegLoss: inf
+Epoch 137/400: Valid RECLoss: -15.858791 with std: 1.314646
+Batch 500/2134: PITLoss: 0.090906, RECLoss: -17.202469, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.090275, RECLoss: -17.231992, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.095900, RECLoss: -17.245255, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.100472, RECLoss: -17.245704, RegLoss: inf
+Epoch 138/400: PITLoss: 0.099952, RECLoss: -17.243029 with std: 0.450911, RegLoss: inf
+Epoch 138/400: Valid RECLoss: -15.881935 with std: 1.353417
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 0.089541, RECLoss: -17.238211, RegLoss: 891.273409
+Batch 1000/2134: PITLoss: 0.097679, RECLoss: -17.238690, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.097345, RECLoss: -17.236757, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.096831, RECLoss: -17.229234, RegLoss: inf
+Epoch 139/400: PITLoss: 0.095916, RECLoss: -17.233072 with std: 0.454222, RegLoss: inf
+Epoch 139/400: Valid RECLoss: -15.831517 with std: 1.399563
+Batch 500/2134: PITLoss: 0.096050, RECLoss: -17.258455, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.099821, RECLoss: -17.246441, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.104809, RECLoss: -17.235278, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.107700, RECLoss: -17.237766, RegLoss: inf
+Epoch 140/400: PITLoss: 0.107474, RECLoss: -17.235841 with std: 0.448696, RegLoss: inf
+Epoch 140/400: Valid RECLoss: -15.805225 with std: 1.371907
+Saved state dict. to checkpoints_Wavesplit_new/10-04_19-53_140.pth
+Batch 500/2134: PITLoss: 0.080244, RECLoss: -17.277793, RegLoss: 884.366241
+Batch 1000/2134: PITLoss: 0.089959, RECLoss: -17.255384, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.090620, RECLoss: -17.256200, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.086457, RECLoss: -17.264980, RegLoss: inf
+Epoch 141/400: PITLoss: 0.086269, RECLoss: -17.266876 with std: 0.459877, RegLoss: inf
+Epoch 141/400: Valid RECLoss: -15.965275 with std: 1.317295
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 0.067679, RECLoss: -17.322666, RegLoss: 891.671399
+Batch 1000/2134: PITLoss: 0.069955, RECLoss: -17.319292, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.067714, RECLoss: -17.326915, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.066070, RECLoss: -17.324586, RegLoss: inf
+Epoch 142/400: PITLoss: 0.066378, RECLoss: -17.320262 with std: 0.450794, RegLoss: inf
+Epoch 142/400: Valid RECLoss: -15.942486 with std: 1.307983
+Batch 500/2134: PITLoss: 0.070874, RECLoss: -17.328554, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.067245, RECLoss: -17.329865, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.065202, RECLoss: -17.344349, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.066818, RECLoss: -17.328577, RegLoss: inf
+Epoch 143/400: PITLoss: 0.067592, RECLoss: -17.330497 with std: 0.449262, RegLoss: inf
+Epoch 143/400: Valid RECLoss: -16.000789 with std: 1.241098
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 0.059041, RECLoss: -17.335380, RegLoss: 898.186619
+Batch 1000/2134: PITLoss: 0.067687, RECLoss: -17.339511, RegLoss: 893.076152
+Batch 1500/2134: PITLoss: 0.065636, RECLoss: -17.346738, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.066142, RECLoss: -17.343453, RegLoss: inf
+Epoch 144/400: PITLoss: 0.065568, RECLoss: -17.346772 with std: 0.446775, RegLoss: inf
+Epoch 144/400: Valid RECLoss: -15.970383 with std: 1.279204
+Batch 500/2134: PITLoss: 0.068543, RECLoss: -17.321858, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.066131, RECLoss: -17.345322, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.066698, RECLoss: -17.345366, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.066790, RECLoss: -17.349417, RegLoss: inf
+Epoch 145/400: PITLoss: 0.065908, RECLoss: -17.351727 with std: 0.457852, RegLoss: inf
+Epoch 145/400: Valid RECLoss: -16.005321 with std: 1.286393
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 0.063394, RECLoss: -17.361725, RegLoss: 882.659995
+Batch 1000/2134: PITLoss: 0.061679, RECLoss: -17.366751, RegLoss: 885.640739
+Batch 1500/2134: PITLoss: 0.063066, RECLoss: -17.368110, RegLoss: 883.552212
+Batch 2000/2134: PITLoss: 0.061951, RECLoss: -17.354510, RegLoss: 882.294250
+Epoch 146/400: PITLoss: 0.062604, RECLoss: -17.356395 with std: 0.447658, RegLoss: 882.113393
+Epoch 146/400: Valid RECLoss: -15.966244 with std: 1.317633
+Batch 500/2134: PITLoss: 0.061294, RECLoss: -17.356727, RegLoss: 888.020517
+Batch 1000/2134: PITLoss: 0.060864, RECLoss: -17.352021, RegLoss: 884.668443
+Batch 1500/2134: PITLoss: 0.062966, RECLoss: -17.352792, RegLoss: 886.140953
+Batch 2000/2134: PITLoss: 0.062557, RECLoss: -17.357866, RegLoss: 885.442869
+Epoch 147/400: PITLoss: 0.061742, RECLoss: -17.358305 with std: 0.444275, RegLoss: 884.807177
+Epoch 147/400: Valid RECLoss: -15.952402 with std: 1.289342
+Batch 500/2134: PITLoss: 0.065127, RECLoss: -17.378977, RegLoss: 878.680374
+Batch 1000/2134: PITLoss: 0.062892, RECLoss: -17.381122, RegLoss: 878.924845
+Batch 1500/2134: PITLoss: 0.062559, RECLoss: -17.376740, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.062780, RECLoss: -17.370422, RegLoss: inf
+Epoch 148/400: PITLoss: 0.062725, RECLoss: -17.370850 with std: 0.439875, RegLoss: inf
+Epoch 148/400: Valid RECLoss: -15.931966 with std: 1.381380
+Batch 500/2134: PITLoss: 0.063871, RECLoss: -17.404661, RegLoss: 879.276945
+Batch 1000/2134: PITLoss: 0.063396, RECLoss: -17.383914, RegLoss: 883.207360
+Batch 1500/2134: PITLoss: 0.061492, RECLoss: -17.379358, RegLoss: 880.185583
+Batch 2000/2134: PITLoss: 0.060183, RECLoss: -17.377704, RegLoss: inf
+Epoch 149/400: PITLoss: 0.060849, RECLoss: -17.373432 with std: 0.441893, RegLoss: inf
+Epoch 149/400: Valid RECLoss: -15.986611 with std: 1.317053
+Batch 500/2134: PITLoss: 0.061379, RECLoss: -17.389677, RegLoss: 883.875558
+Batch 1000/2134: PITLoss: 0.061499, RECLoss: -17.385201, RegLoss: 882.679137
+Batch 1500/2134: PITLoss: 0.059131, RECLoss: -17.378893, RegLoss: 886.113622
+Batch 2000/2134: PITLoss: 0.060492, RECLoss: -17.377785, RegLoss: inf
+Epoch 150/400: PITLoss: 0.060993, RECLoss: -17.374544 with std: 0.450888, RegLoss: inf
+Epoch 150/400: Valid RECLoss: -15.939116 with std: 1.294046
+Saved state dict. to checkpoints_Wavesplit_new/10-05_04-42_150.pth
+Batch 500/2134: PITLoss: 0.058204, RECLoss: -17.387948, RegLoss: 888.469706
+Batch 1000/2134: PITLoss: 0.061216, RECLoss: -17.387561, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.062235, RECLoss: -17.379753, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.061283, RECLoss: -17.374865, RegLoss: inf
+Epoch 151/400: PITLoss: 0.060609, RECLoss: -17.377089 with std: 0.439042, RegLoss: inf
+Epoch 151/400: Valid RECLoss: -15.928750 with std: 1.372479
+Batch 500/2134: PITLoss: 0.052021, RECLoss: -17.402681, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.055921, RECLoss: -17.382095, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.058952, RECLoss: -17.380080, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.059045, RECLoss: -17.378138, RegLoss: inf
+Epoch 152/400: PITLoss: 0.059256, RECLoss: -17.379897 with std: 0.458393, RegLoss: inf
+Epoch 152/400: Valid RECLoss: -15.939465 with std: 1.341155
+Batch 500/2134: PITLoss: 0.054016, RECLoss: -17.362289, RegLoss: 900.730701
+Batch 1000/2134: PITLoss: 0.063006, RECLoss: -17.379025, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.059412, RECLoss: -17.364127, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.060598, RECLoss: -17.381588, RegLoss: inf
+Epoch 153/400: PITLoss: 0.060638, RECLoss: -17.386956 with std: 0.445322, RegLoss: inf
+Epoch 153/400: Valid RECLoss: -16.009752 with std: 1.302163
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 0.059534, RECLoss: -17.414234, RegLoss: 888.072478
+Batch 1000/2134: PITLoss: 0.057936, RECLoss: -17.386965, RegLoss: 889.842360
+Batch 1500/2134: PITLoss: 0.055114, RECLoss: -17.389253, RegLoss: 887.513358
+Batch 2000/2134: PITLoss: 0.059149, RECLoss: -17.386897, RegLoss: 885.696745
+Epoch 154/400: PITLoss: 0.059175, RECLoss: -17.390000 with std: 0.447350, RegLoss: 885.183927
+Epoch 154/400: Valid RECLoss: -15.957415 with std: 1.345546
+Batch 500/2134: PITLoss: 0.061214, RECLoss: -17.384113, RegLoss: 877.868863
+Batch 1000/2134: PITLoss: 0.056282, RECLoss: -17.400489, RegLoss: 878.480565
+Batch 1500/2134: PITLoss: 0.055330, RECLoss: -17.390308, RegLoss: 879.967509
+Batch 2000/2134: PITLoss: 0.057060, RECLoss: -17.392145, RegLoss: 880.822310
+Epoch 155/400: PITLoss: 0.056407, RECLoss: -17.389641 with std: 0.448690, RegLoss: 880.975643
+Epoch 155/400: Valid RECLoss: -15.927726 with std: 1.342847
+Batch 500/2134: PITLoss: 0.050756, RECLoss: -17.403354, RegLoss: 879.982312
+Batch 1000/2134: PITLoss: 0.053575, RECLoss: -17.386049, RegLoss: 881.671400
+Batch 1500/2134: PITLoss: 0.054508, RECLoss: -17.396769, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.054184, RECLoss: -17.396188, RegLoss: inf
+Epoch 156/400: PITLoss: 0.054328, RECLoss: -17.397356 with std: 0.444016, RegLoss: inf
+Epoch 156/400: Valid RECLoss: -15.986685 with std: 1.299375
+Batch 500/2134: PITLoss: 0.059771, RECLoss: -17.403526, RegLoss: 883.505352
+Batch 1000/2134: PITLoss: 0.055169, RECLoss: -17.392349, RegLoss: 881.425071
+Batch 1500/2134: PITLoss: 0.055517, RECLoss: -17.393171, RegLoss: 882.101825
+Batch 2000/2134: PITLoss: 0.054137, RECLoss: -17.404352, RegLoss: 882.528089
+Epoch 157/400: PITLoss: 0.053877, RECLoss: -17.404621 with std: 0.454266, RegLoss: inf
+Epoch 157/400: Valid RECLoss: -15.984437 with std: 1.310635
+Batch 500/2134: PITLoss: 0.050143, RECLoss: -17.435021, RegLoss: 893.104619
+Batch 1000/2134: PITLoss: 0.055575, RECLoss: -17.422877, RegLoss: 887.328087
+Batch 1500/2134: PITLoss: 0.060539, RECLoss: -17.413508, RegLoss: 886.565767
+Batch 2000/2134: PITLoss: 0.059276, RECLoss: -17.411632, RegLoss: inf
+Epoch 158/400: PITLoss: 0.058540, RECLoss: -17.407148 with std: 0.450907, RegLoss: inf
+Epoch 158/400: Valid RECLoss: -16.004427 with std: 1.282343
+Batch 500/2134: PITLoss: 0.048221, RECLoss: -17.433261, RegLoss: 883.745658
+Batch 1000/2134: PITLoss: 0.051439, RECLoss: -17.417801, RegLoss: 878.427350
+Batch 1500/2134: PITLoss: 0.052169, RECLoss: -17.410340, RegLoss: 875.124604
+Batch 2000/2134: PITLoss: 0.053991, RECLoss: -17.408220, RegLoss: 876.063405
+Epoch 159/400: PITLoss: 0.054705, RECLoss: -17.407111 with std: 0.451501, RegLoss: 876.863467
+Epoch 159/400: Valid RECLoss: -15.981627 with std: 1.316204
+Batch 500/2134: PITLoss: 0.048217, RECLoss: -17.408999, RegLoss: 882.985593
+Batch 1000/2134: PITLoss: 0.055773, RECLoss: -17.415101, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.053725, RECLoss: -17.409743, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.055400, RECLoss: -17.414848, RegLoss: inf
+Epoch 160/400: PITLoss: 0.056595, RECLoss: -17.414601 with std: 0.461412, RegLoss: inf
+Epoch 160/400: Valid RECLoss: -15.955340 with std: 1.368659
+Saved state dict. to checkpoints_Wavesplit_new/10-05_14-08_160.pth
+Batch 500/2134: PITLoss: 0.052719, RECLoss: -17.415913, RegLoss: 876.031366
+Batch 1000/2134: PITLoss: 0.054260, RECLoss: -17.420862, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.055198, RECLoss: -17.410261, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.054031, RECLoss: -17.418434, RegLoss: inf
+Epoch 161/400: PITLoss: 0.055145, RECLoss: -17.416162 with std: 0.449224, RegLoss: inf
+Epoch 161/400: Valid RECLoss: -15.975987 with std: 1.326824
+Batch 500/2134: PITLoss: 0.049229, RECLoss: -17.438050, RegLoss: 883.132998
+Batch 1000/2134: PITLoss: 0.050589, RECLoss: -17.426603, RegLoss: 885.045924
+Batch 1500/2134: PITLoss: 0.052039, RECLoss: -17.430548, RegLoss: 883.937908
+Batch 2000/2134: PITLoss: 0.052904, RECLoss: -17.420884, RegLoss: 882.998681
+Epoch 162/400: PITLoss: 0.054797, RECLoss: -17.419351 with std: 0.455092, RegLoss: 883.197948
+Epoch 162/400: Valid RECLoss: -16.000807 with std: 1.389073
+Batch 500/2134: PITLoss: 0.052939, RECLoss: -17.426387, RegLoss: 888.194398
+Batch 1000/2134: PITLoss: 0.052854, RECLoss: -17.435283, RegLoss: 885.871415
+Batch 1500/2134: PITLoss: 0.054591, RECLoss: -17.431905, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.054782, RECLoss: -17.421084, RegLoss: inf
+Epoch 163/400: PITLoss: 0.054559, RECLoss: -17.422112 with std: 0.457287, RegLoss: inf
+Epoch 163/400: Valid RECLoss: -16.010293 with std: 1.322332
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 0.050492, RECLoss: -17.421943, RegLoss: 892.091506
+Batch 1000/2134: PITLoss: 0.053661, RECLoss: -17.430897, RegLoss: 893.118372
+Batch 1500/2134: PITLoss: 0.054064, RECLoss: -17.425742, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.055151, RECLoss: -17.422191, RegLoss: inf
+Epoch 164/400: PITLoss: 0.055832, RECLoss: -17.422097 with std: 0.450875, RegLoss: inf
+Epoch 164/400: Valid RECLoss: -16.004038 with std: 1.279968
+Batch 500/2134: PITLoss: 0.042276, RECLoss: -17.466428, RegLoss: 879.390654
+Batch 1000/2134: PITLoss: 0.049022, RECLoss: -17.446636, RegLoss: 881.321933
+Batch 1500/2134: PITLoss: 0.048226, RECLoss: -17.437999, RegLoss: 884.604324
+Batch 2000/2134: PITLoss: 0.049673, RECLoss: -17.440362, RegLoss: inf
+Epoch 165/400: PITLoss: 0.049673, RECLoss: -17.434145 with std: 0.444663, RegLoss: inf
+Epoch 165/400: Valid RECLoss: -15.975629 with std: 1.320729
+Batch 500/2134: PITLoss: 0.047834, RECLoss: -17.427021, RegLoss: 895.429235
+Batch 1000/2134: PITLoss: 0.050895, RECLoss: -17.427584, RegLoss: 887.790914
+Batch 1500/2134: PITLoss: 0.052386, RECLoss: -17.424753, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.053726, RECLoss: -17.425743, RegLoss: inf
+Epoch 166/400: PITLoss: 0.053304, RECLoss: -17.426649 with std: 0.446437, RegLoss: inf
+Epoch 166/400: Valid RECLoss: -16.007595 with std: 1.307466
+Batch 500/2134: PITLoss: 0.052442, RECLoss: -17.476549, RegLoss: 884.086502
+Batch 1000/2134: PITLoss: 0.049353, RECLoss: -17.444202, RegLoss: 876.520091
+Batch 1500/2134: PITLoss: 0.051431, RECLoss: -17.433081, RegLoss: 876.324898
+Batch 2000/2134: PITLoss: 0.055047, RECLoss: -17.430173, RegLoss: 877.310735
+Epoch 167/400: PITLoss: 0.054657, RECLoss: -17.423483 with std: 0.443276, RegLoss: 877.247908
+Epoch 167/400: Valid RECLoss: -15.976524 with std: 1.328726
+Batch 500/2134: PITLoss: 0.052449, RECLoss: -17.444091, RegLoss: 881.282510
+Batch 1000/2134: PITLoss: 0.054095, RECLoss: -17.452797, RegLoss: 879.778195
+Batch 1500/2134: PITLoss: 0.055960, RECLoss: -17.456299, RegLoss: 879.202138
+Batch 2000/2134: PITLoss: 0.055343, RECLoss: -17.447707, RegLoss: 882.437939
+Epoch 168/400: PITLoss: 0.056398, RECLoss: -17.444455 with std: 0.448449, RegLoss: 882.595825
+Epoch 168/400: Valid RECLoss: -16.001910 with std: 1.306925
+Batch 500/2134: PITLoss: 0.051472, RECLoss: -17.421919, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.050725, RECLoss: -17.435477, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.050924, RECLoss: -17.439967, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.053034, RECLoss: -17.442334, RegLoss: inf
+Epoch 169/400: PITLoss: 0.052586, RECLoss: -17.442926 with std: 0.460731, RegLoss: inf
+Epoch 169/400: Valid RECLoss: -16.030514 with std: 1.255653
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 0.052644, RECLoss: -17.461283, RegLoss: 876.498080
+Batch 1000/2134: PITLoss: 0.055606, RECLoss: -17.444977, RegLoss: 879.256593
+Batch 1500/2134: PITLoss: 0.055263, RECLoss: -17.446102, RegLoss: 882.299667
+Batch 2000/2134: PITLoss: 0.053320, RECLoss: -17.442264, RegLoss: 880.567780
+Epoch 170/400: PITLoss: 0.052722, RECLoss: -17.440642 with std: 0.454477, RegLoss: 880.064535
+Epoch 170/400: Valid RECLoss: -15.978049 with std: 1.378862
+Saved state dict. to checkpoints_Wavesplit_new/10-05_22-49_170.pth
+Batch 500/2134: PITLoss: 0.054180, RECLoss: -17.467443, RegLoss: 881.575752
+Batch 1000/2134: PITLoss: 0.050128, RECLoss: -17.465373, RegLoss: 881.944364
+Batch 1500/2134: PITLoss: 0.053240, RECLoss: -17.444219, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.052474, RECLoss: -17.445596, RegLoss: inf
+Epoch 171/400: PITLoss: 0.052588, RECLoss: -17.446467 with std: 0.439190, RegLoss: inf
+Epoch 171/400: Valid RECLoss: -15.967431 with std: 1.345372
+Batch 500/2134: PITLoss: 0.048783, RECLoss: -17.499643, RegLoss: 884.041017
+Batch 1000/2134: PITLoss: 0.050479, RECLoss: -17.443435, RegLoss: 881.649719
+Batch 1500/2134: PITLoss: 0.050614, RECLoss: -17.446514, RegLoss: 880.340679
+Batch 2000/2134: PITLoss: 0.050320, RECLoss: -17.452024, RegLoss: 879.870931
+Epoch 172/400: PITLoss: 0.052067, RECLoss: -17.449223 with std: 0.451494, RegLoss: 879.708322
+Epoch 172/400: Valid RECLoss: -16.031580 with std: 1.298225
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 0.047582, RECLoss: -17.460855, RegLoss: 878.027197
+Batch 1000/2134: PITLoss: 0.048901, RECLoss: -17.452802, RegLoss: 878.741996
+Batch 1500/2134: PITLoss: 0.050285, RECLoss: -17.450415, RegLoss: 874.575487
+Batch 2000/2134: PITLoss: 0.050663, RECLoss: -17.449567, RegLoss: 873.975289
+Epoch 173/400: PITLoss: 0.050895, RECLoss: -17.447637 with std: 0.437858, RegLoss: 874.222622
+Epoch 173/400: Valid RECLoss: -16.045852 with std: 1.288594
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 0.050411, RECLoss: -17.440915, RegLoss: 872.735140
+Batch 1000/2134: PITLoss: 0.048118, RECLoss: -17.438289, RegLoss: 878.955682
+Batch 1500/2134: PITLoss: 0.047482, RECLoss: -17.446006, RegLoss: 876.071102
+Batch 2000/2134: PITLoss: 0.048481, RECLoss: -17.450957, RegLoss: 875.778026
+Epoch 174/400: PITLoss: 0.049975, RECLoss: -17.451431 with std: 0.448593, RegLoss: 876.175553
+Epoch 174/400: Valid RECLoss: -16.011714 with std: 1.304159
+Batch 500/2134: PITLoss: 0.043259, RECLoss: -17.444886, RegLoss: 869.717057
+Batch 1000/2134: PITLoss: 0.048461, RECLoss: -17.456002, RegLoss: 871.970337
+Batch 1500/2134: PITLoss: 0.049499, RECLoss: -17.458078, RegLoss: 870.965721
+Batch 2000/2134: PITLoss: 0.050284, RECLoss: -17.457511, RegLoss: 873.667228
+Epoch 175/400: PITLoss: 0.050194, RECLoss: -17.455190 with std: 0.462134, RegLoss: 873.770168
+Epoch 175/400: Valid RECLoss: -15.972344 with std: 1.351300
+Batch 500/2134: PITLoss: 0.043194, RECLoss: -17.479687, RegLoss: 869.181746
+Batch 1000/2134: PITLoss: 0.044869, RECLoss: -17.454543, RegLoss: 873.437552
+Batch 1500/2134: PITLoss: 0.045353, RECLoss: -17.462886, RegLoss: 874.614832
+Batch 2000/2134: PITLoss: 0.046305, RECLoss: -17.458665, RegLoss: 876.328226
+Epoch 176/400: PITLoss: 0.046437, RECLoss: -17.457501 with std: 0.444586, RegLoss: 877.135757
+Epoch 176/400: Valid RECLoss: -15.967672 with std: 1.337696
+Batch 500/2134: PITLoss: 0.055936, RECLoss: -17.475797, RegLoss: 889.352482
+Batch 1000/2134: PITLoss: 0.052226, RECLoss: -17.474756, RegLoss: 884.006371
+Batch 1500/2134: PITLoss: 0.051879, RECLoss: -17.466546, RegLoss: 885.658898
+Batch 2000/2134: PITLoss: 0.051603, RECLoss: -17.468185, RegLoss: 883.157124
+Epoch 177/400: PITLoss: 0.051683, RECLoss: -17.465353 with std: 0.453429, RegLoss: 882.999906
+Epoch 177/400: Valid RECLoss: -15.984146 with std: 1.338797
+Batch 500/2134: PITLoss: 0.049973, RECLoss: -17.493203, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.046263, RECLoss: -17.470594, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.045216, RECLoss: -17.461168, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.047440, RECLoss: -17.468380, RegLoss: inf
+Epoch 178/400: PITLoss: 0.046911, RECLoss: -17.471081 with std: 0.451026, RegLoss: inf
+Epoch 178/400: Valid RECLoss: -15.992801 with std: 1.344758
+Batch 500/2134: PITLoss: 0.046029, RECLoss: -17.487564, RegLoss: 874.983056
+Batch 1000/2134: PITLoss: 0.047989, RECLoss: -17.479925, RegLoss: 876.862848
+Batch 1500/2134: PITLoss: 0.050368, RECLoss: -17.459520, RegLoss: 879.585709
+Batch 2000/2134: PITLoss: 0.049811, RECLoss: -17.468205, RegLoss: 878.247819
+Epoch 179/400: PITLoss: 0.049407, RECLoss: -17.470973 with std: 0.457794, RegLoss: inf
+Epoch 179/400: Valid RECLoss: -15.986903 with std: 1.380031
+Batch 500/2134: PITLoss: 0.047748, RECLoss: -17.478161, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.047579, RECLoss: -17.473406, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.051178, RECLoss: -17.466723, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.049347, RECLoss: -17.468861, RegLoss: inf
+Epoch 180/400: PITLoss: 0.049964, RECLoss: -17.470930 with std: 0.437130, RegLoss: inf
+Epoch 180/400: Valid RECLoss: -16.026665 with std: 1.353039
+Saved state dict. to checkpoints_Wavesplit_new/10-06_07-24_180.pth
+Batch 500/2134: PITLoss: 0.047363, RECLoss: -17.474816, RegLoss: 883.432830
+Batch 1000/2134: PITLoss: 0.053939, RECLoss: -17.478403, RegLoss: 880.594030
+Batch 1500/2134: PITLoss: 0.054169, RECLoss: -17.475812, RegLoss: 881.111042
+Batch 2000/2134: PITLoss: 0.051909, RECLoss: -17.476595, RegLoss: 880.794548
+Epoch 181/400: PITLoss: 0.051435, RECLoss: -17.475590 with std: 0.444213, RegLoss: 880.701874
+Epoch 181/400: Valid RECLoss: -15.986282 with std: 1.333826
+Batch 500/2134: PITLoss: 0.050964, RECLoss: -17.501843, RegLoss: 883.133936
+Batch 1000/2134: PITLoss: 0.047166, RECLoss: -17.488174, RegLoss: 881.637011
+Batch 1500/2134: PITLoss: 0.049287, RECLoss: -17.486685, RegLoss: 880.462821
+Batch 2000/2134: PITLoss: 0.048725, RECLoss: -17.479420, RegLoss: 879.003475
+Epoch 182/400: PITLoss: 0.048802, RECLoss: -17.481970 with std: 0.463733, RegLoss: 878.876051
+Epoch 182/400: Valid RECLoss: -15.948735 with std: 1.358499
+Batch 500/2134: PITLoss: 0.044065, RECLoss: -17.512856, RegLoss: inf
+Batch 1000/2134: PITLoss: 0.042967, RECLoss: -17.478723, RegLoss: inf
+Batch 1500/2134: PITLoss: 0.046221, RECLoss: -17.473121, RegLoss: inf
+Batch 2000/2134: PITLoss: 0.046450, RECLoss: -17.481991, RegLoss: inf
+Epoch 183/400: PITLoss: 0.047476, RECLoss: -17.486459 with std: 0.448088, RegLoss: inf
+Epoch 183/400: Valid RECLoss: -16.004168 with std: 1.333966
+Batch 500/2134: PITLoss: 0.052811, RECLoss: -17.471617, RegLoss: 873.553128
+Batch 1000/2134: PITLoss: 0.051405, RECLoss: -17.485285, RegLoss: 878.303545
+Batch 1500/2134: PITLoss: 0.049546, RECLoss: -17.492839, RegLoss: 876.160818
+Batch 2000/2134: PITLoss: 0.049869, RECLoss: -17.485774, RegLoss: 876.730333
+Epoch 184/400: PITLoss: 0.049146, RECLoss: -17.486814 with std: 0.441743, RegLoss: 877.142010
+Epoch 184/400: Valid RECLoss: -16.041296 with std: 1.297549
+Batch 500/2134: PITLoss: 0.042067, RECLoss: -17.484509, RegLoss: 875.622101
+Batch 1000/2134: PITLoss: 0.044538, RECLoss: -17.495344, RegLoss: 874.647322
+Batch 1500/2134: PITLoss: 0.048601, RECBatch 500/2134: PITLoss: 0.045575, RECLoss: -17.514453, RegLoss: 867.710253Batch 1000/2134: PITLoss: 0.049145, RECLoss: -17.516869, RegLoss: 869.411993Batch 1500/2134: PITLoss: 0.046774, RECLoss: -17.510074, RegLoss: 871.291452Batch 2000/2134: PITLoss: 0.045058, RECLoss: -17.510038, RegLoss: 871.527704Epoch 188/400: PITLoss: 0.044396, RECLoss: -17.508488 with std: 0.440944, RegLoss: 872.319978
+Epoch 188/400: Valid RECLoss: -16.101960 with std: 1.284752
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 0.030519, RECLoss: -17.541993, RegLoss: 885.558905Batch 1000/2134: PITLoss: 0.034784, RECLoss: -17.540983, RegLoss: 882.699990Batch 1500/2134: PITLoss: 0.033995, RECLoss: -17.530396, RegLoss: 878.286917Batch 2000/2134: PITLoss: 0.034706, RECLoss: -17.535742, RegLoss: 878.699728Epoch 189/400: PITLoss: 0.034962, RECLoss: -17.534162 with std: 0.443694, RegLoss: 877.542934
+Epoch 189/400: Valid RECLoss: -16.040039 with std: 1.350514
+Batch 500/2134: PITLoss: 0.031828, RECLoss: -17.568611, RegLoss: 869.120859Batch 1000/2134: PITLoss: 0.033622, RECLoss: -17.563372, RegLoss: 870.118961Batch 1500/2134: PITLoss: 0.036645, RECLoss: -17.552295, RegLoss: 872.641089Batch 2000/2134: PITLoss: 0.036649, RECLoss: -17.539836, RegLoss: 874.659706Epoch 190/400: PITLoss: 0.036515, RECLoss: -17.537908 with std: 0.453086, RegLoss: 874.440606
+Epoch 190/400: Valid RECLoss: -16.067724 with std: 1.324043
+Saved state dict. to checkpoints_Wavesplit_new/10-06_16-30_190.pth
+Batch 500/2134: PITLoss: 0.037870, RECLoss: -17.549004, RegLoss: 875.974912Batch 1000/2134: PITLoss: 0.035928, RECLoss: -17.556377, RegLoss: 873.918634Batch 1500/2134: PITLoss: 0.034966, RECLoss: -17.541826, RegLoss: 873.219098Batch 2000/2134: PITLoss: 0.036434, RECLoss: -17.545937, RegLoss: 874.749580Epoch 191/400: PITLoss: 0.035943, RECLoss: -17.542843 with std: 0.449147, RegLoss: 875.346816
+Epoch 191/400: Valid RECLoss: -16.091626 with std: 1.317541
+Batch 500/2134: PITLoss: 0.040416, RECLoss: -17.530489, RegLoss: 879.147681Batch 1000/2134: PITLoss: 0.034922, RECLoss: -17.546720, RegLoss: 879.390695Batch 1500/2134: PITLoss: 0.034573, RECLoss: -17.538677, RegLoss: 877.219467Batch 2000/2134: PITLoss: 0.034816, RECLoss: -17.538367, RegLoss: 875.496551Epoch 192/400: PITLoss: 0.036542, RECLoss: -17.537670 with std: 0.442201, RegLoss: 874.673525
+Epoch 192/400: Valid RECLoss: -16.091831 with std: 1.289872
+Batch 500/2134: PITLoss: 0.034225, RECLoss: -17.547548, RegLoss: 870.412481Batch 1000/2134: PITLoss: 0.035459, RECLoss: -17.551295, RegLoss: 871.729267Batch 1500/2134: PITLoss: 0.034330, RECLoss: -17.546681, RegLoss: 872.170992Batch 2000/2134: PITLoss: 0.035586, RECLoss: -17.542234, RegLoss: 874.607759Epoch 193/400: PITLoss: 0.037041, RECLoss: -17.541444 with std: 0.440070, RegLoss: 874.884141
+Epoch 193/400: Valid RECLoss: -16.032655 with std: 1.368786
+Batch 500/2134: PITLoss: 0.032264, RECLoss: -17.555088, RegLoss: 878.182490Batch 1000/2134: PITLoss: 0.032425, RECLoss: -17.557260, RegLoss: 878.405580Batch 1500/2134: PITLoss: 0.036453, RECLoss: -17.545353, RegLoss: 876.530244Batch 2000/2134: PITLoss: 0.036607, RECLoss: -17.549093, RegLoss: 876.597645Epoch 194/400: PITLoss: 0.036365, RECLoss: -17.550248 with std: 0.443713, RegLoss: 876.442449
+Epoch 194/400: Valid RECLoss: -16.040079 with std: 1.325238
+Batch 500/2134: PITLoss: 0.033207, RECLoss: -17.548294, RegLoss: 871.345978Batch 1000/2134: PITLoss: 0.034992, RECLoss: -17.549526, RegLoss: 874.336901Batch 1500/2134: PITLoss: 0.034623, RECLoss: -17.547479, RegLoss: infBatch 2000/2134: PITLoss: 0.034957, RECLoss: -17.553781, RegLoss: infEpoch 195/400: PITLoss: 0.034516, RECLoss: -17.551105 with std: 0.438836, RegLoss: inf
+Epoch 195/400: Valid RECLoss: -16.065198 with std: 1.305272
+Batch 500/2134: PITLoss: 0.029775, RECLoss: -17.545389, RegLoss: 874.126511Batch 1000/2134: PITLoss: 0.039243, RECLoss: -17.526186, RegLoss: 875.747563Batch 1500/2134: PITLoss: 0.036569, RECLoss: -17.533031, RegLoss: 876.699710Batch 2000/2134: PITLoss: 0.035624, RECLoss: -17.543600, RegLoss: 876.966600Epoch 196/400: PITLoss: 0.035361, RECLoss: -17.539070 with std: 0.442955, RegLoss: 876.751236
+Epoch 196/400: Valid RECLoss: -16.037627 with std: 1.302447
+Batch 500/2134: PITLoss: 0.032291, RECLoss: -17.574704, RegLoss: 876.398191Batch 1000/2134: PITLoss: 0.031238, RECLoss: -17.561209, RegLoss: 876.257958Batch 1500/2134: PITLoss: 0.031919, RECLoss: -17.550518, RegLoss: 876.252595Batch 2000/2134: PITLoss: 0.030807, RECLoss: -17.547966, RegLoss: 877.011691Epoch 197/400: PITLoss: 0.030732, RECLoss: -17.547384 with std: 0.449488, RegLoss: 876.937387
+Epoch 197/400: Valid RECLoss: -16.078561 with std: 1.369041
+Batch 500/2134: PITLoss: 0.028906, RECLoss: -17.567938, RegLoss: 879.510631Batch 1000/2134: PITLoss: 0.029978, RECLoss: -17.543933, RegLoss: 879.720344Batch 1500/2134: PITLoss: 0.032852, RECLoss: -17.545847, RegLoss: 878.515807Batch 2000/2134: PITLoss: 0.032919, RECLoss: -17.548016, RegLoss: 879.031245Epoch 198/400: PITLoss: 0.033226, RECLoss: -17.549833 with std: 0.447708, RegLoss: 878.799267
+Epoch 198/400: Valid RECLoss: -16.046277 with std: 1.394533
+Batch 500/2134: PITLoss: 0.030216, RECLoss: -17.579937, RegLoss: 875.441533Batch 1000/2134: PITLoss: 0.031720, RECLoss: -17.551623, RegLoss: 878.877081Batch 1500/2134: PITLoss: 0.033394, RECLoss: -17.554612, RegLoss: 879.326007Batch 2000/2134: PITLoss: 0.035925, RECLoss: -17.550379, RegLoss: 881.024638Epoch 199/400: PITLoss: 0.035901, RECLoss: -17.549402 with std: 0.441598, RegLoss: 880.267135
+Epoch 199/400: Valid RECLoss: -16.045328 with std: 1.386857
+Batch 500/2134: PITLoss: 0.031095, RECLoss: -17.550916, RegLoss: 880.784041Batch 1000/2134: PITLoss: 0.034756, RECLoss: -17.560383, RegLoss: 878.995822Batch 1500/2134: PITLoss: 0.033886, RECLoss: -17.563689, RegLoss: 878.655729Batch 2000/2134: PITLoss: 0.034107, RECLoss: -17.559644, RegLoss: 879.003078Epoch 200/400: PITLoss: 0.033673, RECLoss: -17.559965 with std: 0.454751, RegLoss: 878.967728
+Epoch 200/400: Valid RECLoss: -16.003747 with std: 1.346575
+Saved state dict. to checkpoints_Wavesplit_new/10-07_01-32_200.pth
+Batch 500/2134: PITLoss: 0.035897, RECLoss: -17.541136, RegLoss: 875.663695Batch 1000/2134: PITLoss: 0.038525, RECLoss: -17.572889, RegLoss: 880.248680Batch 1500/2134: PITLoss: 0.036577, RECLoss: -17.556177, RegLoss: 882.795584Batch 2000/2134: PITLoss: 0.035594, RECLoss: -17.559199, RegLoss: 882.309999Epoch 201/400: PITLoss: 0.036388, RECLoss: -17.562664 with std: 0.446575, RegLoss: 882.341500
+Epoch 201/400: Valid RECLoss: -16.069248 with std: 1.289724
+Batch 500/2134: PITLoss: 0.040612, RECLoss: -17.559437, RegLoss: 879.504045Batch 1000/2134: PITLoss: 0.036863, RECLoss: -17.573505, RegLoss: 875.637958Batch 1500/2134: PITLoss: 0.036039, RECLoss: -17.570849, RegLoss: 876.593076Batch 2000/2134: PITLoss: 0.035906, RECLoss: -17.562610, RegLoss: 877.829134Epoch 202/400: PITLoss: 0.035503, RECLoss: -17.561216 with std: 0.443859, RegLoss: 877.717545
+Epoch 202/400: Valid RECLoss: -16.093946 with std: 1.310790
+Batch 500/2134: PITLoss: 0.026881, RECLoss: -17.580661, RegLoss: 872.575193Batch 1000/2134: PITLoss: 0.028882, RECLoss: -17.570363, RegLoss: 877.664898Batch 1500/2134: PITLoss: 0.031029, RECLoss: -17.562490, RegLoss: 879.926572Batch 2000/2134: PITLoss: 0.034975, RECLoss: -17.556473, RegLoss: 882.912154Epoch 203/400: PITLoss: 0.034656, RECLoss: -17.560456 with std: 0.452659, RegLoss: 883.454766
+Epoch 203/400: Valid RECLoss: -16.085708 with std: 1.270942
+Batch 500/2134: PITLoss: 0.038220, RECLoss: -17.583010, RegLoss: 883.981466Batch 1000/2134: PITLoss: 0.038793, RECLoss: -17.555601, RegLoss: 887.370403Batch 1500/2134: PITLoss: 0.035978, RECLoss: -17.562403, RegLoss: 886.910018Batch 2000/2134: PITLoss: 0.036586, RECLoss: -17.563889, RegLoss: 887.226127Epoch 204/400: PITLoss: 0.036007, RECLoss: -17.564687 with std: 0.445634, RegLoss: 886.268669
+Epoch 204/400: Valid RECLoss: -16.092066 with std: 1.300700
+Batch 500/2134: PITLoss: 0.034455, RECLoss: -17.596666, RegLoss: 885.778759Batch 1000/2134: PITLoss: 0.033396, RECLoss: -17.560347, RegLoss: 885.929759Batch 1500/2134: PITLoss: 0.032988, RECLoss: -17.563079, RegLoss: infBatch 2000/2134: PITLoss: 0.033481, RECLoss: -17.562282, RegLoss: infEpoch 205/400: PITLoss: 0.033305, RECLoss: -17.562557 with std: 0.442457, RegLoss: inf
+Epoch 205/400: Valid RECLoss: -16.000521 with std: 1.382810
+Batch 500/2134: PITLoss: 0.035014, RECLoss: -17.591814, RegLoss: 887.616571Batch 1000/2134: PITLoss: 0.031304, RECLoss: -17.588043, RegLoss: 886.431264Batch 1500/2134: PITLoss: 0.032772, RECLoss: -17.574059, RegLoss: 885.698333Batch 2000/2134: PITLoss: 0.035233, RECLoss: -17.568476, RegLoss: 885.721402Epoch 206/400: PITLoss: 0.035128, RECLoss: -17.569974 with std: 0.439406, RegLoss: 886.009716
+Epoch 206/400: Valid RECLoss: -16.008400 with std: 1.397781
+Batch 500/2134: PITLoss: 0.029928, RECLoss: -17.583260, RegLoss: 879.692614Batch 1000/2134: PITLoss: 0.035615, RECLoss: -17.591116, RegLoss: 880.137597Batch 1500/2134: PITLoss: 0.035447, RECLoss: -17.579274, RegLoss: 882.531154Batch 2000/2134: PITLoss: 0.034199, RECLoss: -17.577454, RegLoss: 885.241623Epoch 207/400: PITLoss: 0.033977, RECLoss: -17.575287 with std: 0.446883, RegLoss: 885.219547
+Epoch 207/400: Valid RECLoss: -16.086310 with std: 1.369591
+Batch 500/2134: PITLoss: 0.037029, RECLoss: -17.543876, RegLoss: 893.231494Batch 1000/2134: PITLoss: 0.038845, RECLoss: -17.555650, RegLoss: 892.909243Batch 1500/2134: PITLoss: 0.036292, RECLoss: -17.562545, RegLoss: 894.843501Batch 2000/2134: PITLoss: 0.036407, RECLoss: -17.565698, RegLoss: infEpoch 208/400: PITLoss: 0.036228, RECLoss: -17.565551 with std: 0.443976, RegLoss: inf
+Epoch 208/400: Valid RECLoss: -16.051055 with std: 1.353337
+Batch 500/2134: PITLoss: 0.028488, RECLoss: -17.573138, RegLoss: infBatch 1000/2134: PITLoss: 0.029769, RECLoss: -17.575559, RegLoss: infBatch 1500/2134: PITLoss: 0.031224, RECLoss: -17.574754, RegLoss: infBatch 2000/2134: PITLoss: 0.035272, RECLoss: -17.567214, RegLoss: infEpoch 209/400: PITLoss: 0.035225, RECLoss: -17.569466 with std: 0.438315, RegLoss: inf
+Epoch 209/400: Valid RECLoss: -16.079761 with std: 1.340696
+Batch 500/2134: PITLoss: 0.033976, RECLoss: -17.581930, RegLoss: 892.780412Batch 1000/2134: PITLoss: 0.033197, RECLoss: -17.572029, RegLoss: 894.110328Batch 1500/2134: PITLoss: 0.031483, RECLoss: -17.585581, RegLoss: 893.991286Batch 2000/2134: PITLoss: 0.030615, RECLoss: -17.579442, RegLoss: 893.400947Epoch 210/400: PITLoss: 0.031082, RECLoss: -17.579945 with std: 0.457891, RegLoss: 893.235432
+Epoch 210/400: Valid RECLoss: -16.045505 with std: 1.382814
+Saved state dict. to checkpoints_Wavesplit_new/10-07_10-29_210.pth
+Batch 500/2134: PITLoss: 0.028388, RECLoss: -17.614909, RegLoss: 889.103497Batch 1000/2134: PITLoss: 0.030249, RECLoss: -17.602005, RegLoss: 890.699522Batch 1500/2134: PITLoss: 0.034817, RECLoss: -17.581377, RegLoss: 890.931447Batch 2000/2134: PITLoss: 0.033663, RECLoss: -17.577515, RegLoss: 888.733920Epoch 211/400: PITLoss: 0.033348, RECLoss: -17.574877 with std: 0.447830, RegLoss: 888.224407
+Epoch 211/400: Valid RECLoss: -16.097076 with std: 1.283056
+Batch 500/2134: PITLoss: 0.027429, RECLoss: -17.569644, RegLoss: 889.841630Batch 1000/2134: PITLoss: 0.027065, RECLoss: -17.574583, RegLoss: 885.946445Batch 1500/2134: PITLoss: 0.028916, RECLoss: -17.570039, RegLoss: 885.746101Batch 2000/2134: PITLoss: 0.028372, RECLoss: -17.579539, RegLoss: 887.076982Epoch 212/400: PITLoss: 0.028749, RECLoss: -17.581858 with std: 0.449364, RegLoss: 886.644760
+Epoch 212/400: Valid RECLoss: -16.081424 with std: 1.325204
+Batch 500/2134: PITLoss: 0.028363, RECLoss: -17.564393, RegLoss: 885.442717Batch 1000/2134: PITLoss: 0.029860, RECLoss: -17.562622, RegLoss: 885.149998Batch 1500/2134: PITLoss: 0.031585, RECLoss: -17.572611, RegLoss: 884.327723Batch 2000/2134: PITLoss: 0.032218, RECLoss: -17.578654, RegLoss: 885.102005Epoch 213/400: PITLoss: 0.032763, RECLoss: -17.580403 with std: 0.451125, RegLoss: 884.905415
+Epoch 213/400: Valid RECLoss: -16.113255 with std: 1.320217
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Batch 500/2134: PITLoss: 0.036461, RECLoss: -17.573370, RegLoss: 885.581374Batch 1000/2134: PITLoss: 0.032899, RECLoss: -17.587732, RegLoss: 883.139926Batch 1500/2134: PITLoss: 0.033081, RECLoss: -17.592626, RegLoss: 885.514889Batch 2000/2134: PITLoss: 0.031713, RECLoss: -17.580783, RegLoss: 886.871612Epoch 214/400: PITLoss: 0.032504, RECLoss: -17.582251 with std: 0.440652, RegLoss: 887.418032
+Epoch 214/400: Valid RECLoss: -16.109721 with std: 1.299446
+Batch 500/2134: PITLoss: 0.039976, RECLoss: -17.590805, RegLoss: 887.400132Batch 1000/2134: PITLoss: 0.032833, RECLoss: -17.585367, RegLoss: 894.503642Batch 1500/2134: PITLoss: 0.030556, RECLoss: -17.587812, RegLoss: 895.517724Batch 2000/2134: PITLoss: 0.029375, RECLoss: -17.589212, RegLoss: 896.648635Epoch 215/400: PITLoss: 0.029475, RECLoss: -17.593636 with std: 0.443859, RegLoss: 896.635179
+Epoch 215/400: Valid RECLoss: -16.098499 with std: 1.275503
+Batch 500/2134: PITLoss: 0.035178, RECLoss: -17.564286, RegLoss: 893.295382Batch 1000/2134: PITLoss: 0.035268, RECLoss: -17.575911, RegLoss: 888.822983Batch 1500/2134: PITLoss: 0.035980, RECLoss: -17.580781, RegLoss: 885.992765Batch 2000/2134: PITLoss: 0.034781, RECLoss: -17.582049, RegLoss: 885.749857Epoch 216/400: PITLoss: 0.034360, RECLoss: -17.581397 with std: 0.444735, RegLoss: 885.823722
+Epoch 216/400: Valid RECLoss: -16.063316 with std: 1.293464
+Batch 500/2134: PITLoss: 0.032610, RECLoss: -17.581427, RegLoss: 886.385776Batch 1000/2134: PITLoss: 0.034506, RECLoss: -17.576405, RegLoss: 884.405919Batch 1500/2134: PITLoss: 0.033049, RECLoss: -17.589242, RegLoss: 883.993741Batch 2000/2134: PITLoss: 0.033567, RECLoss: -17.587365, RegLoss: 884.037798Epoch 217/400: PITLoss: 0.033273, RECLoss: -17.588387 with std: 0.446340, RegLoss: 883.810076
+Epoch 217/400: Valid RECLoss: -16.106981 with std: 1.260950
+Batch 500/2134: PITLoss: 0.031205, RECLoss: -17.599856, RegLoss: 879.388661Batch 1000/2134: PITLoss: 0.034190, RECLoss: -17.591057, RegLoss: 880.048583Batch 1500/2134: PITLoss: 0.035306, RECLoss: -17.587743, RegLoss: 880.544570Batch 2000/2134: PITLoss: 0.034735, RECLoss: -17.584882, RegLoss: 882.073043Epoch 218/400: PITLoss: 0.035122, RECLoss: -17.585993 with std: 0.445170, RegLoss: 881.314267
+Epoch 218/400: Valid RECLoss: -16.090359 with std: 1.280518
+Batch 500/2134: PITLoss: 0.026865, RECLoss: -17.595420, RegLoss: 878.586822Batch 1000/2134: PITLoss: 0.027999, RECLoss: -17.586333, RegLoss: 880.188134Batch 1500/2134: PITLoss: 0.028722, RECLoss: -17.588061, RegLoss: 879.085269Batch 2000/2134: PITLoss: 0.030271, RECLoss: -17.588132, RegLoss: infEpoch 219/400: PITLoss: 0.030118, RECLoss: -17.585263 with std: 0.451545, RegLoss: inf
+Epoch 219/400: Valid RECLoss: -16.032534 with std: 1.384901
+Batch 500/2134: PITLoss: 0.034248, RECLoss: -17.601565, RegLoss: 879.424585Batch 1000/2134: PITLoss: 0.030158, RECLoss: -17.604428, RegLoss: 882.521132Batch 1500/2134: PITLoss: 0.030674, RECLoss: -17.597757, RegLoss: 882.015670Batch 2000/2134: PITLoss: 0.031754, RECLoss: -17.594393, RegLoss: 880.454578Epoch 220/400: PITLoss: 0.031508, RECLoss: -17.591229 with std: 0.448821, RegLoss: 880.952891
+Epoch 220/400: Valid RECLoss: -16.088795 with std: 1.316102
+Saved state dict. to checkpoints_Wavesplit_new/10-07_19-11_220.pth
+Batch 500/2134: PITLoss: 0.036895, RECLoss: -17.616372, RegLoss: 881.609624Batch 1000/2134: PITLoss: 0.033348, RECLoss: -17.607457, RegLoss: 880.547468Batch 1500/2134: PITLoss: 0.030405, RECLoss: -17.606048, RegLoss: 880.214972Batch 2000/2134: PITLoss: 0.031834, RECLoss: -17.596467, RegLoss: 880.468570Epoch 221/400: PITLoss: 0.031468, RECLoss: -17.594924 with std: 0.453985, RegLoss: 880.305326
+Epoch 221/400: Valid RECLoss: -16.059270 with std: 1.323897
+Batch 500/2134: PITLoss: 0.030833, RECLoss: -17.578432, RegLoss: 877.816681Batch 1000/2134: PITLoss: 0.036061, RECLoss: -17.590237, RegLoss: 879.229967Batch 1500/2134: PITLoss: 0.033195, RECLoss: -17.607364, RegLoss: 879.027714Batch 2000/2134: PITLoss: 0.033278, RECLoss: -17.604470, RegLoss: 878.934857Epoch 222/400: PITLoss: 0.032873, RECLoss: -17.600973 with std: 0.450312, RegLoss: 879.029067
+Epoch 222/400: Valid RECLoss: -16.072518 with std: 1.287323
+Batch 500/2134: PITLoss: 0.031071, RECLoss: -17.608129, RegLoss: 879.387513Batch 1000/2134: PITLoss: 0.033132, RECLoss: -17.595759, RegLoss: 877.570300Batch 1500/2134: PITLoss: 0.031952, RECLoss: -17.595024, RegLoss: 877.804484Batch 2000/2134: PITLoss: 0.031750, RECLoss: -17.601585, RegLoss: 878.548154Epoch 223/400: PITLoss: 0.032649, RECLoss: -17.596944 with std: 0.442952, RegLoss: 878.319896
+Epoch 223/400: Valid RECLoss: -16.107613 with std: 1.302574
+Batch 500/2134: PITLoss: 0.025577, RECLoss: -17.567892, RegLoss: 873.720499Batch 1000/2134: PITLoss: 0.027670, RECLoss: -17.591423, RegLoss: 875.806930Batch 1500/2134: PITLoss: 0.028025, RECLoss: -17.584523, RegLoss: 877.093464Batch 2000/2134: PITLoss: 0.029402, RECLoss: -17.589040, RegLoss: 877.582238Epoch 224/400: PITLoss: 0.029786, RECLoss: -17.592905 with std: 0.443963, RegLoss: 877.726703
+Epoch 224/400: Valid RECLoss: -16.058070 with std: 1.323906
+Batch 500/2134: PITLoss: 0.024404, RECLoss: -17.601520, RegLoss: 870.531602Batch 1000/2134: PITLoss: 0.025729, RECLoss: -17.599674, RegLoss: 871.940123Batch 1500/2134: PITLoss: 0.030062, RECLoss: -17.599336, RegLoss: 870.814486Batch 2000/2134: PITLoss: 0.029778, RECLoss: -17.601214, RegLoss: 871.073089Epoch 225/400: PITLoss: 0.030108, RECLoss: -17.603163 with std: 0.444143, RegLoss: 871.276811
+Epoch 225/400: Valid RECLoss: -16.089277 with std: 1.342886
+Batch 500/2134: PITLoss: 0.030240, RECLoss: -17.601061, RegLoss: 875.910103Batch 1000/2134: PITLoss: 0.029725, RECLoss: -17.614144, RegLoss: 870.061879Batch 1500/2134: PITLoss: 0.032666, RECLoss: -17.605821, RegLoss: 871.536187Batch 2000/2134: PITLoss: 0.032854, RECLoss: -17.598777, RegLoss: 871.473995Epoch 226/400: PITLoss: 0.032246, RECLoss: -17.604005 with std: 0.443895, RegLoss: 871.310101
+Epoch 226/400: Valid RECLoss: -16.018962 with std: 1.358063
+Batch 500/2134: PITLoss: 0.033824, RECLoss: -17.632264, RegLoss: 865.517429Batch 1000/2134: PITLoss: 0.032148, RECLoss: -17.609283, RegLoss: 867.357047Batch 1500/2134: PITLoss: 0.031848, RECLoss: -17.599266, RegLoss: 869.465765Batch 2000/2134: PITLoss: 0.030498, RECLoss: -17.603013, RegLoss: 870.225906Epoch 227/400: PITLoss: 0.030167, RECLoss: -17.604030 with std: 0.438798, RegLoss: 869.772707
+Epoch 227/400: Valid RECLoss: -16.092369 with std: 1.308931
+Batch 500/2134: PITLoss: 0.029675, RECLoss: -17.598091, RegLoss: 872.480747Batch 1000/2134: PITLoss: 0.029114, RECLoss: -17.587698, RegLoss: 870.771102Batch 1500/2134: PITLoss: 0.030380, RECLoss: -17.606222, RegLoss: 871.916574Batch 2000/2134: PITLoss: 0.030193, RECLoss: -17.605700, RegLoss: 872.526369Epoch 228/400: PITLoss: 0.029793, RECLoss: -17.603527 with std: 0.435383, RegLoss: 871.715573
+Epoch 228/400: Valid RECLoss: -16.052788 with std: 1.372214
+Batch 500/2134: PITLoss: 0.030917, RECLoss: -17.614278, RegLoss: 878.455209Batch 1000/2134: PITLoss: 0.030294, RECLoss: -17.594339, RegLoss: 881.114235Batch 1500/2134: PITLoss: 0.031399, RECLoss: -17.595016, RegLoss: 879.626726Batch 2000/2134: PITLoss: 0.030332, RECLoss: -17.600125, RegLoss: 878.444194Epoch 229/400: PITLoss: 0.031052, RECLoss: -17.599141 with std: 0.451802, RegLoss: 879.013360
+Epoch 229/400: Valid RECLoss: -16.095110 with std: 1.361149
+Batch 500/2134: PITLoss: 0.032262, RECLoss: -17.605142, RegLoss: 876.736781Batch 1000/2134: PITLoss: 0.028915, RECLoss: -17.611024, RegLoss: 878.106028Batch 1500/2134: PITLoss: 0.027063, RECLoss: -17.608526, RegLoss: 881.916599Batch 2000/2134: PITLoss: 0.026790, RECLoss: -17.611785, RegLoss: 881.044994Epoch 230/400: PITLoss: 0.026642, RECLoss: -17.608178 with std: 0.439521, RegLoss: 880.588031
+Epoch 230/400: Valid RECLoss: -16.068946 with std: 1.357178
+Saved state dict. to checkpoints_Wavesplit_new/10-08_03-46_230.pth
+Batch 500/2134: PITLoss: 0.031007, RECLoss: -17.662553, RegLoss: 876.042305Batch 1000/2134: PITLoss: 0.028141, RECLoss: -17.631176, RegLoss: 878.803911Batch 1500/2134: PITLoss: 0.027614, RECLoss: -17.623694, RegLoss: 880.081391Batch 2000/2134: PITLoss: 0.029603, RECLoss: -17.613330, RegLoss: 883.177628Epoch 231/400: PITLoss: 0.029681, RECLoss: -17.611828 with std: 0.446906, RegLoss: 883.315788
+Epoch 231/400: Valid RECLoss: -16.103734 with std: 1.265878
+Batch 500/2134: PITLoss: 0.027187, RECLoss: -17.607263, RegLoss: 886.003972Batch 1000/2134: PITLoss: 0.028980, RECLoss: -17.625182, RegLoss: 881.809668Batch 1500/2134: PITLoss: 0.028657, RECLoss: -17.616964, RegLoss: 878.915075Batch 2000/2134: PITLoss: 0.030035, RECLoss: -17.610562, RegLoss: 880.135710Epoch 232/400: PITLoss: 0.030075, RECLoss: -17.611671 with std: 0.450901, RegLoss: 879.955671
+Epoch 232/400: Valid RECLoss: -16.073198 with std: 1.361837
+Batch 500/2134: PITLoss: 0.025118, RECLoss: -17.616274, RegLoss: 867.982944Batch 1000/2134: PITLoss: 0.025723, RECLoss: -17.613449, RegLoss: 874.087207Batch 1500/2134: PITLoss: 0.028186, RECLoss: -17.608787, RegLoss: 875.748227Batch 2000/2134: PITLoss: 0.028780, RECLoss: -17.609536, RegLoss: 874.535961Epoch 233/400: PITLoss: 0.028506, RECLoss: -17.608873 with std: 0.444840, RegLoss: 875.186500
+Epoch 233/400: Valid RECLoss: -16.070427 with std: 1.347795
+Batch 500/2134: PITLoss: 0.034312, RECLoss: -17.614572, RegLoss: 878.631036Batch 1000/2134: PITLoss: 0.029744, RECLoss: -17.618912, RegLoss: 880.391138Batch 1500/2134: PITLoss: 0.029857, RECLoss: -17.616180, RegLoss: 878.372920Batch 2000/2134: PITLoss: 0.030912, RECLoss: -17.613887, RegLoss: 876.159805Epoch 234/400: PITLoss: 0.030441, RECLoss: -17.612310 with std: 0.445920, RegLoss: 876.610879
+Epoch 234/400: Valid RECLoss: -16.054822 with std: 1.375391
+Batch 500/2134: PITLoss: 0.027192, RECLoss: -17.661172, RegLoss: 874.667854Batch 1000/2134: PITLoss: 0.026201, RECLoss: -17.635096, RegLoss: 871.249211Batch 1500/2134: PITLoss: 0.025691, RECLoss: -17.629857, RegLoss: 870.890001Batch 2000/2134: PITLoss: 0.024919, RECLoss: -17.621503, RegLoss: 872.512144Epoch 235/400: PITLoss: 0.025778, RECLoss: -17.618901 with std: 0.451243, RegLoss: 872.771027
+Epoch 235/400: Valid RECLoss: -16.104873 with std: 1.349687
+Batch 500/2134: PITLoss: 0.030759, RECLoss: -17.630434, RegLoss: 876.944186Batch 1000/2134: PITLoss: 0.026482, RECLoss: -17.630274, RegLoss: 879.097337Batch 1500/2134: PITLoss: 0.026258, RECLoss: -17.639017, RegLoss: 881.276227Batch 2000/2134: PITLoss: 0.027489, RECLoss: -17.635178, RegLoss: 883.948327Epoch 236/400: PITLoss: 0.027137, RECLoss: -17.634260 with std: 0.448774, RegLoss: 884.286133
+Epoch 236/400: Valid RECLoss: -16.066873 with std: 1.356873
+Batch 500/2134: PITLoss: 0.030199, RECLoss: -17.623707, RegLoss: 885.470614Batch 1000/2134: PITLoss: 0.027129, RECLoss: -17.642066, RegLoss: 882.333591Batch 1500/2134: PITLoss: 0.026839, RECLoss: -17.638841, RegLoss: 880.645154Batch 2000/2134: PITLoss: 0.030671, RECLoss: -17.637062, RegLoss: 879.510483Epoch 237/400: PITLoss: 0.030186, RECLoss: -17.635481 with std: 0.453582, RegLoss: 880.077789
+Epoch 237/400: Valid RECLoss: -16.107922 with std: 1.364302
+Batch 500/2134: PITLoss: 0.023152, RECLoss: -17.656942, RegLoss: 885.134834Batch 1000/2134: PITLoss: 0.024011, RECLoss: -17.646823, RegLoss: 884.225593Batch 1500/2134: PITLoss: 0.022953, RECLoss: -17.642434, RegLoss: 883.113534Batch 2000/2134: PITLoss: 0.024665, RECLoss: -17.639524, RegLoss: 881.703707Epoch 238/400: PITLoss: 0.024329, RECLoss: -17.638635 with std: 0.437886, RegLoss: 882.050006
+Epoch 238/400: Valid RECLoss: -16.088664 with std: 1.357359
+Batch 500/2134: PITLoss: 0.031640, RECLoss: -17.619044, RegLoss: 885.930591Batch 1000/2134: PITLoss: 0.028383, RECLoss: -17.621089, RegLoss: 878.208309Batch 1500/2134: PITLoss: 0.030089, RECLoss: -17.638171, RegLoss: infBatch 2000/2134: PITLoss: 0.028167, RECLoss: -17.634523, RegLoss: infEpoch 239/400: PITLoss: 0.027709, RECLoss: -17.633938 with std: 0.450615, RegLoss: inf
+Epoch 239/400: Valid RECLoss: -16.077749 with std: 1.351404
+Batch 500/2134: PITLoss: 0.031961, RECLoss: -17.665950, RegLoss: 876.340199Batch 1000/2134: PITLoss: 0.027128, RECLoss: -17.657931, RegLoss: 885.602170Batch 1500/2134: PITLoss: 0.027031, RECLoss: -17.651604, RegLoss: 887.702131Batch 2000/2134: PITLoss: 0.027647, RECLoss: -17.640840, RegLoss: 884.580567Epoch 240/400: PITLoss: 0.027590, RECLoss: -17.640410 with std: 0.448808, RegLoss: 884.517713
+Epoch 240/400: Valid RECLoss: -16.142611 with std: 1.281602
+Saved state dict. to checkpoints_Wavesplit_new/best.pth
+Saved state dict. to checkpoints_Wavesplit_new/10-08_12-19_240.pth
+Batch 500/2134: PITLoss: 0.027837, RECLoss: -17.629577, RegLoss: 881.091612Batch 1000/2134: PITLoss: 0.026202, RECLoss: -17.632070, RegLoss: 881.225441Batch 1500/2134: PITLoss: 0.027298, RECLoss: -17.635434, RegLoss: 882.945590Batch 2000/2134: PITLoss: 0.026766, RECLoss: -17.638675, RegLoss: 883.772519Epoch 241/400: PITLoss: 0.026634, RECLoss: -17.634310 with std: 0.437116, RegLoss: 884.356759
+Epoch 241/400: Valid RECLoss: -16.092346 with std: 1.341727
+Batch 500/2134: PITLoss: 0.024817, RECLoss: -17.653224, RegLoss: infBatch 1000/2134: PITLoss: 0.027741, RECLoss: -17.651876, RegLoss: infBatch 1500/2134: PITLoss: 0.026369, RECLoss: -17.641109, RegLoss: infBatch 2000/2134: PITLoss: 0.026137, RECLoss: -17.637786, RegLoss: infEpoch 242/400: PITLoss: 0.026289, RECLoss: -17.639286 with std: 0.448278, RegLoss: inf
+Epoch 242/400: Valid RECLoss: -16.085819 with std: 1.351851
+Batch 500/2134: PITLoss: 0.022560, RECLoss: -17.652621, RegLoss: 880.483546Batch 1000/2134: PITLoss: 0.024828, RECLoss: -17.645260, RegLoss: 882.083928Batch 1500/2134: PITLoss: 0.027202, RECLoss: -17.649995, RegLoss: 878.817274Batch 2000/2134: PITLoss: 0.025867, RECLoss: -17.644875, RegLoss: 878.162934Epoch 243/400: PITLoss: 0.025554, RECLoss: -17.642609 with std: 0.454137, RegLoss: 878.320010
+Epoch 243/400: Valid RECLoss: -16.081572 with std: 1.343830
+Batch 500/2134: PITLoss: 0.022514, RECLoss: -17.664105, RegLoss: 890.650367Batch 1000/2134: PITLoss: 0.022320, RECLoss: -17.661669, RegLoss: 887.027277Batch 1500/2134: PITLoss: 0.022474, RECLoss: -17.650903, RegLoss: 885.042829Batch 2000/2134: PITLoss: 0.024213, RECLoss: -17.644741, RegLoss: 886.144758Epoch 244/400: PITLoss: 0.024995, RECLoss: -17.644923 with std: 0.448804, RegLoss: 886.455533
+Epoch 244/400: Valid RECLoss: -16.074076 with std: 1.406803
+Batch 500/2134: PITLoss: 0.025682, RECLoss: -17.653348, RegLoss: infBatch 1000/2134: PITLoss: 0.027508, RECLoss: -17.652096, RegLoss: infBatch 1500/2134: PITLoss: 0.025923, RECLoss: -17.642086, RegLoss: infBatch 2000/2134: PITLoss: 0.025313, RECLoss: -17.642003, RegLoss: infEpoch 245/400: PITLoss: 0.025194, RECLoss: -17.640149 with std: 0.455320, RegLoss: inf
+Epoch 245/400: Valid RECLoss: -16.093206 with std: 1.328726
+Batch 500/2134: PITLoss: 0.026449, RECLoss: -17.604416, RegLoss: 881.760583Batch 1000/2134: PITLoss: 0.028402, RECLoss: -17.612255, RegLoss: 884.023899Batch 1500/2134: PITLoss: 0.029137, RECLoss: -17.620244, RegLoss: 883.926973Batch 2000/2134: PITLoss: 0.029117, RECLoss: -17.636047, RegLoss: 883.142390Epoch 246/400: PITLoss: 0.028504, RECLoss: -17.635039 with std: 0.453555, RegLoss: 882.865224
+Epoch 246/400: Valid RECLoss: -16.065337 with std: 1.355462
+Batch 500/2134: PITLoss: 0.027781, RECLoss: -17.636257, RegLoss: 878.749811Batch 1000/2134: PITLoss: 0.026149, RECLoss: -17.636457, RegLoss: 877.556409Batch 1500/2134: PITLoss: 0.025942, RECLoss: -17.635310, RegLoss: 876.997197Batch 2000/2134: PITLoss: 0.025163, RECLoss: -17.638727, RegLoss: 877.066096Epoch 247/400: PITLoss: 0.024738, RECLoss: -17.642740 with std: 0.445966, RegLoss: 876.997998
+Epoch 247/400: Valid RECLoss: -16.092399 with std: 1.347750
+Batch 500/2134: PITLoss: 0.020609, RECLoss: -17.659372, RegLoss: 880.942201Batch 1000/2134: PITLoss: 0.024295, RECLoss: -17.662336, RegLoss: 881.804672Batch 1500/2134: PITLoss: 0.026303, RECLoss: -17.654981, RegLoss: 879.247586Batch 2000/2134: PITLoss: 0.025640, RECLoss: -17.646509, RegLoss: 879.148390Epoch 248/400: PITLoss: 0.025221, RECLoss: -17.649385 with std: 0.436250, RegLoss: 879.835728
+Epoch 248/400: Valid RECLoss: -16.078229 with std: 1.354949
+Batch 500/2134: PITLoss: 0.023057, RECLoss: -17.624550, RegLoss: 894.751079Batch 1000/2134: PITLoss: 0.023230, RECLoss: -17.636162, RegLoss: 892.895383Batch 1500/2134: PITLoss: 0.021891, RECLoss: -17.644616, RegLoss: 893.200327Batch 2000/2134: PITLoss: 0.023340, RECLoss: -17.639247, RegLoss: 892.444847Epoch 249/400: PITLoss: 0.023206, RECLoss: -17.641484 with std: 0.458512, RegLoss: 892.312636
+Epoch 249/400: Valid RECLoss: -16.063421 with std: 1.336133
+Batch 500/2134: PITLoss: 0.022226, RECLoss: -17.652347, RegLoss: 896.676714Batch 1000/2134: PITLoss: 0.021673, RECLoss: -17.650210, RegLoss: 895.440249Batch 1500/2134: PITLoss: 0.024271, RECLoss: -17.649590, RegLoss: 891.043049Batch 2000/2134: PITLoss: 0.024726, RECLoss: -17.644604, RegLoss: 888.919871Epoch 250/400: PITLoss: 0.024449, RECLoss: -17.645809 with std: 0.443099, RegLoss: 889.156237
+Epoch 250/400: Valid RECLoss: -16.069493 with std: 1.369347
+Saved state dict. to checkpoints_Wavesplit_new/10-08_21-15_250.pth
+Batch 500/2134: PITLoss: 0.025450, RECLoss: -17.611364, RegLoss: 885.364985Batch 1000/2134: PITLoss: 0.025566, RECLoss: -17.630027, RegLoss: 880.471366Batch 1500/2134: PITLoss: 0.023949, RECLoss: -17.644198, RegLoss: 882.385067Batch 2000/2134: PITLoss: 0.023567, RECLoss: -17.647850, RegLoss: 881.672791Epoch 251/400: PITLoss: 0.023763, RECLoss: -17.647788 with std: 0.437972, RegLoss: 881.979962
+Epoch 251/400: Valid RECLoss: -16.085395 with std: 1.310017
+Batch 500/2134: PITLoss: 0.022986, RECLoss: -17.665319, RegLoss: 884.550566Batch 1000/2134: PITLoss: 0.022686, RECLoss: -17.669946, RegLoss: infBatch 1500/2134: PITLoss: 0.024928, RECLoss: -17.664187, RegLoss: infBatch 2000/2134: PITLoss: 0.024774, RECLoss: -17.652780, RegLoss: infEpoch 252/400: PITLoss: 0.025618, RECLoss: -17.646737 with std: 0.450054, RegLoss: inf
+Epoch 252/400: Valid RECLoss: -16.098020 with std: 1.366711
+Batch 500/2134: PITLoss: 0.022177, RECLoss: -17.663235, RegLoss: 878.808296Batch 1000/2134: PITLoss: 0.023714, RECLoss: -17.658343, RegLoss: 881.403265Batch 1500/2134: PITLoss: 0.026277, RECLoss: -17.660082, RegLoss: 880.513533Batch 2000/2134: PITLoss: 0.027154, RECLoss: -17.652867, RegLoss: 878.921745Epoch 253/400: PITLoss: 0.026915, RECLoss: -17.650850 with std: 0.441232, RegLoss: 878.782333
+Epoch 253/400: Valid RECLoss: -16.117456 with std: 1.332464
+Batch 500/2134: PITLoss: 0.021184, RECLoss: -17.648923, RegLoss: 873.675392Batch 1000/2134: PITLoss: 0.022521, RECLoss: -17.653947, RegLoss: 873.333956Batch 1500/2134: PITLoss: 0.022317, RECLoss: -17.647692, RegLoss: 873.792957Batch 2000/2134: PITLoss: 0.022617, RECLoss: -17.649963, RegLoss: 875.278843Epoch 254/400: PITLoss: 0.022626, RECLoss: -17.652040 with std: 0.446804, RegLoss: 875.140547
+Epoch 254/400: Valid RECLoss: -16.097163 with std: 1.334418
+Batch 500/2134: PITLoss: 0.028650, RECLoss: -17.651267, RegLoss: 882.690673Batch 1000/2134: PITLoss: 0.023934, RECLoss: -17.631757, RegLoss: 883.307299Batch 1500/2134: PITLoss: 0.024407, RECLoss: -17.642658, RegLoss: 880.997028Batch 2000/2134: PITLoss: 0.027314, RECLoss: -17.643915, RegLoss: 881.293631Epoch 255/400: PITLoss: 0.026700, RECLoss: -17.646141 with std: 0.466090, RegLoss: 881.245162
+Epoch 255/400: Valid RECLoss: -16.053594 with std: 1.358976
+Batch 500/2134: PITLoss: 0.026673, RECLoss: -17.633341, RegLoss: 881.753724Batch 1000/2134: PITLoss: 0.026366, RECLoss: -17.645000, RegLoss: 880.838628Batch 1500/2134: PITLoss: 0.026882, RECLoss: -17.658335, RegLoss: 881.652460Batch 2000/2134: PITLoss: 0.025057, RECLoss: -17.649154, RegLoss: 881.925464Epoch 256/400: PITLoss: 0.025688, RECLoss: -17.651009 with std: 0.441172, RegLoss: 882.226062
+Epoch 256/400: Valid RECLoss: -16.075408 with std: 1.360661
+Batch 500/2134: PITLoss: 0.023215, RECLoss: -17.631611, RegLoss: 893.755934Batch 1000/2134: PITLoss: 0.021395, RECLoss: -17.635083, RegLoss: 889.039109Batch 1500/2134: PITLoss: 0.022621, RECLoss: -17.641344, RegLoss: 888.174545Batch 2000/2134: PITLoss: 0.022559, RECLoss: -17.654688, RegLoss: 886.377642Epoch 257/400: PITLoss: 0.023739, RECLoss: -17.649669 with std: 0.453909, RegLoss: 886.122841
+Epoch 257/400: Valid RECLoss: -16.084035 with std: 1.354894
+Batch 500/2134: PITLoss: 0.024028, RECLoss: -17.631822, RegLoss: 879.218476Batch 1000/2134: PITLoss: 0.025678, RECLoss: -17.637720, RegLoss: 886.014651Batch 1500/2134: PITLoss: 0.025900, RECLoss: -17.642935, RegLoss: 888.534884Batch 2000/2134: PITLoss: 0.026372, RECLoss: -17.646321, RegLoss: 886.725219Epoch 258/400: PITLoss: 0.025907, RECLoss: -17.648630 with std: 0.441369, RegLoss: 886.379649
+Epoch 258/400: Valid RECLoss: -16.064326 with std: 1.362205
+Batch 500/2134: PITLoss: 0.030371, RECLoss: -17.640477, RegLoss: 880.463168Batch 1000/2134: PITLoss: 0.029934, RECLoss: -17.655221, RegLoss: 878.996618Batch 1500/2134: PITLoss: 0.027681, RECLoss: -17.656932, RegLoss: 880.357339Batch 2000/2134: PITLoss: 0.027675, RECLoss: -17.656698, RegLoss: 879.873583Epoch 259/400: PITLoss: 0.027201, RECLoss: -17.651257 with std: 0.454257, RegLoss: 879.803598
+Epoch 259/400: Valid RECLoss: -16.091581 with std: 1.328595
+Batch 500/2134: PITLoss: 0.023898, RECLoss: -17.654479, RegLoss: 880.988144Batch 1000/2134: PITLoss: 0.021679, RECLoss: -17.664064, RegLoss: 881.516949Batch 1500/2134: PITLoss: 0.022406, RECLoss: -17.661069, RegLoss: 882.027154Batch 2000/2134: PITLoss: 0.021861, RECLoss: -17.655609, RegLoss: 884.208448Epoch 260/400: PITLoss: 0.022518, RECLoss: -17.656032 with std: 0.445947, RegLoss: 884.516578
+Epoch 260/400: Valid RECLoss: -16.063189 with std: 1.394545
+Saved state dict. to checkpoints_Wavesplit_new/10-09_06-08_260.pth
+Batch 500/2134: PITLoss: 0.020281, RECLoss: -17.673380, RegLoss: 888.984801Batch 1000/2134: PITLoss: 0.020002, RECLoss: -17.662474, RegLoss: 893.635564Batch 1500/2134: PITLoss: 0.024507, RECLoss: -17.652787, RegLoss: 892.443158Batch 2000/2134: PITLoss: 0.026591, RECLoss: -17.653008, RegLoss: 891.063654Epoch 261/400: PITLoss: 0.026940, RECLoss: -17.653959 with std: 0.445199, RegLoss: 890.690245
+Epoch 261/400: Valid RECLoss: -16.057304 with std: 1.388675
+Batch 500/2134: PITLoss: 0.023145, RECLoss: -17.652598, RegLoss: 897.833675Batch 1000/2134: PITLoss: 0.025422, RECLoss: -17.657050, RegLoss: 896.651365Batch 1500/2134: PITLoss: 0.024825, RECLoss: -17.655412, RegLoss: infBatch 2000/2134: PITLoss: 0.023628, RECLoss: -17.653203, RegLoss: infEpoch 262/400: PITLoss: 0.023605, RECLoss: -17.656307 with std: 0.437534, RegLoss: inf
+Epoch 262/400: Valid RECLoss: -16.127796 with std: 1.317736
+Batch 500/2134: PITLoss: 0.025548, RECLoss: -17.673590, RegLoss: 892.093786Batch 1000/2134: PITLoss: 0.023225, RECLoss: -17.665093, RegLoss: 893.138781Batch 1500/2134: PITLoss: 0.023319, RECLoss: -17.649984, RegLoss: 892.334872Batch 2000/2134: PITLoss: 0.023488, RECLoss: -17.653221, RegLoss: 892.971449Epoch 263/400: PITLoss: 0.023174, RECLoss: -17.652911 with std: 0.455767, RegLoss: 893.015384
+Epoch 263/400: Valid RECLoss: -16.104422 with std: 1.383590
+Batch 500/2134: PITLoss: 0.028407, RECLoss: -17.624600, RegLoss: 889.389389Batch 1000/2134: PITLoss: 0.025840, RECLoss: -17.640006, RegLoss: 890.446239Batch 1500/2134: PITLoss: 0.026169, RECLoss: -17.654601, RegLoss: 888.839410Batch 2000/2134: PITLoss: 0.025430, RECLoss: -17.657957, RegLoss: 888.475638Epoch 264/400: PITLoss: 0.025946, RECLoss: -17.655615 with std: 0.454944, RegLoss: 888.258726
+Epoch 264/400: Valid RECLoss: -16.130349 with std: 1.284446
+Batch 500/2134: PITLoss: 0.024733, RECLoss: -17.664681, RegLoss: 885.316785Batch 1000/2134: PITLoss: 0.024363, RECLoss: -17.670551, RegLoss: 882.822229Batch 1500/2134: PITLoss: 0.023505, RECLoss: -17.668496, RegLoss: 884.533834Batch 2000/2134: PITLoss: 0.024152, RECLoss: -17.662570, RegLoss: 884.012121Epoch 265/400: PITLoss: 0.023858, RECLoss: -17.662793 with std: 0.448984, RegLoss: 883.828851
+Epoch 265/400: Valid RECLoss: -16.080629 with std: 1.364362
+Batch 500/2134: PITLoss: 0.026306, RECLoss: -17.672058, RegLoss: 876.944821Batch 1000/2134: PITLoss: 0.022111, RECLoss: -17.660587, RegLoss: 877.691742Batch 1500/2134: PITLoss: 0.022305, RECLoss: -17.664600, RegLoss: infBatch 2000/2134: PITLoss: 0.024401, RECLoss: -17.664564, RegLoss: infEpoch 266/400: PITLoss: 0.024073, RECLoss: -17.660583 with std: 0.444523, RegLoss: inf
+Epoch 266/400: Valid RECLoss: -16.075573 with std: 1.383008
+Batch 500/2134: PITLoss: 0.019625, RECLoss: -17.665549, RegLoss: 881.867826Batch 1000/2134: PITLoss: 0.020654, RECLoss: -17.661511, RegLoss: 885.019984Batch 1500/2134: PITLoss: 0.022398, RECLoss: -17.656135, RegLoss: 887.273963Batch 2000/2134: PITLoss: 0.024916, RECLoss: -17.662852, RegLoss: 891.559097Epoch 267/400: PITLoss: 0.025232, RECLoss: -17.662391 with std: 0.449495, RegLoss: inf
+Epoch 267/400: Valid RECLoss: -16.060498 with std: 1.350487
+Batch 500/2134: PITLoss: 0.032426, RECLoss: -17.662165, RegLoss: 891.048378Batch 1000/2134: PITLoss: 0.028254, RECLoss: -17.661038, RegLoss: 890.694971Batch 1500/2134: PITLoss: 0.026178, RECLoss: -17.664102, RegLoss: 887.891972Batch 2000/2134: PITLoss: 0.026535, RECLoss: -17.661656, RegLoss: 890.469395Epoch 268/400: PITLoss: 0.027074, RECLoss: -17.662646 with std: 0.445448, RegLoss: 891.234622
+Epoch 268/400: Valid RECLoss: -16.119777 with std: 1.351852
+Batch 500/2134: PITLoss: 0.027514, RECLoss: -17.692284, RegLoss: 892.980890Batch 1000/2134: PITLoss: 0.028597, RECLoss: -17.681480, RegLoss: 893.634955Batch 1500/2134: PITLoss: 0.025579, RECLoss: -17.672276, RegLoss: 892.312827Batch 2000/2134: PITLoss: 0.026204, RECLoss: -17.658589, RegLoss: 891.946512Epoch 269/400: PITLoss: 0.026135, RECLoss: -17.658589 with std: 0.442694, RegLoss: 891.956063
